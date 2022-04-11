@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_ajustes.xml" value="0.25416666666666665" />
         <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_bienvenida.xml" value="0.25416666666666665" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_contacto.xml" value="0.25416666666666665" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_empleados.xml" value="0.25416666666666665" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_pedidos.xml" value="0.25416666666666665" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_producto.xml" value="0.25416666666666665" />
         <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_registro.xml" value="0.25416666666666665" />
         <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
       </map>
