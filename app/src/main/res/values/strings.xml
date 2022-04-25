@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">GestionaTuNegocio</string>
+    <string name="open" translatable="false">open</string>
+    <string name="close" translatable="false">close</string>
+    <string name="fondo" translatable="false">fondo</string>
+    <string name="perfil" translatable="false">Perfil</string>
+    <string name="nombre_de_usuario" translatable="false">Nombre</string>
+    <string name="apellidos" translatable="false">Apellidos</string>
+    <string name="edad" translatable="false">Edad</string>
+    <string name="altura" translatable="false">Altura</string>
+    <string name="peso" translatable="false">Peso</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="telefono" translatable="false">Teléfono</string>
+    <string name="tv_fContratacion" translatable="false">Fecha Alta</string>
+    <string name="hombre" translatable="false">Hombre</string>
+    <string name="mujer" translatable="false">Mujer</string>
+    <string name="emailRegistro" translatable="false"></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="bienvenido_a_gestiona" translatable="false">Bienvenido a Gestiona</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="ejercicios" translatable="false">Ejercicios</string>
+    <string name="usuario" translatable="false">Usuario</string>
+    <string name="salir" translatable="false">Salir</string>
+    <string name="clientes_add_recycler" translatable="false">Clientes Add Recycler</string>
+    <string name="clientes_add_textview" translatable="false">Clientes add TextView</string>
+    <string name="settings" translatable="false">Settings</string>
 </resources>
