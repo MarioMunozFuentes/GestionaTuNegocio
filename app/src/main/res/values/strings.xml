@@ -19,10 +19,14 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="bienvenido_a_gestiona" translatable="false">Bienvenido a Gestiona</string>
     <string name="home" translatable="false">Home</string>
-    <string name="ejercicios" translatable="false">Ejercicios</string>
+    <string name="empleados" translatable="false">Empleados</string>
+    <string name="pedidos" translatable="false">Pedidos</string>
+    <string name="productos" translatable="false">Productos</string>
     <string name="usuario" translatable="false">Usuario</string>
+    <string name="contacto">Contacto</string>
     <string name="salir" translatable="false">Salir</string>
-    <string name="clientes_add_recycler" translatable="false">Clientes Add Recycler</string>
-    <string name="clientes_add_textview" translatable="false">Clientes add TextView</string>
+
     <string name="settings" translatable="false">Settings</string>
+
+
 </resources>

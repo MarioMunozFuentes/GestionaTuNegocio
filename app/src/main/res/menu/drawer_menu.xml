@@ -12,18 +12,17 @@
                     android:icon="@drawable/ic_home_foreground"
                     android:title="@string/home" />
                 <item
-                    android:id="@+id/clientes"
-                    android:icon="@drawable/ic_add_cliente_foreground"
-                    android:title="@string/clientes_add_textview" />
+                    android:id="@+id/productos"
+                    android:icon="@mipmap/productos_foreground"
+                    android:title="@string/productos" />
                 <item
-                    android:id="@+id/clientes2"
-                    android:icon="@drawable/ic_add_cliente_foreground"
-                    android:title="@string/clientes_add_recycler" />
-
+                    android:id="@+id/pedidos"
+                    android:icon="@mipmap/pedidos_foreground"
+                    android:title="@string/pedidos" />
                 <item
-                    android:id="@+id/ejercicios"
-                    android:icon="@mipmap/ic_ejercicios_foreground"
-                    android:title="@string/ejercicios" />
+                    android:id="@+id/empleados"
+                    android:icon="@mipmap/persona_foreground"
+                    android:title="@string/empleados" />
             </group>
         </menu>
     </item>
@@ -36,6 +35,10 @@
                     android:id="@+id/Datos"
                     android:icon="@drawable/usuario"
                     android:title="@string/usuario" />
+                <item
+                    android:id="@+id/contacto"
+                    android:icon="@mipmap/contacto_foreground"
+                    android:title="@string/contacto" />
 
                 <item
                     android:id="@+id/salir"
