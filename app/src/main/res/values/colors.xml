@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="verdeApp">#40D876</color>
+    <color name="blancoApp">#FFFFFF</color>
+    <color name="negroApp">#232441</color>
+    <color name="pruebacoloralpha">#00232441</color>
+    <!--    <color name="transparente">#00000000</color>-->
+    <color name="transparente">#22FFFFFF</color>
+
+
+    <color name="Teal">#36BFB1</color>
+    <color name="Teal1">#038C73 </color>
+    <color name="Teal2">#02735E </color>
+    <color name="Teal3">#014034 </color>
+    <color name="Teal4">#0D0D0D </color>
 </resources>

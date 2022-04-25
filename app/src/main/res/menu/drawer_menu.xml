@@ -39,12 +39,15 @@
                     android:id="@+id/contacto"
                     android:icon="@mipmap/contacto_foreground"
                     android:title="@string/contacto" />
-
-                <item
-                    android:id="@+id/salir"
-                    android:icon="@mipmap/ic_cerrar_sesion_foreground"
-                    android:title="@string/salir" />
             </group>
         </menu>
     </item>
+
+
+    <item
+        android:id="@+id/salir"
+        android:icon="@mipmap/ic_cerrar_sesion_foreground"
+        android:title="@string/salir" />
+
+
 </menu>
