@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OlvidarContrasenaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgViewLogo"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/logo2"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNombreUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Nombre usuario"
+                android:textColor="@color/Teal"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
+
+            <EditText
+                android:id="@+id/etNombreuser1"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="17dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreUser"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <TextView
+                android:id="@+id/tvContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Contraseña"
+                android:textColor="@color/Teal"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/etNombreuser1" />
+
+            <EditText
+                android:id="@+id/etPassword1"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="17dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tvContrasena"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <Button
+                android:id="@+id/btGuardar"
+                style="@style/botonVerde"
+                android:layout_marginTop="20dp"
+                android:text="Guardar"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword1"
+                tools:ignore="TextContrastCheck" />
+            <Button
+                android:id="@+id/btCancelar"
+                style="@style/botonNegro"
+                android:layout_marginTop="20dp"
+                android:text="Volver"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/btGuardar"
+                tools:ignore="TextContrastCheck" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineaIzd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineaDerecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

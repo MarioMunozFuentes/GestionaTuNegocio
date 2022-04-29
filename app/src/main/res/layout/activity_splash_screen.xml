@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/backView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+    <!--TITULO-->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="145dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="132dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/Titulo"
+        style="@style/tituloapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/aeonikbold"
+        android:gravity="center"
+        android:text="Gestyc"
+        android:textColor="@color/Teal"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+    <!--DESARROLLADOR-->
+    <TextView
+        android:id="@+id/designer1"
+        style="@style/tituloapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="By Asier Aranda"
+        android:textColor="@color/Teal"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/designer2"
+        app:layout_constraintEnd_toEndOf="@id/designer2"
+        app:layout_constraintStart_toStartOf="@id/designer2" />
+    <TextView
+        android:id="@+id/designer2"
+        style="@style/tituloapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text=" &amp; Mario Muñoz"
+        android:textColor="@color/Teal"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

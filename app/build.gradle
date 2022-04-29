@@ -57,6 +57,9 @@ dependencies {
     annotationProcessor'com.github.bumptech.glide:compiler:4.11.0'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+////poder abrir la imagen importando lo siguiente
+//    implementation 'com.github.chrisbanes:PhotoView:2.1.0'
+//    implementation 'com.squareup.picasso:picasso:2.71828'
 
 
 

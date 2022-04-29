@@ -27,6 +27,7 @@
     <string name="salir" translatable="false">Salir</string>
 
     <string name="settings" translatable="false">Settings</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
 
 
 </resources>

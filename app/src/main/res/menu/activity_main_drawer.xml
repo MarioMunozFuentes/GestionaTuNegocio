@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="@string/bienvenido_a_gestiona">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/producto"
+                    android:title="@string/productos" />
+                <item
+                    android:id="@+id/nav_pedidos"
+                    android:icon="@drawable/pedido"
+                    android:title="@string/pedidos" />
+                <item
+                    android:id="@+id/nav_empleados"
+                    android:icon="@drawable/persona"
+                    android:title="@string/empleados" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/settings">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_datos"
+                    android:icon="@drawable/user"
+                    android:title="@string/usuario" />
+                <item
+                    android:id="@+id/nav_contacto"
+                    android:icon="@drawable/contacto"
+                    android:title="@string/contacto" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/cerrarsesion"
+        android:title="@string/salir" />
+
+
+</menu>

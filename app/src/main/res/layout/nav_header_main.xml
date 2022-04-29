@@ -14,11 +14,12 @@
 
     <ImageView
         android:id="@+id/imagenEmpleadoCard"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="80dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:scaleType="center"
-        app:srcCompat="@mipmap/logo_principal1_round" />
+        app:srcCompat="@mipmap/iconogestyc_foreground"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/tvNombreEmpresa"
@@ -27,12 +28,13 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Gestiona"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvEmailUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="default@default.com" />
+        android:text="@string/nav_header_subtitle"
+        android:textColor="#FAFAFA" />
 
 </LinearLayout>
