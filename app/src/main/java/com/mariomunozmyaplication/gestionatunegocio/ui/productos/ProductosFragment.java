@@ -100,7 +100,7 @@ public class ProductosFragment extends Fragment implements MyAdapterProductos.On
                 swipeRefreshLayout.setRefreshing(false);
 
                 if (productosList.size() == 0) {
-                    rvProductos.setBackgroundResource(R.drawable.empty);
+                   // rvProductos.setBackgroundResource();
                 } else {
                     rvProductos.setBackgroundResource(0);
                 }

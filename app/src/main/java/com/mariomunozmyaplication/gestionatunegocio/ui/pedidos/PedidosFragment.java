@@ -198,7 +198,7 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
                 swipeRefreshLayout.setRefreshing(false);
 
                 if (pedidosList.size() == 0) {
-                    rvPedidos.setBackgroundResource(R.drawable.empty);
+                    //rvPedidos.setBackgroundResource(R.drawable.empty);
                 } else {
                     rvPedidos.setBackgroundResource(0);
                 }

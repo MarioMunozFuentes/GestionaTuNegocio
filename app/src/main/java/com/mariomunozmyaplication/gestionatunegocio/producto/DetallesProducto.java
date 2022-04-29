@@ -143,12 +143,12 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
 
     }
 
-    private void abrirImagen() {
-        intent = new Intent(DetallesProducto.this, abrirImagenActivity.class);
-        intent.putExtra("img",getIntent().getStringExtra("img"));
-        startActivity(intent);
-
-    }
+//    private void abrirImagen() {
+//        intent = new Intent(DetallesProducto.this, abrirImagenActivity.class);
+//        intent.putExtra("img",getIntent().getStringExtra("img"));
+//        startActivity(intent);
+//
+//    }
 
 
 
@@ -230,7 +230,7 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
             case R.id.imageView_Producto:
 
                 if(getIntent().getStringExtra("img") != null) {
-                    abrirImagen();
+                   // abrirImagen();
                 }
 
                 break;

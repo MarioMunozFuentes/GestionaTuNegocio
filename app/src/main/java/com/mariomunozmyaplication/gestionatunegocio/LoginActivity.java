@@ -33,10 +33,6 @@ import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText usuario, password;
-    TextView tvOlvidarPasswd;
-    Button accionAccederAlHome, accionRegistrarse;
-
     private Button btnAcceder, btnRegistrarse;
     private Intent intent;
     private EditText etEmail, etPassword;
@@ -128,8 +124,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void accederRegistrarUsuario() {
 
-        intent = new Intent(this, RegisterActivity.class);
-
+        intent = new Intent(this, RegistroActivity.class);
         startActivity(intent);
         finish();
 

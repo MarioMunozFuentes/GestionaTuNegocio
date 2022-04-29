@@ -54,9 +54,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <EditText
-            android:id="@+id/etIniciarSesion"
+            android:id="@+id/etEmail"
             style="@style/editText"
-            android:hint="Nombre Usuario"
+            android:hint="Email"
             android:inputType="text"
             android:maxLines="1"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -66,13 +66,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPassword"
         style="@style/textInputLayout"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/tilIniciarSesion">
 
         <EditText
-            android:id="@+id/contraseña"
+            android:id="@+id/etPassword"
             style="@style/editText"
             android:hint="Contraseña"
             android:inputType="textPassword"
@@ -82,18 +83,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPhone"
+        android:id="@+id/tilPass2"
         style="@style/textInputLayout"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/tilPassword">
 
         <EditText
-            android:id="@+id/telefono"
+            android:id="@+id/etPassword2"
             style="@style/editText"
-            android:hint="Teléfono"
-            android:inputType="number"
+            android:hint="Repite Contraseña"
+            android:inputType="textPassword"
             android:maxLines="1"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -104,12 +106,12 @@
         style="@style/textInputLayout"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/tilPhone">
+        app:layout_constraintTop_toBottomOf="@+id/tilPass2">
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/etNombreEmpresa"
             style="@style/editText"
-            android:hint="Email"
+            android:hint="Nombre de Empresa"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -118,7 +120,7 @@
 
 
     <Button
-        android:id="@+id/accederAlHome"
+        android:id="@+id/btnAceptar"
         style="@style/botonVerde"
         android:layout_marginTop="20dp"
         android:text="Registrarme"
@@ -128,12 +130,12 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/btChangePassword"
+        android:id="@+id/btnCancelar"
         style="@style/botonNegro"
         android:text="Volver al Login"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/accederAlHome" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAceptar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

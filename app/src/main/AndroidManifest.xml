@@ -4,7 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- PERMISO PARA ABRIR LA CAMARA -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- PERMISO PARA ABRIR LA CAMARA -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -16,6 +18,12 @@
         android:roundIcon="@mipmap/iconogestyc_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestiona1">
+
+        <activity android:name=".producto.DetallesProducto" />
+        <activity android:name=".empleado.DetallesEmpleadoActivity" />
+        <activity android:name=".producto.AddProductoActivity" />
+        <activity android:name=".empleado.AddEmpleadoActivity" />
+        <activity android:name=".Co" />
 
         <activity
             android:name=".OlvidarContrasenaActivity"

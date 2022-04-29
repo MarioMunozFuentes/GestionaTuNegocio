@@ -1,9 +1,10 @@
 package com.mariomunozmyaplication.gestionatunegocio;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.mariomunozmyaplication.gestionatunegocio.home.HomeFragment;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -40,43 +42,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Intent intent;
 
 
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
-    //variable del fragment detalle
-   // MyApplication myApplication= (MyApplication) this.getApplication();
-
-    //AÑADIR DATOS
-    private ActivityResultLauncher<Intent> miActivityResultLauncher;
-    //private DatosRegistro persona;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //fab = findViewById(R.id.fab);
-
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        fab = findViewById(R.id.fab);
+
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.nav_view);
-        //lo sgt se implementa luego de haber implementado NavigationView.OnNavigationItemSelectedListener
-        //navigationView.setNavigationItemSelectedListener(this);
 
-//        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
-//        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-//        actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
-//        actionBarDrawerToggle.syncState();
-
-//        //cargar fragment principal en la actividad
-//        fragmentManager = getSupportFragmentManager();
-//        fragmentTransaction = fragmentManager.beginTransaction();
-//
-//        //CAMBIAR POR PRODUCTOS
-//        fragmentTransaction.add(R.id.container_fragment, new HomeFragment());
-//        fragmentTransaction.commit();
-
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_pedidos, R.id.nav_empleados, R.id.nav_logout)
+                .setDrawerLayout(drawerLayout)
+                .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -85,12 +69,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         intent = getIntent();
 
 
-        //MUESTRA EN EL APP BAR EN QUE FRAGMENT ESTAMOS
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_pedidos, R.id.nav_empleados,R.id.nav_datos,R.id.nav_contacto , R.id.nav_logout)
-                .setDrawerLayout(drawerLayout)
-                .build();
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Log.i("loge", "atrass");
 
     }
 
@@ -113,67 +97,135 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+//    //Opciones menú 3 puntitos
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.action_settings:
+//                intent = new Intent(this, ConfguracionActivity.class);
+//                startActivity(intent);
+//                return true;
+//
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
+
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                intent = new Intent(this, ConfguracionActivity.class);
+                startActivity(intent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+                || super.onSupportNavigateUp();
     }
 
-
+    //Opciones menú desplegable
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        //para cerrar automaticamente el menu
-        drawerLayout.closeDrawer(GravityCompat.START);
-        int id = menuItem.getItemId();
-        menuItem.setChecked(true);
-        switch (id) {
+    public boolean onNavigationItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
             case R.id.nav_home:
-                fragmentManager = getSupportFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
-                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
-                fragmentTransaction.commit();
-                break;
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_home);
+                drawerLayout.closeDrawers();
+                return true;
+
             case R.id.nav_pedidos:
-                fragmentManager = getSupportFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
-                Toast.makeText(this, "Productos", Toast.LENGTH_SHORT).show();
-                fragmentTransaction.commit();
-                menuItem.setChecked(true);
-                break;
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_pedidos);
+                drawerLayout.closeDrawers();
+                return true;
+
             case R.id.nav_empleados:
-                fragmentManager = getSupportFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
-                Toast.makeText(this, "Pedidos", Toast.LENGTH_SHORT).show();
-                fragmentTransaction.commit();
-                menuItem.setChecked(true);
-                break;
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_empleados);
+                drawerLayout.closeDrawers();
+                return true;
             case R.id.nav_datos:
-                fragmentManager = getSupportFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
-                Toast.makeText(this, "Empleados", Toast.LENGTH_SHORT).show();
-                fragmentTransaction.commit();
-                break;
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_datos);
+                drawerLayout.closeDrawers();
+                return true;
             case R.id.nav_contacto:
-                fragmentManager = getSupportFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
-                Toast.makeText(this, "Datos de Usuario", Toast.LENGTH_SHORT).show();
-                fragmentTransaction.commit();
-                break;
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_contacto);
+                drawerLayout.closeDrawers();
+                return true;
+
             case R.id.nav_logout:
-                intent = new Intent(this, LoginActivity.class);
-                Toast.makeText(this, "Saliendo", Toast.LENGTH_SHORT).show();
+                LoginActivity.auth.signOut();
+                intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
-                break;
-            default:
                 return true;
         }
-        return true;
+        return false;
     }
 }
+
+
+
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//        //para cerrar automaticamente el menu
+//        drawerLayout.closeDrawer(GravityCompat.START);
+//        int id = menuItem.getItemId();
+//        menuItem.setChecked(true);
+//        switch (id) {
+//            case R.id.nav_home:
+//                fragmentManager = getSupportFragmentManager();
+//                fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
+//                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+//                fragmentTransaction.commit();
+//                break;
+//            case R.id.nav_pedidos:
+//                fragmentManager = getSupportFragmentManager();
+//                fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
+//                Toast.makeText(this, "Productos", Toast.LENGTH_SHORT).show();
+//                fragmentTransaction.commit();
+//                menuItem.setChecked(true);
+//                break;
+//            case R.id.nav_empleados:
+//                fragmentManager = getSupportFragmentManager();
+//                fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
+//                Toast.makeText(this, "Pedidos", Toast.LENGTH_SHORT).show();
+//                fragmentTransaction.commit();
+//                menuItem.setChecked(true);
+//                break;
+//            case R.id.nav_datos:
+//                fragmentManager = getSupportFragmentManager();
+//                fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
+//                Toast.makeText(this, "Empleados", Toast.LENGTH_SHORT).show();
+//                fragmentTransaction.commit();
+//                break;
+//            case R.id.nav_contacto:
+//                fragmentManager = getSupportFragmentManager();
+//                fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
+//                Toast.makeText(this, "Datos de Usuario", Toast.LENGTH_SHORT).show();
+//                fragmentTransaction.commit();
+//                break;
+//            case R.id.nav_logout:
+//                intent = new Intent(this, LoginActivity.class);
+//                Toast.makeText(this, "Saliendo", Toast.LENGTH_SHORT).show();
+//                startActivity(intent);
+//                finish();
+//                break;
+//            default:
+//                return true;
+//        }
+//        return true;
+//    }
+//}

@@ -15,7 +15,7 @@
         <item name="android:layout_height">55dp</item>
         <item name="android:fontFamily">@font/aeonikbold</item>
         <item name="android:textColorHint">@color/negroApp</item>
-        <item name="maxLines">1</item>
+        <item name="android:maxLines">1</item>
         <item name="android:textColor">@color/Teal4</item>
         <item  name="android:background">@color/transparente</item>
         <item name="android:textSize">17dp</item>

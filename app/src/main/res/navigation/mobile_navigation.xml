@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="dam.android.carlos.gestionatunegocio.ui.productos.ProductosFragment"
+        android:name="com.mariomunozmyaplication.gestionatunegocio.ui.productos.ProductosFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_productos">
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_pedidos"
-        android:name="dam.android.carlos.gestionatunegocio.ui.pedidos.PedidosFragment"
+        android:name="com.mariomunozmyaplication.gestionatunegocio.ui.pedidos.PedidosFragment"
         android:label="@string/menu_pedidos"
         tools:layout="@layout/fragment_pedidos" >
         <action
@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/nav_empleados"
-        android:name="dam.android.carlos.gestionatunegocio.ui.empleados.EmpleadosFragment"
+        android:name="com.mariomunozmyaplication.gestionatunegocio.ui.empleados.EmpleadosFragment"
         android:label="@string/menu_empleados"
         tools:layout="@layout/fragment_empleados" >
         <action

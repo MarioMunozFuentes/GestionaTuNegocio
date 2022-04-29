@@ -4,128 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/Theme.Gestiona"
     tools:context=".ConfguracionActivity">
 
-    <TextView
-        android:id="@+id/tvNombreEmpresa"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaIzd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="36dp"
-        android:textSize="20dp"
-        android:text="@string/tvNombreEmpresa"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/imgViewLogo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etEmailAcceso"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="17dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmailAcceso" />
-
     <TextView
-        android:id="@+id/tvEmailAcceso"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="21dp"
-        android:textSize="20dp"
-        android:text="@string/tvEmailAcceso"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombreEmpresa" />
+        android:layout_height="59dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aeonikbold"
+        android:gravity="start"
+        android:text="Cambio Contraseña"
+        android:textColor="@color/Teal"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
 
-    <EditText
-        android:id="@+id/etNombreEmpresa"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="17dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilIniciarSesion"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
+        <EditText
+            android:id="@+id/etEmailAcceso"
+            style="@style/editText"
+            android:hint="Email"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/tvContrasenaNueva"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="24dp"
-        android:textSize="20dp"
-        android:text="@string/tvContrasenaNueva"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailAcceso" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etNewPassword"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="17dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContrasenaNueva" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/textInputLayout"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilIniciarSesion">
 
-    <TextView
-        android:id="@+id/tvContrasenaNuevaConfirmada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="26dp"
-        android:textSize="20dp"
-        android:text="@string/tvContrasenaActualConfirmada"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNewPassword" />
+        <EditText
+            android:id="@+id/etNewPassword"
+            style="@style/editText"
+            android:hint="Nueva Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <EditText
-        android:id="@+id/etConfirmNewPassword"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="17dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContrasenaNuevaConfirmada" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPass2"
+        style="@style/textInputLayout"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword">
+
+        <EditText
+            android:id="@+id/etConfirmNewPassword"
+            style="@style/editText"
+            android:hint="Confirma Nueva Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilPass2">
+
+        <EditText
+            android:id="@+id/etNombreEmpresa"
+            style="@style/editText"
+            android:hint="Nombre de Empresa"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
-        style="@style/botonVerde"
         android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/btnSave"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirmNewPassword" />
+        style="@style/botonVerde"
+        android:layout_marginTop="20dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+        tools:ignore="TextContrastCheck" />
 
     <Button
-        style="@style/botonNegro"
         android:id="@+id/btnCambiarPasswd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/btnCambiarPasswd"
+        style="@style/botonNegro"
+        android:text="Cambiar Contraseña"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
 
-        app:layout_constraintStart_toEndOf="@+id/btnSave"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirmNewPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

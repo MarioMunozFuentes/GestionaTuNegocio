@@ -32,8 +32,8 @@ import com.mariomunozmyaplication.gestionatunegocio.empleado.DetallesEmpleadoAct
 import com.mariomunozmyaplication.gestionatunegocio.empleado.Empleado;
 import com.mariomunozmyaplication.gestionatunegocio.empleado.MyAdapterEmpleados;
 
-public class EmpleadosFragment extends Fragment  {
-//implements MyAdapterEmpleados.OnItemClickListener
+public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.OnItemClickListener {
+
     private Intent intent;
     private DatabaseReference reff;
     private ArrayList<Empleado> empleadosList;
@@ -100,7 +100,7 @@ public class EmpleadosFragment extends Fragment  {
                 swipeRefreshLayout.setRefreshing(false);
 
                 if (empleadosList.size() == 0) {
-                    rvEmpleados.setBackgroundResource(R.drawable.empty);
+                   // rvEmpleados.setBackgroundResource(R.drawable.empty);
                 } else {
                     rvEmpleados.setBackgroundResource(0);
                 }

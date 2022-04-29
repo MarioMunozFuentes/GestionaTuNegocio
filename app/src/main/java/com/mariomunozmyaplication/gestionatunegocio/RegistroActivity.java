@@ -1,67 +1,224 @@
 package com.mariomunozmyaplication.gestionatunegocio;
 
-import android.content.Context;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
-public class RegistroActivity extends AppCompatActivity {
-    EditText usuario, password, telefono, mail;
-    Button accionAccederAlHome, accionVolver;
-    private SharedPreferences preferencias;
+import java.util.regex.Pattern;
+
+
+public class RegistroActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button btnAceptar, btnCancelar;
+    private Intent intent;
+    private EditText etNombreEmpresa, etEmail, etPassword, etPassword2;
+    private FirebaseAuth auth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        //Variables
-        usuario = findViewById(R.id.etIniciarSesion);
-        password = findViewById(R.id.contraseña);
-        telefono = findViewById(R.id.telefono);
-        mail = findViewById(R.id.email);
+        auth = FirebaseAuth.getInstance();
 
 
-        //FICHERO MIS PREFERENCIAS
-        preferencias = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        //Buttons
+        findViewById(R.id.btnAceptar).setOnClickListener(this);
+        findViewById(R.id.btnCancelar).setOnClickListener(this);
 
-        accionAccederAlHome = findViewById(R.id.accederAlHome);
-        accionVolver = findViewById(R.id.btChangePassword);
+        //EditText
+        etNombreEmpresa = findViewById(R.id.etNombreEmpresa);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        etPassword2 = findViewById(R.id.etPassword2);
 
-        accionAccederAlHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //ALMACENAMOS DATOS EN EL FICHERO MISPREFERENCIAS
-                guardarDatos();
-                Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
-                Toast.makeText(RegistroActivity.this, "REGISTRADO", Toast.LENGTH_SHORT).show();
+        comprobarFormato();
 
-                startActivity(intent);
-            }
-        });
 
-        accionVolver.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
-                Toast.makeText(RegistroActivity.this, "VOLVIENDO AL LOGIN", Toast.LENGTH_SHORT).show();
-                startActivity(intent);
-            }
-        });
-    }
-
-    public void guardarDatos() {
-        preferencias.edit().putString("user", usuario.getText().toString()).commit();
-        preferencias.edit().putString("passwd", password.getText().toString()).commit();
-        preferencias.edit().putString("phone", telefono.getText().toString()).commit();
-        preferencias.edit().putString("mail", mail.getText().toString()).commit();
     }
 
 
+    private void volverLogin() {
+
+        intent = new Intent(this, LoginActivity.class);
+
+        startActivity(intent);
+        finish();
+    }
+
+    private void registrarUsuario() {
+        if (!validarEmail(etEmail.getText().toString())) {
+            mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorFormatoEmail);
+        } else {
+            if (etPassword.getText().length() >= 6 && etPassword2.getText().length() >= 6) {
+                if (etPassword.getText().toString().equals(etPassword2.getText().toString())) {
+
+                    auth.createUserWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                updateUser(user);
+                            } else {
+                                if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                    mostrarAlert(R.string.alertCabezeraImportante, R.string.alertErrorUsuarioYaExiste);
+                                } else {
+                                    mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorCreandoUsuario);
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    mostrarAlert(R.string.alertCabezeraError, R.string.alertPasswdNoCoinciden);
+                }
+            } else {
+                mostrarAlert(R.string.alertCabezeraError, R.string.alertPasswdLong);
+            }
+
+        }
+
+    }
+
+    private void updateUser(FirebaseUser user) {
+
+        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                .setDisplayName(etNombreEmpresa.getText().toString()).build();
+
+        user.updateProfile(profileUpdates)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Log.d("loge", "User profile updated.");
+                            //Una vez se realizan todos los cambios accedemos a la app
+                            intent = new Intent(RegistroActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                });
+    }
+
+    private void mostrarAlert(int titulo, int mensaje) {
+        AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
+        dialogo1.setTitle(titulo);
+        dialogo1.setMessage(mensaje);
+        dialogo1.setCancelable(false);
+        dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo1, int id) {
+
+            }
+        });
+
+        dialogo1.show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        int i = v.getId();
+        if (i == R.id.btnAceptar) {
+
+            registrarUsuario();
+
+        } else if (i == R.id.btnCancelar) {
+            volverLogin();
+        }
+    }
+
+    //Comprobamos el formato del email
+    private boolean validarEmail(String email) {
+        Pattern pattern = Patterns.EMAIL_ADDRESS;
+        return pattern.matcher(email).matches();
+    }
+
+    //Color linea EditText con formato valido email y longitud contraseña
+    private void comprobarFormato() {
+
+        etPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (s.length() >= 6) {
+
+                    etPassword.getBackground().setColorFilter(getResources().getColor(R.color.colorVerde), PorterDuff.Mode.SRC_ATOP);
+                } else {
+
+                    etPassword.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        etPassword2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (s.length() >= 6) {
+
+                    etPassword2.getBackground().setColorFilter(getResources().getColor(R.color.colorVerde), PorterDuff.Mode.SRC_ATOP);
+                } else {
+
+                    etPassword2.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        etEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (validarEmail(etEmail.getText().toString())) {
+
+                    etEmail.getBackground().setColorFilter(getResources().getColor(R.color.colorVerde), PorterDuff.Mode.SRC_ATOP);
+                } else {
+
+                    etEmail.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+    }
 }

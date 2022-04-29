@@ -1,14 +1,16 @@
 package com.mariomunozmyaplication.gestionatunegocio.empleado;
 
+import java.util.Date;
+
 public class Empleado {
 
     private int nTelefono;
     private String imagenEmpleado;
     private String nombre, apellidos, IBAN, fContratacion, direccion, dni;
     private Float sueldo;
-    //  private Date fContratacion;
+    //private Date fContratacion;
 
-    public Empleado(){
+    public Empleado() {
 
     }
 
@@ -35,9 +37,6 @@ public class Empleado {
         this.fContratacion = fContratacion;
         this.sueldo = sueldo;
     }
-
-
-
 
 
     public String getNombre() {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "481363827743",
+    "project_id": "gesty-c3e6a",
+    "storage_bucket": "gesty-c3e6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481363827743:android:cdaebd6dbb83ed2ca9892a",
+        "android_client_info": {
+          "package_name": "com.mariomunozmyaplication.gestionatunegocio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481363827743-4pl5u3gqdo3l3ssiphefbk3l07ceugng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBENwdlVbfQWqmVZ0izOqMH8xAOXhFPOwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481363827743-4pl5u3gqdo3l3ssiphefbk3l07ceugng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
