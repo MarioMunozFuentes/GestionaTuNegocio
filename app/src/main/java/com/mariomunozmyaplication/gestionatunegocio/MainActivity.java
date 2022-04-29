@@ -1,40 +1,33 @@
 package com.mariomunozmyaplication.gestionatunegocio;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Menu;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.Toolbar;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
-    DrawerLayout drawerLayout;
-    ActionBarDrawerToggle actionBarDrawerToggle;
-    Toolbar toolbar;
-    NavigationView navigationView;
-
     private TextView tvEmailUsuario, tvNombreEmpresa;
-
-    public FloatingActionButton fab;
     private Intent intent;
+    private NavigationView navigationView;
+    private DrawerLayout drawer;
+    public FloatingActionButton fab;
+    Toolbar toolbar;
 
 
     @Override
@@ -42,26 +35,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
+
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
         fab = findViewById(R.id.fab);
 
-        drawerLayout = findViewById(R.id.drawer);
+
+        drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_pedidos, R.id.nav_empleados, R.id.nav_logout)
-                .setDrawerLayout(drawerLayout)
+                .setDrawerLayout(drawer)
                 .build();
+
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         navigationView.setNavigationItemSelectedListener(this);
         intent = getIntent();
+
 
 
     }
@@ -92,24 +90,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-//    //Opciones menú 3 puntitos
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.action_settings:
-//                intent = new Intent(this, ConfguracionActivity.class);
-//                startActivity(intent);
-//                return true;
-//
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
-
+    //Opciones menú 3 puntitos
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
         switch (item.getItemId()) {
             case R.id.action_settings:
                 intent = new Intent(this, ConfguracionActivity.class);
@@ -120,6 +103,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return super.onOptionsItemSelected(item);
         }
     }
+
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
+//        switch (item.getItemId()) {
+//            case R.id.action_settings:
+//                intent = new Intent(this, ConfguracionActivity.class);
+//                startActivity(intent);
+//                return true;
+//
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -134,25 +132,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.nav_home:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_home);
-                drawerLayout.closeDrawers();
+                drawer.closeDrawers();
                 return true;
 
             case R.id.nav_pedidos:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_pedidos);
-                drawerLayout.closeDrawers();
+                drawer.closeDrawers();
                 return true;
 
             case R.id.nav_empleados:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_empleados);
-                drawerLayout.closeDrawers();
+                drawer.closeDrawers();
                 return true;
             case R.id.nav_datos:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_datos);
-                drawerLayout.closeDrawers();
+                drawer.closeDrawers();
                 return true;
             case R.id.nav_contacto:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_contacto);
-                drawerLayout.closeDrawers();
+                drawer.closeDrawers();
                 return true;
 
             case R.id.nav_logout:
