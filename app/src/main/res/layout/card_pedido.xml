@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardPedido"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cadViewPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="8dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/horizontalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imagenPedidoCard"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                tools:srcCompat="@drawable/ic_persona_foreground"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/verticalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:padding="@dimen/cardview_compat_inset_shadow">
+
+                <TextView
+                    android:id="@+id/tvReferenciaProductoPedidoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="TextView"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvCanitdadPedidoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="TextView"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvnombreProductoPedidoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/cardview_compat_inset_shadow"
+                    android:paddingStart="5dp"
+                    android:text="TextView"
+                    android:textColor="#0E63E6"
+                    android:textSize="25dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".producto.DetallesProducto">
+
+
+    <TextView
+        android:id="@+id/tv_tittle_InfoProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="111dp"
+        android:text="@string/tv_tittle_InfoProducto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_Producto"
+        android:layout_width="131dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
+        app:srcCompat="@drawable/ic_persona_foreground" />
+
+
+    <TextView
+        android:id="@+id/tv_descipcionProducto"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="13dp"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioVentaProducto"
+        tools:text="descipción del productoooooooo esto tienen que ser mu largo para comprobar que se acople correctamente" />
+
+    <TextView
+        android:id="@+id/tv_nombreProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
+        tools:text="Nombre  del producto" />
+
+    <TextView
+        android:id="@+id/tv_referenciaProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="23dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombreProducto"
+        tools:text="codigo de referencia" />
+
+    <TextView
+        android:id="@+id/tv_titleStockProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tv_titleStockProducto"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto" />
+
+    <TextView
+        android:id="@+id/tv_stockProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_titleStockProducto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto"
+        tools:text="230" />
+
+    <TextView
+        android:id="@+id/tv_tittlePrecioCosteProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="33dp"
+        android:text="@string/tv_tittlePrecioCosteProducto"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Producto" />
+
+    <TextView
+        android:id="@+id/tv_precioCosteProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="33dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioCosteProducto"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Producto"
+        tools:text="125.5" />
+
+    <TextView
+        android:id="@+id/tv_tittlePrecioVentaProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/tv_tittlePrecioVentaProducto"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioCosteProducto" />
+
+    <TextView
+        android:id="@+id/tv_precioVentaProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="21dp"
+        android:text="230"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioVentaProducto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_precioCosteProducto" />
+
+    <Button
+        style="@style/botonVerde"
+        android:id="@+id/btnHacerPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btnHacerPedido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="@style/botonVerde"
+        android:id="@+id/btnModificarProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btnEditar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnHacerPedido" />
+
+    <Button
+        style="@style/botonNegro"
+        android:id="@+id/btnEliminarProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btnEliminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

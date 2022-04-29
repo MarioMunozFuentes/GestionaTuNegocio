@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -16,7 +17,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -29,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
     NavigationView navigationView;
+
+    private TextView tvEmailUsuario, tvNombreEmpresa;
 
     public FloatingActionButton fab;
     private Intent intent;
@@ -56,21 +62,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.nav_view);
         //lo sgt se implementa luego de haber implementado NavigationView.OnNavigationItemSelectedListener
+        //navigationView.setNavigationItemSelectedListener(this);
+
+//        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+//        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+//        actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
+//        actionBarDrawerToggle.syncState();
+
+//        //cargar fragment principal en la actividad
+//        fragmentManager = getSupportFragmentManager();
+//        fragmentTransaction = fragmentManager.beginTransaction();
+//
+//        //CAMBIAR POR PRODUCTOS
+//        fragmentTransaction.add(R.id.container_fragment, new HomeFragment());
+//        fragmentTransaction.commit();
+
+
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
         navigationView.setNavigationItemSelectedListener(this);
-
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
-        actionBarDrawerToggle.syncState();
-
-        //cargar fragment principal en la actividad
-        fragmentManager = getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-
-
-        //CAMBIAR POR PRODUCTOS
-        fragmentTransaction.add(R.id.container_fragment, new HomeFragment());
-        fragmentTransaction.commit();
+        intent = getIntent();
 
 
         //MUESTRA EN EL APP BAR EN QUE FRAGMENT ESTAMOS
@@ -82,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    //MODIFICA EL navHEADER
+    //MODIFICA EL nav header
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
