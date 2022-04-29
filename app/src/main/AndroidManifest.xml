@@ -23,7 +23,7 @@
         <activity android:name=".empleado.DetallesEmpleadoActivity" />
         <activity android:name=".producto.AddProductoActivity" />
         <activity android:name=".empleado.AddEmpleadoActivity" />
-        <activity android:name=".Co" />
+        <activity android:name=".ConfguracionActivity" />
 
         <activity
             android:name=".OlvidarContrasenaActivity"
