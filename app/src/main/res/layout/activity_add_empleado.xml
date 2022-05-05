@@ -6,25 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".empleado.AddEmpleadoActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/lineaIzd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/lineaDerecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
 
         <TextView
             android:id="@+id/tv_title_addEmpleado"
@@ -34,7 +19,7 @@
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
             android:text="@string/tv_title_addEmpleado"
-            android:textSize="23sp"
+            android:textSize="23dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +31,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="12dp"
             android:text="@string/tv_imagenEmpleado"
-            android:textSize="18sp"
+            android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado" />
 
@@ -68,7 +53,7 @@
             android:layout_marginStart="23dp"
             android:layout_marginTop="15dp"
             android:text="@string/tv_nombre"
-            android:textSize="18sp"
+            android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado" />
 
@@ -84,8 +69,7 @@
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado" />
 
         <TextView
             android:id="@+id/tv_ApellidosEmplado"
@@ -107,11 +91,9 @@
             android:layout_marginEnd="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado" />
 
 
         <TextView
@@ -134,11 +116,9 @@
             android:layout_marginEnd="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado" />
 
         <TextView
             android:id="@+id/tv_IBAN"
@@ -160,11 +140,9 @@
             android:layout_marginEnd="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_IBAN"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
 
         <TextView
 
@@ -262,20 +240,27 @@
             android:orientation="horizontal">
 
             <Button
-                style="@style/botonVerde"
+                style="@style/botonNegro"
                 android:id="@+id/btnAceptarEmpleado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/btnAceptar"
+                android:background="#0E9209"
                 />
 
 
             <Button
-                style="@style/botonNegro"
+                style="@style/botonVerde"
                 android:id="@+id/btnCancelarEmpleado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="13dp"
                 android:text="@string/btnCancelar"
+                android:background="#EE3811"
                 />
         </LinearLayout>
 

@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
+            case R.id.nav_datos:
                 intent = new Intent(this, ConfguracionActivity.class);
                 startActivity(intent);
                 return true;
@@ -104,20 +104,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-//            return true;
-//        }
-//        switch (item.getItemId()) {
-//            case R.id.action_settings:
-//                intent = new Intent(this, ConfguracionActivity.class);
-//                startActivity(intent);
-//                return true;
-//
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

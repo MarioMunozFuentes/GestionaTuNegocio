@@ -37,7 +37,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.mariomunozmyaplication.gestionatunegocio.R;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
@@ -51,6 +50,7 @@ import com.mariomunozmyaplication.gestionatunegocio.R;
 
 
 public class AddEmpleadoActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     private ProgressDialog progressDialog;
     private EditText etNombreEmpleado, etApellidosEmpleado, etDNIEmpleado, etIBAN, etDireccionEmpleado, etnTelefonoEmpleado, etSueldoEmpleado;
@@ -76,7 +76,7 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Botones
-        findViewById(com.mariomunozmyaplication.gestionatunegocio.R.id.btnAceptarEmpleado).setOnClickListener(this);
+        findViewById(R.id.btnAceptarEmpleado).setOnClickListener(this);
         findViewById(R.id.btnCancelarEmpleado).setOnClickListener(this);
         //EditText
         etNombreEmpleado = findViewById(R.id.etNombreEmpleado);
@@ -620,4 +620,3 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
 
     }
 }
-

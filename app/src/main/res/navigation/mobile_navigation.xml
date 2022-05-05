@@ -10,7 +10,6 @@
         android:name="com.mariomunozmyaplication.gestionatunegocio.ui.productos.ProductosFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_productos">
-
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
             />
