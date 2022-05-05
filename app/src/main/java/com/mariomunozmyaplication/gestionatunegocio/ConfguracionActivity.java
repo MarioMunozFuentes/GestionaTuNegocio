@@ -31,21 +31,24 @@ import java.util.regex.Pattern;
 
 public class ConfguracionActivity extends AppCompatActivity implements View.OnClickListener {
 
+    // Declaramos variables
     private EditText etEmailAcceso, etNombreEmpresa, etNewPassword, etConfirmNewPassword;
     private Button btnSave, btnCambiarPasswd;
     private Intent intent;
     private static ProgressDialog progressDialog;
     private boolean alertDialogVisible;
-    private  EditText editTextAlertDialog;
+    private EditText editTextAlertDialog;
     private AlertDialog dialog = null;
 
+    // Metodo onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confguracion);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        // Asociamos variables
+        // editText
         etEmailAcceso = findViewById(R.id.etEmailAcceso);
         etNombreEmpresa = findViewById(R.id.etNombreEmpresa);
         etNewPassword = findViewById(R.id.etNewPassword);
@@ -53,37 +56,38 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         etConfirmNewPassword = findViewById(R.id.etConfirmNewPassword);
         etConfirmNewPassword.setEnabled(false);
         editTextAlertDialog = new EditText(this);
-        //Botones
+        // Botones
         btnSave = findViewById(R.id.btnSave);
         btnSave.setOnClickListener(this);
-        btnCambiarPasswd =  findViewById(R.id.btnCambiarPasswd);
+        btnCambiarPasswd = findViewById(R.id.btnCambiarPasswd);
         btnCambiarPasswd.setOnClickListener(this);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage(getString(R.string.progressDialogActualizarDatos));
-        //Llenamos los datos
+
+        // LLamamos al metodo para cargar los datos
         cargarDatos();
-        //Comprobamos formatos
+
+        // Comprobamos formatos
         comprobarFormatoPassword(etNewPassword);
         comprobarFormatoPassword(etConfirmNewPassword);
         comprobarFormatoEmail();
-
         alertDialogVisible = false;
-
     }
 
-    //Cuando pulsamos el botón atres del toolbar
+    // Cuando pulsamos el botón atres del toolbar
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         finish();
         return true;
     }
 
-
+    // Metodo onClick
     @Override
     public void onClick(View v) {
         int i = v.getId();
         switch (i) {
+            // Boton guardar
             case R.id.btnSave:
                 progressDialog.show();
                 if (etEmailAcceso.isEnabled()) {
@@ -92,7 +96,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
                     actualizarPassword();
                 }
                 break;
-
+            // Boton cambiar contraseña
             case R.id.btnCambiarPasswd:
                 etNewPassword.setEnabled(true);
                 etConfirmNewPassword.setEnabled(true);
@@ -100,10 +104,10 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
                 etNombreEmpresa.setEnabled(false);
                 btnCambiarPasswd.setEnabled(false);
                 break;
-
         }
     }
 
+    // Metodo para actualizar contraseña
     private void actualizarPassword() {
         if (etNewPassword.getText().length() >= 6 && etConfirmNewPassword.getText().length() >= 6) {
             if (etNewPassword.getText().toString().equals(etConfirmNewPassword.getText().toString())) {
@@ -112,12 +116,11 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            //vaciamos los campos una vez se guardan los cambios
+                            // Vaciamos los campos una vez se guardan los cambios
                             etNewPassword.setText("");
                             etConfirmNewPassword.setText("");
                             progressDialog.dismiss();
                             ventanaPrincipal();
-
                         } else {
                             progressDialog.dismiss();
                             if (task.getException() instanceof FirebaseAuthRecentLoginRequiredException) {
@@ -140,8 +143,8 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
+    // Metodo para actualizar los datos
     private synchronized void actualizarDatos() {
-
         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder().setDisplayName(etNombreEmpresa.getText().toString())
                 .build();
         LoginActivity.user.updateProfile(profileUpdates).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -151,14 +154,12 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorActualizarUsuario);
                     Log.i("loge", "datos: " + task.getException().getMessage());
                 }
-
             }
         });
-
         actualizarEmail();
-
     }
 
+    // Metodo para actualizar el email
     private void actualizarEmail() {
         if (!validarEmail(etEmailAcceso.getText().toString())) {
             progressDialog.dismiss();
@@ -187,6 +188,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
+    // Metodo para mostrar alerta
     private void mostrarAlert(int titulo, int mensaje) {
         AlertDialog.Builder dialogoMostrarAlert = new AlertDialog.Builder(this);
         dialogoMostrarAlert.setTitle(titulo);
@@ -195,12 +197,10 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         dialogoMostrarAlert.setPositiveButton(R.string.btnAceptar, null);
 
         dialogoMostrarAlert.show();
-
-
     }
 
+    // Metodo para mostrar AlertDialog
     private void mostrarAlertDialog(int titulo, int mensaje) {
-
         //Hacemos que el edit text sea de tipo password para que no muestre la contraseña
         editTextAlertDialog.setInputType(InputType.TYPE_CLASS_TEXT |
                 InputType.TYPE_TEXT_VARIATION_PASSWORD);
@@ -217,9 +217,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
                 alertDialogVisible = false;
                 dialog.dismiss();
                 editTextAlertDialog.setText("");
-                ((ViewGroup)editTextAlertDialog.getParent()).removeView(editTextAlertDialog);
-
-
+                ((ViewGroup) editTextAlertDialog.getParent()).removeView(editTextAlertDialog);
             }
         });
 
@@ -228,7 +226,6 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
                 //comprobamos que el usuario y la contraseña coninciden
                 if (editTextAlertDialog.getText().toString().equals("")) {
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorCampoVacio);
-
                 } else {
                     AuthCredential credential = EmailAuthProvider.getCredential(LoginActivity.user.getEmail(), editTextAlertDialog.getText().toString());
 
@@ -247,82 +244,72 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
                             }
                         }
                     });
-
                 }
                 editTextAlertDialog.setText("");
-                ((ViewGroup)editTextAlertDialog.getParent()).removeView(editTextAlertDialog);
+                ((ViewGroup) editTextAlertDialog.getParent()).removeView(editTextAlertDialog);
                 alertDialogVisible = false;
-
             }
         });
 
         dialog = dialogo1.create();
         dialog.show();
         alertDialogVisible = true;
-
-
     }
 
+    // Metodo para comprobar el formato de la contraseña
     private void comprobarFormatoPassword(final EditText editText) {
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
                 if (s.length() >= 6) {
-
                     editText.getBackground().setColorFilter(getResources().getColor(R.color.colorVerde), PorterDuff.Mode.SRC_ATOP);
                 } else {
-
                     editText.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
                 }
             }
-
             @Override
             public void afterTextChanged(Editable s) {
             }
         });
     }
 
+    // Metodo para comprobar el formato del email
     private void comprobarFormatoEmail() {
         etEmailAcceso.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
                 if (validarEmail(etEmailAcceso.getText().toString())) {
-
                     etEmailAcceso.getBackground().setColorFilter(getResources().getColor(R.color.colorVerde), PorterDuff.Mode.SRC_ATOP);
                 } else {
-
                     etEmailAcceso.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
                 }
             }
-
             @Override
             public void afterTextChanged(Editable s) {
             }
         });
     }
 
-    //Comprobamos el formato del email
+    // Metodo para comprobamos el formato del email
     private boolean validarEmail(String email) {
         Pattern pattern = Patterns.EMAIL_ADDRESS;
         return pattern.matcher(email).matches();
     }
 
+    // Metodo para cargar los datos
     private void cargarDatos() {
         etEmailAcceso.setText(LoginActivity.user.getEmail());
         etNombreEmpresa.setText(LoginActivity.user.getDisplayName());
         etNewPassword.setText("");
         etConfirmNewPassword.setText("");
     }
+
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
@@ -340,15 +327,14 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         boolean alertDialogVisible = savedInstanceState.getBoolean("alertDialogVisible");
         String etDialog = savedInstanceState.getString("editTextAlertDialog");
 
-        if(!restorePassword){
+        if (!restorePassword) {
             etNewPassword.setEnabled(true);
             etConfirmNewPassword.setEnabled(true);
             etEmailAcceso.setEnabled(false);
             etNombreEmpresa.setEnabled(false);
             btnCambiarPasswd.setEnabled(false);
         }
-
-        if(alertDialogVisible){
+        if (alertDialogVisible) {
             mostrarAlertDialog(R.string.alertCabezeraImportante, R.string.alertIntroducirPassword);
             editTextAlertDialog.setText(etDialog);
         }
@@ -357,7 +343,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onPause() {
         super.onPause();
-        if(dialog != null){
+        if (dialog != null) {
             dialog.dismiss();
         }
     }

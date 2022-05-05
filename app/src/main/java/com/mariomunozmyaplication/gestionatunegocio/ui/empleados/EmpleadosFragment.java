@@ -21,9 +21,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-
 import com.mariomunozmyaplication.gestionatunegocio.LoginActivity;
 import com.mariomunozmyaplication.gestionatunegocio.MainActivity;
 import com.mariomunozmyaplication.gestionatunegocio.R;
@@ -32,8 +29,11 @@ import com.mariomunozmyaplication.gestionatunegocio.empleado.DetallesEmpleadoAct
 import com.mariomunozmyaplication.gestionatunegocio.empleado.Empleado;
 import com.mariomunozmyaplication.gestionatunegocio.empleado.MyAdapterEmpleados;
 
+import java.util.ArrayList;
+
 public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.OnItemClickListener {
 
+    // Declaramos variables
     private Intent intent;
     private DatabaseReference reff;
     private ArrayList<Empleado> empleadosList;
@@ -44,6 +44,7 @@ public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.On
     private static ProgressDialog progressDialog;
     private SwipeRefreshLayout swipeRefreshLayout;
 
+    // onCreateView
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 

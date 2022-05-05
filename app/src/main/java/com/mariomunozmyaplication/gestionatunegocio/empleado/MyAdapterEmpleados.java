@@ -10,11 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.mariomunozmyaplication.gestionatunegocio.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-
-import com.mariomunozmyaplication.gestionatunegocio.R;
 
 public class MyAdapterEmpleados extends RecyclerView.Adapter<MyAdapterEmpleados.MyViewHolder> {
 
