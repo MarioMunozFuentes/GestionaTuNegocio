@@ -48,7 +48,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Asociamos variables
-        // editText
+        // EditText
         etEmailAcceso = findViewById(R.id.etEmailAcceso);
         etNombreEmpresa = findViewById(R.id.etNombreEmpresa);
         etNewPassword = findViewById(R.id.etNewPassword);

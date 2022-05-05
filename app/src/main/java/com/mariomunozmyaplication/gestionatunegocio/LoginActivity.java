@@ -33,6 +33,7 @@ import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
+    // Declaramos variables
     private Button btnAcceder, btnRegistrarse;
     private Intent intent;
     private EditText etEmail, etPassword;
@@ -44,21 +45,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText editTextAlertDialog;
     private AlertDialog dialog = null;
 
-
+    // Metodo onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //Buttons
+        // Asociamos variables
+        // Buttons
         findViewById(R.id.btnAcceder).setOnClickListener(this);
         findViewById(R.id.btnRegistrarse).setOnClickListener(this);
-
-        //EditText
+        // EditText
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         editTextAlertDialog = new EditText(this);
-
+        // TextView
         tvOlvidasteContrasena = findViewById(R.id.tvOlvidasteContrasena);
         tvOlvidasteContrasena.setOnClickListener(this);
 
@@ -78,24 +79,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 finish();
             }
-
         } else {
             mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorNetwork);
         }
-
     }
 
-
+    // Metodo para que el usuario pueda acceder
     private void accederUsuario() {
-
         intent = new Intent(this, MainActivity.class);
-
         if (!validarEmail(etEmail.getText().toString())) {
             mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorFormatoEmail);
         } else {
-
             if (etPassword.getText().length() >= 6) {
-
                 auth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -104,48 +99,39 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Log.i("loge", "Accedido: " + user.getEmail() + " - " + user.getDisplayName());
                             intent.putExtra("email", user.getEmail());
                             intent.putExtra("nombreEmpresa", user.getDisplayName());
-
                             startActivity(intent);
                             finish();
-
                         } else {
                             mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorLogin);
                         }
                     }
                 });
-
             } else {
                 mostrarAlert(R.string.alertCabezeraError, R.string.alertPasswdLong);
             }
-
         }
-
     }
 
+    // Metodo para hacer un nuevo registro de usuario
     private void accederRegistrarUsuario() {
-
         intent = new Intent(this, RegistroActivity.class);
         startActivity(intent);
         finish();
-
     }
 
     public boolean isNetworkAviable() {
         boolean networkAviable = false;
-
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
         if (cm != null) {
             NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-
             if (networkInfo != null && networkInfo.isConnected()) {
                 networkAviable = true;
-
             }
         }
         return networkAviable;
     }
 
+    // Metodo para mostrar alerta
     private void mostrarAlert(int titulo, int mensaje) {
         AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
         dialogo1.setTitle(titulo);
@@ -153,14 +139,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         dialogo1.setCancelable(false);
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialogo1, int id) {
-
             }
         });
-
         dialogo1.show();
     }
 
-
+    // Metodo onClick
     @Override
     public void onClick(View v) {
         int i = v.getId();
@@ -172,28 +156,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorNetwork);
                 }
                 break;
-
             case R.id.btnRegistrarse:
                 accederRegistrarUsuario();
                 break;
-
             case R.id.tvOlvidasteContrasena:
-
                 recuperarContrasena();
                 break;
-
-
             default:
                 accederUsuario();
         }
-
     }
 
+    // Metodo para recuperar contraseña
     private void recuperarContrasena() {
-
         editTextAlertDialog.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         comprobarFormatoEmail(editTextAlertDialog);
-
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
         dialogo1.setTitle(R.string.alertCabezeraImportante);
         dialogo1.setMessage(R.string.alertRecuperarContrasena);
@@ -206,16 +183,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 alertDialogVisible = false;
                 editTextAlertDialog.setText("");
                 ((ViewGroup) editTextAlertDialog.getParent()).removeView(editTextAlertDialog);
-
             }
         });
-
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
                 if (editTextAlertDialog.getText().toString().equals("")) {
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorCampoVacio);
-
                 } else {
                     if (!validarEmail(editTextAlertDialog.getText().toString())) {
                         mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorFormatoEmail);
@@ -224,7 +197,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         auth.sendPasswordResetEmail(editTextAlertDialog.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
-
                                 if (task.isSuccessful()) {
                                     progressDialog.dismiss();
                                     mostrarAlert(R.string.alertCabezeraImportante, R.string.alertEmailEnviado);
@@ -232,16 +204,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     progressDialog.dismiss();
                                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorEnviarEmail);
                                 }
-
                             }
                         });
-
                     }
                 }
                 ((ViewGroup) editTextAlertDialog.getParent()).removeView(editTextAlertDialog);
                 editTextAlertDialog.setText("");
                 alertDialogVisible = false;
-
             }
         });
         dialog = dialogo1.create();
@@ -249,61 +218,47 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         alertDialogVisible = true;
     }
 
-    //Color linea EditText con longitud contraseña valida
+    // Metodo para comprobar el formato de la contraseña (verde->bien/rojo->mal)
     private void comprobarFormatoContrasena() {
-
         etPassword.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
                 if (s.length() >= 6) {
-
                     etPassword.getBackground().setColorFilter(getResources().getColor(R.color.colorVerde), PorterDuff.Mode.SRC_ATOP);
                 } else {
-
                     etPassword.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
                 }
             }
-
             @Override
             public void afterTextChanged(Editable s) {
             }
         });
-
-
     }
 
+    // Metodo para comprobar el formato del email (verde->bien/rojo->mal)
     private void comprobarFormatoEmail(final EditText editText) {
-
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
                 if (validarEmail(editText.getText().toString())) {
-
                     editText.getBackground().setColorFilter(getResources().getColor(R.color.colorVerde), PorterDuff.Mode.SRC_ATOP);
                 } else {
-
                     editText.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
                 }
             }
-
             @Override
             public void afterTextChanged(Editable s) {
             }
         });
-
     }
 
-    // Comprobamos el formato del email
+    // Metodo para comprobar el formato del email
     private boolean validarEmail(String email) {
         Pattern pattern = Patterns.EMAIL_ADDRESS;
         return pattern.matcher(email).matches();
@@ -312,7 +267,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-
         outState.putBoolean("recuperarContrasena", alertDialogVisible);
         outState.putString("editTextAlertDialog", editTextAlertDialog.getText().toString());
     }
@@ -320,11 +274,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-
         boolean alertDialogVisible = savedInstanceState.getBoolean("recuperarContrasena");
         String etDialog = savedInstanceState.getString("editTextAlertDialog");
-
-
         if (alertDialogVisible) {
             recuperarContrasena();
             editTextAlertDialog.setText(etDialog);
