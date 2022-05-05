@@ -39,6 +39,12 @@
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/mipmap-anydpi-v26/pedidos.xml" value="0.3045" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/mipmap-anydpi-v26/persona.xml" value="0.3045" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/mipmap-anydpi-v26/persona_round.xml" value="0.2255" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_add_empleado.xml" value="0.2" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/card_empleado.xml" value="0.36666666666666664" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/fragment_empleados.xml" value="0.2223731884057971" />
+        <entry key="..\:/GestionaTuNegocio/app/src/main/res/layout/fragment_pedidos.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
