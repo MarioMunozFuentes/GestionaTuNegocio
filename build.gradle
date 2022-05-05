@@ -8,7 +8,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:3.6.0'
         classpath 'com.google.gms:google-services:4.3.10'
 
 
@@ -17,6 +17,13 @@ buildscript {
     }
 }
 
+allprojects {
+    repositories {
+//        google()
+//        jcenter()
+//        maven { url "https://jitpack.io"}
+    }
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
