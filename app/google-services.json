@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "777016197454",
+    "project_id": "miprueba-16d70",
+    "storage_bucket": "miprueba-16d70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777016197454:android:066d5b425b6aba4fae1e1f",
+        "android_client_info": {
+          "package_name": "com.mariomunozmyaplication.gestionatunegocio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777016197454-f968imko1ualiq8r4sj375ff3gnrglnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkzrmzU1fL3bc3S7qYTBlxiTzbb0gf8hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777016197454-f968imko1ualiq8r4sj375ff3gnrglnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
