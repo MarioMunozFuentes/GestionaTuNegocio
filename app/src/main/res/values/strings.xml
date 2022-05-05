@@ -11,7 +11,7 @@
     <string name="peso" translatable="false">Peso</string>
     <string name="email" translatable="false">Email</string>
     <string name="telefono" translatable="false">Teléfono</string>
-<!--    <string name="tv_fContratacion" translatable="false">Fecha Alta</string>-->
+    <!--    <string name="tv_fContratacion" translatable="false">Fecha Alta</string>-->
     <string name="hombre" translatable="false">Hombre</string>
     <string name="mujer" translatable="false">Mujer</string>
     <string name="emailRegistro" translatable="false"></string>
@@ -29,8 +29,8 @@
     <string name="settings" translatable="false">Settings</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
 
-<!--    f-->
-<!--    <string name="app_name">Manage your business</string>-->
+    <!--    f-->
+    <!--    <string name="app_name">Manage your business</string>-->
     <string name="etEmail">"Email: "</string>
     <string name="etPassword">"Password: "</string>
     <string name="etRepitePassword">Enter the password again:</string>
@@ -86,7 +86,7 @@
     <string name="alertCabezeraPermisosDesactivados">Disabled permissions</string>
     <string name="alertPermisosDesactivados">Grant permissions for proper operation</string>
     <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!--    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>-->
+    <!--    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>-->
     <!-- Textos Progress Dialog -->
     <string name="progressDialogActualizarDatos">Updating data</string>
     <string name="progressDialogCargando">Loading...</string>

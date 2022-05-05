@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_datos:
+            case R.id.action_settings:
                 intent = new Intent(this, ConfguracionActivity.class);
                 startActivity(intent);
                 return true;
@@ -130,15 +130,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_empleados);
                 drawer.closeDrawers();
                 return true;
-            case R.id.nav_datos:
-                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_datos);
-                drawer.closeDrawers();
-                return true;
             case R.id.nav_contacto:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_contacto);
                 drawer.closeDrawers();
                 return true;
-
             case R.id.nav_logout:
                 LoginActivity.auth.signOut();
                 intent = new Intent(MainActivity.this, LoginActivity.class);
