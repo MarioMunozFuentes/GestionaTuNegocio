@@ -1,21 +1,19 @@
 package com.mariomunozmyaplication.gestionatunegocio.empleado;
 
-import java.util.Date;
-
 public class Empleado {
 
+    // Declaramos variables
     private int nTelefono;
     private String imagenEmpleado;
     private String nombre, apellidos, IBAN, fContratacion, direccion, dni;
     private Float sueldo;
-    //private Date fContratacion;
 
+    //Constructor vacio
     public Empleado() {
-
     }
 
+    // Constructor con argumentos
     public Empleado(String nombre, String apellidos, String dni, String IBAN, String direccion, int nTelefono, String fContratacion, Float sueldo) {
-
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.dni = dni;
@@ -26,6 +24,7 @@ public class Empleado {
         this.sueldo = sueldo;
     }
 
+    // Constructor con argumentos
     public Empleado(String imageView, String nombre, String apellidos, String dni, String IBAN, String direccion, int nTelefono, String fContratacion, Float sueldo) {
         this.imagenEmpleado = imageView;
         this.nombre = nombre;
@@ -38,7 +37,7 @@ public class Empleado {
         this.sueldo = sueldo;
     }
 
-
+    // Metodos GETTER y SETTER
     public String getNombre() {
         return nombre;
     }
@@ -87,7 +86,6 @@ public class Empleado {
         this.direccion = direccion;
     }
 
-
     public String getDni() {
         return dni;
     }
@@ -112,6 +110,7 @@ public class Empleado {
         this.sueldo = sueldo;
     }
 
+    // Metodo para concatenar todos los datos
     @Override
     public String toString() {
         return "Empleado{" +

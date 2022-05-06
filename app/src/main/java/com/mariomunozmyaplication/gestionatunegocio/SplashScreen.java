@@ -47,6 +47,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 // Aqui indicamos que vaya del Splash al login
                 Intent intent = new Intent(SplashScreen.this, LoginActivity.class); // SPLASHSCREEN --> LOGIN
+                startActivity(intent); // Con esto vamos al siguiente activity indicando con la variable intent
             }
         }, 2500); // Tarda 2500 milisegundos en pasar al siguiente activity
     }

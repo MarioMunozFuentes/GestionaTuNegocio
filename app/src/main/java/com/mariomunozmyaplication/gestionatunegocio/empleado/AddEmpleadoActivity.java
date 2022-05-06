@@ -74,6 +74,7 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_add_empleado);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Asociamos variables
         // Botones
         findViewById(R.id.btnAceptarEmpleado).setOnClickListener(this);
         findViewById(R.id.btnCancelarEmpleado).setOnClickListener(this);
@@ -85,6 +86,7 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
         etDireccionEmpleado = findViewById(R.id.etDireccionEmpleado);
         etnTelefonoEmpleado = findViewById(R.id.etnTelefonoEmpleado);
         etSueldoEmpleado = findViewById(R.id.etSueldoEmpleado);
+        // TextView
         tv_title_addEmpleado = findViewById(R.id.tv_title_addEmpleado);
 
         calendarView = findViewById(R.id.calendarView);

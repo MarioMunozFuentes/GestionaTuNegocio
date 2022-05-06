@@ -2,15 +2,16 @@ package com.mariomunozmyaplication.gestionatunegocio.pedido;
 
 public class Pedido {
 
-
+    // Declaramos variables
     private String imagen;
     private String referencia, nombre;
     private int cantidad;
 
-    public Pedido(){
-
+    //Constructor vacio
+    public Pedido() {
     }
 
+    // Constructor con argumentos
     public Pedido(String imagen, String referencia, String nombre, int cantidad) {
         this.imagen = imagen;
         this.referencia = referencia;
@@ -18,12 +19,14 @@ public class Pedido {
         this.cantidad = cantidad;
     }
 
+    // Constructor con argumentos
     public Pedido(String referencia, String nombre, int cantidad) {
         this.referencia = referencia;
         this.nombre = nombre;
         this.cantidad = cantidad;
     }
 
+    // Metodos GETTER y SETTER
     public String getImagen() {
         return imagen;
     }
@@ -56,8 +59,7 @@ public class Pedido {
         this.cantidad = cantidad;
     }
 
-
-
+    // Metodo para concatenar todos los datos
     @Override
     public String toString() {
         return "Pedido{" +

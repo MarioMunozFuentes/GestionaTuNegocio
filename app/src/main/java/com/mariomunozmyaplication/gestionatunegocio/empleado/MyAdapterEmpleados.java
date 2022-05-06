@@ -17,16 +17,16 @@ import java.util.ArrayList;
 
 public class MyAdapterEmpleados extends RecyclerView.Adapter<MyAdapterEmpleados.MyViewHolder> {
 
-
     public interface OnItemClickListener {
         void onItemClick(String activityName);
     }
 
+    // Declaramos variables
     private ArrayList<Empleado> myDataSet;
     private OnItemClickListener listener;
     private Context context;
 
-
+    // Creamos RecyclerView
     public class MyViewHolder extends RecyclerView.ViewHolder {
         View cardEmpleado;
         ImageView imageView;
@@ -41,45 +41,47 @@ public class MyAdapterEmpleados extends RecyclerView.Adapter<MyAdapterEmpleados.
             cardEmpleado = itemView.findViewById(R.id.cadViewEmpleado);
         }
 
-
-        public void bind(ArrayList<Empleado> empleados, int posicion, final OnItemClickListener listener){
-
+        // Metodo bind
+        public void bind(ArrayList<Empleado> empleados, int posicion, final OnItemClickListener listener) {
             this.nombre.setText(empleados.get(posicion).getNombre());
             this.dni.setText(String.valueOf(empleados.get(posicion).getDni()));
             this.direccion.setText(empleados.get(posicion).getDireccion());
-            if(empleados.get(posicion).getImagenEmpleado() == null){
+            if (empleados.get(posicion).getImagenEmpleado() == null) {
                 this.imageView.setImageResource(R.drawable.ic_persona_foreground);
-            }else{
+            } else {
                 Picasso.get().load(empleados.get(posicion).getImagenEmpleado()).into(imageView);
             }
             cardEmpleado.setOnClickListener(new View.OnClickListener() {
                 @Override
+                // Metodo onClick
                 public void onClick(View v) {
-                   listener.onItemClick(dni.getText().toString());
+                    listener.onItemClick(dni.getText().toString());
                 }
             });
         }
     }
 
-    public MyAdapterEmpleados(ArrayList<Empleado> empleados, OnItemClickListener listener){
+    // Constructor con parametros
+    public MyAdapterEmpleados(ArrayList<Empleado> empleados, OnItemClickListener listener) {
         this.myDataSet = empleados;
         this.listener = listener;
     }
 
+    // Metodo onCreateViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_empleado, parent, false);
         return new MyViewHolder(view);
     }
 
+    // Metodo onBindViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         holder.bind(myDataSet, position, listener);
     }
 
+    // Metodo para saber el tamaño de la lista
     @Override
     public int getItemCount() {
         return myDataSet.size();

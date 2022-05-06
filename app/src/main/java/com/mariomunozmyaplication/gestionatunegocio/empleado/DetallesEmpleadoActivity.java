@@ -25,20 +25,22 @@ import com.mariomunozmyaplication.gestionatunegocio.R;
 
 public class DetallesEmpleadoActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView tv_nombre_InfoEmpleado, tv_apellidos_InfoEmpleado, tv_dni_InfoEmpleado, tv_IBAN_InfoEmpleado, tv_telefono_InfoEmpleado,
-            tv_direccion_InfoEmpleado, tv_fContratacion_InfoEmpleado, tv_sueldoEmpleado_infoEmpleado;
-
+    // Declaramos variables
+    private TextView tv_nombre_InfoEmpleado, tv_apellidos_InfoEmpleado, tv_dni_InfoEmpleado, tv_IBAN_InfoEmpleado,
+            tv_telefono_InfoEmpleado, tv_direccion_InfoEmpleado, tv_fContratacion_InfoEmpleado, tv_sueldoEmpleado_infoEmpleado;
     private ImageView imagenEmpleado;
-
     private Intent intent;
     private AlertDialog dialog = null;
 
+    // Metodo onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalles_empleado);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Asociamos variables
+        // TextView
         tv_nombre_InfoEmpleado = findViewById(R.id.tv_nombre_infoEmpleado);
         tv_apellidos_InfoEmpleado = findViewById(R.id.tv_apellidos_infoEmpleado);
         tv_dni_InfoEmpleado = findViewById(R.id.tv_dni_infoEmpleado);
@@ -49,23 +51,21 @@ public class DetallesEmpleadoActivity extends AppCompatActivity implements View.
         tv_sueldoEmpleado_infoEmpleado = findViewById(R.id.tv_sueldoEmpleado_infoEmpleado);
         imagenEmpleado = findViewById(R.id.imagenDetallesEmpleado);
         imagenEmpleado.setOnClickListener(this);
+        // Botones
         findViewById(R.id.btnEditEmpleado).setOnClickListener(this);
         findViewById(R.id.btnEliminarEmpleado).setOnClickListener(this);
 
         cargarDatos();
-
-
     }
 
-
-    //Cuando pulsamos el botón atres del toolbar
+    // Cuando pulsamos el botón atras del toolbar
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         finish();
         return true;
     }
 
-
+    // Metodo para cargar los datos
     private void cargarDatos() {
         tv_nombre_InfoEmpleado.setText(getIntent().getStringExtra("nombre"));
         tv_apellidos_InfoEmpleado.setText(getIntent().getStringExtra("apellidos"));
@@ -75,23 +75,15 @@ public class DetallesEmpleadoActivity extends AppCompatActivity implements View.
         tv_telefono_InfoEmpleado.setText(String.valueOf(getIntent().getIntExtra("telefono", 0)));
         tv_fContratacion_InfoEmpleado.setText(getIntent().getStringExtra("fContratacion"));
         tv_sueldoEmpleado_infoEmpleado.setText(String.valueOf(getIntent().getFloatExtra("sueldoEmpleado", 0)));
-        if(getIntent().getStringExtra("img") != null){
-            //Ponemos la imagen obtenida desde el enlace en el imageview
+        if (getIntent().getStringExtra("img") != null) {
+            // Ponemos la imagen obtenida desde el enlace en el ImageView
             Picasso.get().load(getIntent().getStringExtra("img")).into(imagenEmpleado);
-        }else{
+        } else {
             imagenEmpleado.setImageResource(R.drawable.ic_persona_foreground);
         }
-
     }
 
-
-//    private void abrirImagen() {
-//        intent = new Intent(DetallesEmpleadoActivity.this, abrirImagenActivity.class);
-//        intent.putExtra("img",getIntent().getStringExtra("img"));
-//        startActivity(intent);
-//
-//    }
-
+    // Metodo onClick
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -103,31 +95,26 @@ public class DetallesEmpleadoActivity extends AppCompatActivity implements View.
                         .putExtra("fContratacion", tv_fContratacion_InfoEmpleado.getText()).putExtra("IBAN", tv_IBAN_InfoEmpleado.getText())
                         .putExtra("telefono", tv_telefono_InfoEmpleado.getText()).putExtra("img", getIntent().getStringExtra("img"))
                         .putExtra("sueldo", tv_sueldoEmpleado_infoEmpleado.getText());
-
                 startActivity(intent);
                 finish();
                 break;
-
             case R.id.btnEliminarEmpleado:
-
-               mostrarAlertConfirmacion();
-
+                mostrarAlertConfirmacion();
                 break;
 
+                // Revisar porque esto se puede quitar yo creo --> no hace nada , sobra
             case R.id.imagenDetallesEmpleado:
-
-                if(getIntent().getStringExtra("img") != null) {
-                   // abrirImagen();
+                if (getIntent().getStringExtra("img") != null) {
+                    // abrirImagen();
                 }
-
                 break;
         }
     }
 
+    // Metodo para eliminar empleado
     private void elimiarEmpleado() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
         Query applesQuery = ref.child(LoginActivity.user.getUid()).child("empleados").orderByChild("dni").equalTo(tv_dni_InfoEmpleado.getText().toString());
-
         applesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -141,35 +128,26 @@ public class DetallesEmpleadoActivity extends AppCompatActivity implements View.
                 Log.e("loge", "onCancelled", databaseError.toException());
             }
         });
-
     }
 
-
+    // Metodo para mostrar alerta de confirmacion
     private void mostrarAlertConfirmacion() {
-
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
         dialogo1.setTitle(R.string.alertCabezeraImportante);
         dialogo1.setMessage(R.string.alertEliminarEmpleado);
         dialogo1.setCancelable(false);
-
-
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 elimiarEmpleado();
                 finish();
-
             }
         });
         dialogo1.setNegativeButton(R.string.btnCancelar, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
             }
         });
         dialog = dialogo1.create();
         dialog.show();
-
     }
-
-
 }
