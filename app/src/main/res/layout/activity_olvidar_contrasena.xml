@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".OlvidarContrasenaActivity">
 
+    <!-- ScrollView contenedor -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <!-- ConstraintLayout contenedor -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
+            <!-- ImageView logo -->
             <ImageView
                 android:id="@+id/imgViewLogo"
                 android:layout_width="130dp"
@@ -25,6 +26,7 @@
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- TextView nombre usuario -->
             <TextView
                 android:id="@+id/tvNombreUser"
                 android:layout_width="wrap_content"
@@ -39,6 +41,7 @@
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
                 app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
 
+            <!-- EditText nombre usuario -->
             <EditText
                 android:id="@+id/etNombreuser1"
                 android:layout_width="376dp"
@@ -54,7 +57,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvNombreUser"
                 tools:ignore="SpeakableTextPresentCheck" />
 
-
+            <!-- TextView contraseña -->
             <TextView
                 android:id="@+id/tvContrasena"
                 android:layout_width="wrap_content"
@@ -68,7 +71,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
                 app:layout_constraintTop_toBottomOf="@+id/etNombreuser1" />
-
+            <!-- EditText contraseña -->
             <EditText
                 android:id="@+id/etPassword1"
                 android:layout_width="376dp"
@@ -84,7 +87,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvContrasena"
                 tools:ignore="SpeakableTextPresentCheck" />
 
-
+            <!-- Boton guardar -->
             <Button
                 android:id="@+id/btGuardar"
                 style="@style/botonVerde"
@@ -94,6 +97,7 @@
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
                 app:layout_constraintTop_toBottomOf="@+id/etPassword1"
                 tools:ignore="TextContrastCheck" />
+            <!-- Boton volver -->
             <Button
                 android:id="@+id/btCancelar"
                 style="@style/botonNegro"
@@ -104,7 +108,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/btGuardar"
                 tools:ignore="TextContrastCheck" />
 
-
+            <!-- Guideline izquierda -->
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/lineaIzd"
                 android:layout_width="wrap_content"
@@ -112,6 +116,7 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.05" />
 
+            <!-- Guideline derecha -->
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/lineaDerecha"
                 android:layout_width="wrap_content"
@@ -120,5 +125,4 @@
                 app:layout_constraintGuide_percent="0.95" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

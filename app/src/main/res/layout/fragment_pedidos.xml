@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.pedidos.PedidosFragment">
+
+    <!-- SwipeRefreshLayout -->
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayoutPedidos"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- RecyclerView pedidos -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPedidos"
             android:layout_width="408dp"
@@ -23,6 +26,5 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

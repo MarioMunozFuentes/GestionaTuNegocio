@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
+    <!-- ImageView fondo -->
     <ImageView
         android:id="@+id/backView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"></ImageView>
 
-    <!--TITULO-->
+    <!-- ImageView logo-->
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="145dp"
@@ -23,6 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 
+    <!-- TextView nombre app -->
     <TextView
         android:id="@+id/Titulo"
         style="@style/tituloapp"
@@ -38,7 +40,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogo" />
-    <!--DESARROLLADOR-->
+
+    <!-- TextView nombre desarrollador 1-->
     <TextView
         android:id="@+id/designer1"
         style="@style/tituloapp"
@@ -54,6 +57,8 @@
         app:layout_constraintBottom_toTopOf="@id/designer2"
         app:layout_constraintEnd_toEndOf="@id/designer2"
         app:layout_constraintStart_toStartOf="@id/designer2" />
+
+    <!-- TextView nombre desarrollador 2-->
     <TextView
         android:id="@+id/designer2"
         style="@style/tituloapp"
@@ -69,5 +74,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

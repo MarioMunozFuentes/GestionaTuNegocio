@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".empleado.AddEmpleadoActivity">
 
+    <!-- LinearLayout contenedor-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- TextView datos empleado -->
         <TextView
             android:id="@+id/tv_title_addEmpleado"
             android:layout_width="373dp"
@@ -24,6 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- TextView foto empleado -->
         <TextView
             android:id="@+id/tv_ImagenEmpleado"
             android:layout_width="wrap_content"
@@ -35,6 +38,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado" />
 
+        <!-- ImageView foto empleado -->
         <ImageView
             android:id="@+id/imagenEmppleado"
             android:layout_width="186dp"
@@ -46,6 +50,7 @@
             app:srcCompat="@drawable/ic_persona_foreground"
             tools:ignore="VectorDrawableCompat" />
 
+        <!-- TextView nombre empleado -->
         <TextView
             android:id="@+id/tv_nombreEmplado"
             android:layout_width="wrap_content"
@@ -57,6 +62,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado" />
 
+        <!-- EditText nombre empleado -->
         <EditText
             android:id="@+id/etNombreEmpleado"
             android:layout_width="match_parent"
@@ -71,6 +77,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado" />
 
+        <!-- TextView apellidos empleado -->
         <TextView
             android:id="@+id/tv_ApellidosEmplado"
             android:layout_width="wrap_content"
@@ -82,6 +89,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
 
+        <!-- EditText apellidos empleado -->
         <EditText
             android:id="@+id/etApellidosEmpleado"
             android:layout_width="match_parent"
@@ -95,7 +103,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado" />
 
-
+        <!-- TextView DNI empleado -->
         <TextView
             android:id="@+id/tv_dniEmpleado"
             android:layout_width="wrap_content"
@@ -107,6 +115,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
+        <!-- EditText DNI empleado -->
         <EditText
             android:id="@+id/etDNIEmpleado"
             android:layout_width="match_parent"
@@ -120,6 +129,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado" />
 
+        <!-- TextView IBAN empleado -->
         <TextView
             android:id="@+id/tv_IBAN"
             android:layout_width="wrap_content"
@@ -131,6 +141,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
+        <!-- EditText IBAN empleado -->
         <EditText
             android:id="@+id/etIBAN"
             android:layout_width="match_parent"
@@ -144,8 +155,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
 
+        <!-- TextView direccion empleado -->
         <TextView
-
             android:id="@+id/tv_direccionEmpleado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -154,9 +165,9 @@
             android:text="@string/tv_direccionEmpleado"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etIBAN"/>
+            app:layout_constraintTop_toBottomOf="@+id/etIBAN" />
 
-
+        <!-- EditText direccion empleado -->
         <EditText
             android:id="@+id/etDireccionEmpleado"
             android:layout_width="match_parent"
@@ -170,6 +181,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_direccionEmpleado" />
 
+        <!-- TextView telefono empleado -->
         <TextView
             android:id="@+id/tv_nTelefonoEmpleado"
             android:layout_width="wrap_content"
@@ -179,8 +191,9 @@
             android:text="@string/tv_nTelefonoEmpleado"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado"/>
+            app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado" />
 
+        <!-- EditText telefono empleado -->
         <EditText
             android:id="@+id/etnTelefonoEmpleado"
             android:layout_width="match_parent"
@@ -194,6 +207,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_nTelefonoEmpleado" />
 
+        <!-- TextView sueldo empleado -->
         <TextView
             android:id="@+id/tv_SueldoEmpleado"
             android:layout_width="wrap_content"
@@ -203,8 +217,9 @@
             android:text="@string/tv_SueldoEmpleado"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado"/>
+            app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado" />
 
+        <!-- EditText sueldo empleado -->
         <EditText
             android:id="@+id/etSueldoEmpleado"
             android:layout_width="match_parent"
@@ -218,6 +233,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_nTelefonoEmpleado" />
 
+        <!-- TextView fecha de contratacion empleado -->
         <TextView
             android:id="@+id/tv_fechaContratacion"
             android:layout_width="wrap_content"
@@ -229,40 +245,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etIBAN" />
 
+        <!-- CalendarView fecha de contraacion empleado-->
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <!-- LinearLayout contenedor de los botones-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+            <!-- Boton aceptar -->
             <Button
-                style="@style/botonNegro"
                 android:id="@+id/btnAceptarEmpleado"
+                style="@style/botonNegro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/btnAceptar"
                 android:background="#0E9209"
-                />
+                android:text="@string/btnAceptar" />
 
-
+            <!-- Boton cancelar -->
             <Button
-                style="@style/botonVerde"
                 android:id="@+id/btnCancelarEmpleado"
+                style="@style/botonVerde"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="190dp"
-                android:layout_marginBottom="20dp"
                 android:layout_marginRight="13dp"
-                android:text="@string/btnCancelar"
+                android:layout_marginBottom="20dp"
                 android:background="#EE3811"
-                />
+                android:text="@string/btnCancelar" />
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

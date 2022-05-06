@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".producto.DetallesProducto">
 
-
+    <!-- TextView informacion producto -->
     <TextView
         android:id="@+id/tv_tittle_InfoProducto"
         android:layout_width="wrap_content"
@@ -21,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- ImageView produco -->
     <ImageView
         android:id="@+id/imageView_Producto"
         android:layout_width="131dp"
@@ -31,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
         app:srcCompat="@drawable/ic_persona_foreground" />
 
-
+    <!-- TextView descripcion producto -->
     <TextView
         android:id="@+id/tv_descipcionProducto"
         android:layout_width="377dp"
@@ -46,8 +47,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioVentaProducto"
-        tools:text="descipción del productoooooooo esto tienen que ser mu largo para comprobar que se acople correctamente" />
+        tools:text="descipción del productoooooooo esto tiene que ser muy largo para comprobar que se acople correctamente" />
 
+    <!-- TextView nombre producto -->
     <TextView
         android:id="@+id/tv_nombreProducto"
         android:layout_width="wrap_content"
@@ -60,6 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
         tools:text="Nombre  del producto" />
 
+    <!-- TextView codigo referencial producto -->
     <TextView
         android:id="@+id/tv_referenciaProducto"
         android:layout_width="wrap_content"
@@ -72,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_nombreProducto"
         tools:text="codigo de referencia" />
 
+    <!-- TextView titulo stock producto -->
     <TextView
         android:id="@+id/tv_titleStockProducto"
         android:layout_width="wrap_content"
@@ -83,6 +87,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
         app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto" />
 
+    <!-- TextView stock producto -->
     <TextView
         android:id="@+id/tv_stockProducto"
         android:layout_width="wrap_content"
@@ -95,6 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto"
         tools:text="230" />
 
+    <!-- TextView titulo precio de coste producto -->
     <TextView
         android:id="@+id/tv_tittlePrecioCosteProducto"
         android:layout_width="wrap_content"
@@ -106,6 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_Producto" />
 
+    <!-- TextView precio de coste producto -->
     <TextView
         android:id="@+id/tv_precioCosteProducto"
         android:layout_width="wrap_content"
@@ -118,6 +125,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView_Producto"
         tools:text="125.5" />
 
+    <!-- TextView titulo precio de venta producto -->
     <TextView
         android:id="@+id/tv_tittlePrecioVentaProducto"
         android:layout_width="wrap_content"
@@ -129,6 +137,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioCosteProducto" />
 
+    <!-- TextView precio de venta producto -->
     <TextView
         android:id="@+id/tv_precioVentaProducto"
         android:layout_width="wrap_content"
@@ -140,9 +149,10 @@
         app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioVentaProducto"
         app:layout_constraintTop_toBottomOf="@+id/tv_precioCosteProducto" />
 
+    <!-- Boton hacer pedido -->
     <Button
-        style="@style/botonVerde"
         android:id="@+id/btnHacerPedido"
+        style="@style/botonVerde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
@@ -151,9 +161,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Boton editar producto -->
     <Button
-        style="@style/botonVerde"
         android:id="@+id/btnModificarProducto"
+        style="@style/botonVerde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
@@ -162,9 +173,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnHacerPedido" />
 
+    <!-- Boton eliminar producto -->
     <Button
-        style="@style/botonNegro"
         android:id="@+id/btnEliminarProducto"
+        style="@style/botonNegro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="21dp"
@@ -172,5 +184,4 @@
         android:text="@string/btnEliminar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

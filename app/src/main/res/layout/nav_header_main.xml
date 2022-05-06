@@ -12,15 +12,17 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+    <!-- ImageView logo -->
     <ImageView
         android:id="@+id/imagenEmpleadoCard"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:contentDescription="TODO"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:scaleType="center"
-        app:srcCompat="@mipmap/iconogestyc_foreground"
-        android:contentDescription="TODO" />
+        app:srcCompat="@mipmap/iconogestyc_foreground" />
 
+    <!-- TextView nombre empresa -->
     <TextView
         android:id="@+id/tvNombreEmpresa"
         android:layout_width="match_parent"
@@ -30,11 +32,11 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp" />
 
+    <!-- TextVIew email usuario -->
     <TextView
         android:id="@+id/tvEmailUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nav_header_subtitle"
         android:textColor="#FAFAFA" />
-
 </LinearLayout>

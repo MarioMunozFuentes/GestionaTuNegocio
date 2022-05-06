@@ -7,6 +7,7 @@
     android:theme="@style/Theme.Gestiona"
     tools:context=".ConfguracionActivity">
 
+    <!-- Guideline izquierda -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineaIzd"
         android:layout_width="wrap_content"
@@ -14,6 +15,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05" />
 
+    <!-- Guideline derecha -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineaDerecha"
         android:layout_width="wrap_content"
@@ -21,17 +23,19 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
+    <!-- ImageView logo -->
     <ImageView
         android:id="@+id/imgViewLogo"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
         android:src="@drawable/logo2"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- TextView XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX__CAMBIAR__XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -45,13 +49,15 @@
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
 
+    <!-- CUADROS DE TEXTO RELLENABLES -->
+    <!-- TextInputLayout email -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilIniciarSesion"
         style="@style/textInputLayout"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
-
+        <!-- EditText email -->
         <EditText
             android:id="@+id/etEmailAcceso"
             style="@style/editText"
@@ -59,18 +65,18 @@
             android:inputType="text"
             android:maxLines="1"
             tools:ignore="SpeakableTextPresentCheck" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- TextInputLayout nueva contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPassword"
         style="@style/textInputLayout"
-        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/tilIniciarSesion">
-
+        app:layout_constraintTop_toBottomOf="@+id/tilIniciarSesion"
+        app:passwordToggleEnabled="true">
+        <!-- EditText nueva contraseña -->
         <EditText
             android:id="@+id/etNewPassword"
             style="@style/editText"
@@ -78,18 +84,18 @@
             android:inputType="textPassword"
             android:maxLines="1"
             tools:ignore="SpeakableTextPresentCheck" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- TextInputLayout confirmar nueva contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPass2"
         style="@style/textInputLayout"
-        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword">
-
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        app:passwordToggleEnabled="true">
+        <!-- EditText confirmar nueva contraseña -->
         <EditText
             android:id="@+id/etConfirmNewPassword"
             style="@style/editText"
@@ -97,16 +103,16 @@
             android:inputType="textPassword"
             android:maxLines="1"
             tools:ignore="SpeakableTextPresentCheck" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- TextInputLayout nombre empresa -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         style="@style/textInputLayout"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/tilPass2">
-
+        <!-- EditText nombre empresa -->
         <EditText
             android:id="@+id/etNombreEmpresa"
             style="@style/editText"
@@ -114,10 +120,9 @@
             android:inputType="textEmailAddress"
             android:maxLines="1"
             tools:ignore="SpeakableTextPresentCheck" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
+    <!-- Boton guardar -->
     <Button
         android:id="@+id/btnSave"
         style="@style/botonVerde"
@@ -128,6 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tilEmail"
         tools:ignore="TextContrastCheck" />
 
+    <!-- Boton cambiar contraseña -->
     <Button
         android:id="@+id/btnCambiarPasswd"
         style="@style/botonNegro"
@@ -135,5 +141,4 @@
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/btnSave" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

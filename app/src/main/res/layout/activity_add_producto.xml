@@ -6,36 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".producto.AddProductoActivity">
 
+    <!-- LinearLayout contenedor-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_title_addProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/tv_title_addProducto"
-        android:textSize="23dp"
+        <!-- TextView datos producto -->
+        <TextView
+            android:id="@+id/tv_title_addProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/tv_title_addProducto"
+            android:textSize="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- TextView foto producto -->
+        <TextView
+            android:id="@+id/tv_ImagenProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/tv_imagenProducto"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado" />
 
-    <TextView
-        android:id="@+id/tv_ImagenProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/tv_imagenProducto"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado" />
-
+        <!-- ImageView foto producto -->
         <ImageView
             android:id="@+id/imagenProducto"
             android:layout_width="186dp"
@@ -47,30 +50,33 @@
             app:srcCompat="@drawable/producto"
             tools:ignore="VectorDrawableCompat" />
 
-    <TextView
-        android:id="@+id/tv_nombreProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/tv_nombre"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado" />
+        <!-- TextView nombre producto -->
+        <TextView
+            android:id="@+id/tv_nombreProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/tv_nombre"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado" />
 
-    <EditText
-        android:id="@+id/etNombreProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado" />
+        <!-- EditText nombre producto -->
+        <EditText
+            android:id="@+id/etNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado" />
 
+        <!-- TextView referencia producto -->
         <TextView
             android:id="@+id/tv_ReferenciaProducto"
             android:layout_width="wrap_content"
@@ -82,6 +88,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
 
+        <!-- EditText referencia producto -->
         <EditText
             android:id="@+id/etReferenciaProducto"
             android:layout_width="match_parent"
@@ -95,80 +102,85 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado" />
 
-
+        <!-- TextView descripcion producto -->
         <TextView
-        android:id="@+id/tv_DescripcionProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="23dp"
-        android:text="@string/tv_DescripcionProducto"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
+            android:id="@+id/tv_DescripcionProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/tv_DescripcionProducto"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
 
-    <EditText
-        android:id="@+id/etDescripcionProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:inputType="text|textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado" />
+        <!-- EditText descripcion producto -->
+        <EditText
+            android:id="@+id/etDescripcionProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:inputType="text|textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado" />
 
+        <!-- TextView stock producto -->
+        <TextView
+            android:id="@+id/tv_stockProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/tv_stockProducto"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
-    <TextView
-        android:id="@+id/tv_stockProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="23dp"
-        android:text="@string/tv_stockProducto"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
+        <!-- EditText stock producto -->
+        <EditText
+            android:id="@+id/etStockProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado" />
 
-    <EditText
-        android:id="@+id/etStockProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado" />
+        <!-- TextView precio producto -->
+        <TextView
+            android:id="@+id/tv_precioProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="21dp"
+            android:text="@string/tv_precioProducto"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
-    <TextView
-        android:id="@+id/tv_precioProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="21dp"
-        android:text="@string/tv_precioProducto"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
+        <!-- EditText precio producto -->
+        <EditText
+            android:id="@+id/etPrecioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
 
-    <EditText
-        android:id="@+id/etPrecioProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
-
+        <!-- TextView precio de venta producto -->
         <TextView
             android:id="@+id/tv_precioVentaProducto"
             android:layout_width="wrap_content"
@@ -180,6 +192,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
+        <!-- EditText precio de venta producto -->
         <EditText
             android:id="@+id/etPrecioVentaProducto"
             android:layout_width="match_parent"
@@ -193,11 +206,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
 
+        <!-- LinearLayout contenedor de los botones-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+            <!-- Boton aceptar -->
             <Button
                 android:id="@+id/btnAceptarProducto"
                 style="@style/botonVerde"
@@ -208,19 +223,17 @@
                 android:background="#0E9209"
                 android:text="@string/btnAceptar" />
 
+            <!-- Boton cancelar -->
             <Button
-                style="@style/botonNegro"
                 android:id="@+id/btnCancelarProducto"
+                style="@style/botonNegro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="190dp"
-                android:layout_marginBottom="20dp"
                 android:layout_marginRight="13dp"
-                android:text="@string/btnCancelar"
-                android:background="#EE3811" />
+                android:layout_marginBottom="20dp"
+                android:background="#EE3811"
+                android:text="@string/btnCancelar" />
         </LinearLayout>
-
-
     </LinearLayout>
-
 </ScrollView>

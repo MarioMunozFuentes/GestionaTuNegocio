@@ -6,32 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!-- CardView producto -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cadViewProducto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:cardElevation="5dp"
-        card_view:cardUseCompatPadding="true"
         card_view:cardCornerRadius="8dp"
-        >
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
 
+        <!-- LinearLayout producto horizontal -->
         <LinearLayout
             android:id="@+id/horizontalLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+            <!-- ImageView foto producto -->
             <ImageView
                 android:id="@+id/imagenProductoCard"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                tools:srcCompat="@drawable/ic_persona_foreground"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                tools:srcCompat="@drawable/ic_persona_foreground" />
 
+            <!-- LinearLayout producto vertical -->
             <LinearLayout
                 android:id="@+id/verticalLayout"
                 android:layout_width="match_parent"
@@ -40,6 +43,7 @@
                 android:orientation="vertical"
                 android:padding="@dimen/cardview_compat_inset_shadow">
 
+                <!-- TextView referencia producto -->
                 <TextView
                     android:id="@+id/tvReferenciaProductoCard"
                     android:layout_width="wrap_content"
@@ -49,6 +53,7 @@
                     android:text="TextView"
                     android:textSize="20dp" />
 
+                <!-- TextView precio venta producto -->
                 <TextView
                     android:id="@+id/tvPrecioVentaProductoCard"
                     android:layout_width="wrap_content"
@@ -58,6 +63,7 @@
                     android:text="TextView"
                     android:textSize="20dp" />
 
+                <!-- TextView nombre producto -->
                 <TextView
                     android:id="@+id/tvnombreProductoCard"
                     android:layout_width="wrap_content"
@@ -69,8 +75,5 @@
                     android:textSize="25dp" />
             </LinearLayout>
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
-
 </LinearLayout>
