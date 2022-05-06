@@ -25,18 +25,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.mariomunozmyaplication.gestionatunegocio.LoginActivity;
+import com.mariomunozmyaplication.gestionatunegocio.MainActivity;
+import com.mariomunozmyaplication.gestionatunegocio.R;
+import com.mariomunozmyaplication.gestionatunegocio.pedido.MyAdapterPedidos;
+import com.mariomunozmyaplication.gestionatunegocio.pedido.Pedido;
+import com.mariomunozmyaplication.gestionatunegocio.producto.Producto;
 
 import java.util.ArrayList;
 
-import  com.mariomunozmyaplication.gestionatunegocio.LoginActivity;
-import  com.mariomunozmyaplication.gestionatunegocio.MainActivity;
-import  com.mariomunozmyaplication.gestionatunegocio.R;
-import  com.mariomunozmyaplication.gestionatunegocio.pedido.MyAdapterPedidos;
-import  com.mariomunozmyaplication.gestionatunegocio.pedido.Pedido;
-import  com.mariomunozmyaplication.gestionatunegocio.producto.Producto;
-
 public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItemClickListener {
 
+    // Declaramos variables
     private RecyclerView rvPedidos;
     private RecyclerView.LayoutManager layoutManager;
     private MyAdapterPedidos adapter;
@@ -48,11 +48,11 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
     private AlertDialog dialog = null;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
+    // Metodo onCreateView
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
         View root = inflater.inflate(R.layout.fragment_pedidos, container, false);
-
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage(getString(R.string.progressDialogCargando));
         progressDialog.setCancelable(false);
@@ -70,9 +70,7 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
         cargarDatos();
 
         progressDialog.show();
-
         swipeRefreshLayout = root.findViewById(R.id.swipeRefreshLayoutPedidos);
-
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -80,8 +78,6 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
                 cargarDatos();
             }
         });
-
-
         return root;
     }
 
@@ -91,59 +87,51 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
         mostrarAlertConfirmacionPedido(producto);
     }
 
+    // Metodo para mostrar alerta de confirmacion del pedido
     private void mostrarAlertConfirmacionPedido(final String prodcuto) {
-
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(getContext());
         dialogo1.setTitle(R.string.alertCabezeraImportante);
         dialogo1.setMessage(R.string.alertPedidoRecibido);
         dialogo1.setCancelable(false);
-
-
         dialogo1.setPositiveButton(R.string.btnSi, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 actualizarStock(prodcuto);
-    
             }
         });
         dialogo1.setNegativeButton(R.string.btnNo, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
             }
         });
         dialog = dialogo1.create();
         dialog.show();
-
     }
 
+    // Metodo para actualizar el stock
     private void actualizarStock(final String producto) {
         final int[] stockActual = {0};
-
-       //Obetenemos el stock actual del producto
+        // Obetenemos el stock actual del producto
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
         Query applesQuery = ref.child(LoginActivity.user.getUid()).child("productos").orderByChild("referencia").equalTo(producto);
-
         applesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot appleSnapshot : dataSnapshot.getChildren()) {
-                   Producto prod = appleSnapshot.getValue(Producto.class);
-                   stockActual[0] = prod.getStock();
-                   //Obtenemos la cantidad de stock del pedido que hemos recibido y lo sumamos al ya disponible
-                    for(Pedido pedido : pedidosList){
-                        if(pedido.getReferencia().equals(producto)){
+                    Producto prod = appleSnapshot.getValue(Producto.class);
+                    stockActual[0] = prod.getStock();
+                    // Obtenemos la cantidad de stock del pedido que hemos recibido y lo sumamos al ya disponible
+                    for (Pedido pedido : pedidosList) {
+                        if (pedido.getReferencia().equals(producto)) {
                             stockActual[0] += pedido.getCantidad();
-
                         }
                     }
-                    //Actualizamos el stock disponible
+                    // Actualizamos el stock disponible
                     prod.setStock(stockActual[0]);
-                    //Lo almacenamos en la base de datos
-                   appleSnapshot.getRef().setValue(prod);
+                    // Lo almacenamos en la base de datos
+                    appleSnapshot.getRef().setValue(prod);
+                    Log.i("loge", "El stock actual es de " + stockActual[0]);
 
-                   Log.i("loge", "El stock actual es de " + stockActual[0]);
-
-                   eliminarPedido(producto);
+                    eliminarPedido(producto);
                 }
             }
 
@@ -152,16 +140,12 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
                 Log.e("loge", "onCancelled", databaseError.toException());
             }
         });
-
-
-
     }
 
+    // Metodo para eliminar producto
     private void eliminarPedido(String referenciaProducto) {
-
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
         Query applesQuery = ref.child(LoginActivity.user.getUid()).child("pedidos").orderByChild("referencia").equalTo(referenciaProducto);
-
         applesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -175,57 +159,46 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
                 Log.e("loge", "onCancelled", databaseError.toException());
             }
         });
-
-
     }
 
-
+    // Metodo para cargar los datos
     private void cargarDatos() {
         reffPedidos.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 pedidosList.removeAll(pedidosList);
-
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     Pedido pedido = ds.getValue(Pedido.class);
                     pedidosList.add(pedido);
-                     Log.i("loge", "CARGAR DATOS PEDIDOS: "  + pedido.toString());
+                    Log.i("loge", "CARGAR DATOS PEDIDOS: " + pedido.toString());
                 }
-
                 adapter = new MyAdapterPedidos(pedidosList, PedidosFragment.this);
                 rvPedidos.setAdapter(adapter);
                 progressDialog.dismiss();
                 swipeRefreshLayout.setRefreshing(false);
-
                 if (pedidosList.size() == 0) {
                     //rvPedidos.setBackgroundResource(R.drawable.empty);
                 } else {
                     rvPedidos.setBackgroundResource(0);
                 }
-
             }
 
+            // Metodo error
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
                 mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorActualizandoStokc);
-
                 Log.i("loge", "Error leyendo lista empleados: " + databaseError.getMessage());
             }
         });
-
-
     }
 
-
-
+    // Metodo onResume
     @Override
     public void onResume() {
         super.onResume();
         MainActivity mainActivity = (MainActivity) getActivity();
-        if (mainActivity != null){
+        if (mainActivity != null) {
             FloatingActionButton fab = mainActivity.findViewById(R.id.fab);
-
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -235,20 +208,19 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
         }
     }
 
+    // Metodo para cerrar la aplicacion
     private void cerrarActivity() {
-
-        //Cerramos la aplicación cuando pulsamos el botón atrás
+        // Cerramos la aplicación cuando pulsamos el botón atrás
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
                 getActivity().finish();
-
             }
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
-
     }
 
+    // Metodo para mostrar alerta
     private void mostrarAlert(int titulo, int mensaje) {
         AlertDialog.Builder dialogoMostrarAlert = new AlertDialog.Builder(getContext());
         dialogoMostrarAlert.setTitle(titulo);
@@ -257,8 +229,5 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
         dialogoMostrarAlert.setPositiveButton(R.string.btnAceptar, null);
 
         dialogoMostrarAlert.show();
-
-
     }
-
 }

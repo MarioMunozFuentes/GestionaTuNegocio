@@ -1,6 +1,4 @@
-
 package com.mariomunozmyaplication.gestionatunegocio.empleado;
-
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -46,7 +44,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 
 public class AddEmpleadoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -331,7 +328,7 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
-    // Metodo para validad el DNI
+    // Metodo para comprobar si el DNI no esta ya registrado
     private void checkDNI() {
         Query productoByReferencia = reff.orderByChild("dni").equalTo(etDNIEmpleado.getText().toString()).limitToFirst(1);
         productoByReferencia.addListenerForSingleValueEvent(new ValueEventListener() {

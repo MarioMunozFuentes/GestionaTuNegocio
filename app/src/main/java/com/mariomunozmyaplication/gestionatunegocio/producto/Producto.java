@@ -2,15 +2,18 @@ package com.mariomunozmyaplication.gestionatunegocio.producto;
 
 public class Producto {
 
+    // Declaramos variables
     private int stock;
     private String imagen;
     private Float precioCoste, precioVenta;
     private String nombre, descripcion, referencia;
 
-    public Producto(){
+    //Constructor vacio
+    public Producto() {
 
     }
 
+    // Constructor con argumentos
     public Producto(String imagen, String referencia, String nombre, String descripcion, int stock, Float precioCoste, Float precioVenta) {
         this.imagen = imagen;
         this.referencia = referencia;
@@ -21,6 +24,7 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
+    // Constructor con argumentos
     public Producto(String referencia, String nombre, String descripcion, int stock, Float precioCoste, Float precioVenta) {
         this.referencia = referencia;
         this.stock = stock;
@@ -30,6 +34,7 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
+    // Metodos GETTER y SETTER
     public String getImagen() {
         return imagen;
     }
@@ -86,8 +91,7 @@ public class Producto {
         this.referencia = referencia;
     }
 
-
-
+    // Metodo para concatenar todos los datos
     @Override
     public String toString() {
         return "Producto{" +

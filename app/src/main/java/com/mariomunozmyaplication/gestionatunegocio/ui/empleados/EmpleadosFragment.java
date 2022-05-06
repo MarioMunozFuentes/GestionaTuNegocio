@@ -44,10 +44,9 @@ public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.On
     private static ProgressDialog progressDialog;
     private SwipeRefreshLayout swipeRefreshLayout;
 
-    // onCreateView
+    // Metodo onCreateView
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
         View root = inflater.inflate(R.layout.fragment_empleados, container, false);
 
         progressDialog = new ProgressDialog(getContext());
@@ -67,9 +66,7 @@ public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.On
         cerrarActivity();
 
         progressDialog.show();
-
         swipeRefreshLayout = root.findViewById(R.id.swipeRefreshLayout);
-
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -77,50 +74,40 @@ public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.On
                 cargarEmpleados();
             }
         });
-
-
         return root;
     }
 
+    // Metodo para cargar los empleados
     private void cargarEmpleados() {
-
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 empleadosList.removeAll(empleadosList);
-
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     Empleado empleado = ds.getValue(Empleado.class);
                     empleadosList.add(empleado);
                     // Log.i("loge", empleado.toString());
                 }
-
                 adapter = new MyAdapterEmpleados(empleadosList, EmpleadosFragment.this);
                 rvEmpleados.setAdapter(adapter);
                 progressDialog.dismiss();
                 swipeRefreshLayout.setRefreshing(false);
-
                 if (empleadosList.size() == 0) {
-                   // rvEmpleados.setBackgroundResource(R.drawable.empty);
+                    // rvEmpleados.setBackgroundResource(R.drawable.empty);
                 } else {
                     rvEmpleados.setBackgroundResource(0);
                 }
-
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
                 Log.i("loge", "Error leyendo lista empleados: " + databaseError.getMessage());
             }
         });
-
-
     }
 
     @Override
     public void onItemClick(String dniRecived) {
-
         intent = new Intent(getActivity(), DetallesEmpleadoActivity.class);
         for (Empleado empleados : empleadosList) {
             if (empleados.getDni().equals(dniRecived)) {
@@ -129,22 +116,18 @@ public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.On
                         .putExtra("fContratacion", empleados.getfContratacion()).putExtra("IBAN", empleados.getIBAN())
                         .putExtra("img", empleados.getImagenEmpleado()).putExtra("telefono", empleados.getnTelefono())
                         .putExtra("sueldoEmpleado", empleados.getSueldo());
-
                 startActivity(intent);
-
             }
         }
     }
 
-
+    // Metodo onResume
     @Override
     public void onResume() {
         super.onResume();
         MainActivity mainActivity = (MainActivity) getActivity();
         if (mainActivity != null) {
             FloatingActionButton fab = mainActivity.findViewById(R.id.fab);
-
-
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -155,19 +138,15 @@ public class EmpleadosFragment extends Fragment implements MyAdapterEmpleados.On
         }
     }
 
+    // Metodo para cerrar la aplicacion
     private void cerrarActivity() {
-
-        //Cerramos la aplicación cuando pulsamos el botón atrás
+        // Cerramos la aplicación cuando pulsamos el botón atrás
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
                 getActivity().finish();
-
             }
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
-
     }
-
-
 }

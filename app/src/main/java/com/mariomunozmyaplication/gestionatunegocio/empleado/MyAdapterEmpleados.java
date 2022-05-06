@@ -52,8 +52,8 @@ public class MyAdapterEmpleados extends RecyclerView.Adapter<MyAdapterEmpleados.
                 Picasso.get().load(empleados.get(posicion).getImagenEmpleado()).into(imageView);
             }
             cardEmpleado.setOnClickListener(new View.OnClickListener() {
-                @Override
                 // Metodo onClick
+                @Override
                 public void onClick(View v) {
                     listener.onItemClick(dni.getText().toString());
                 }
