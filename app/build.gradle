@@ -29,6 +29,7 @@ android {
      */
 }
 
+// Añadimos dependencias para poder acceder a funciones
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 

@@ -216,7 +216,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
             android:text="@string/btnAceptar"
-            app:layout_constraintTop_toBottomOf="@id/etPrecioVentaProducto"/>
+            app:layout_constraintTop_toBottomOf="@id/etPrecioVentaProducto" />
 
         <!-- Boton cancelar -->
         <Button
@@ -228,8 +228,9 @@
             android:layout_marginEnd="10dp"
             android:text="@string/btnCancelar"
             app:layout_constraintTop_toBottomOf="@id/btnAceptarProducto" />
-
-        <!--
+    </LinearLayout>
+</ScrollView>
+    <!--
         <!- LinearLayout contenedor de los botones->
         <LinearLayout
             android:layout_width="match_parent"
@@ -262,7 +263,7 @@
         </LinearLayout>
 
         -->
-    </LinearLayout>
+
 
     <!--
          <Button
@@ -287,4 +288,3 @@
             app:layout_constraintTop_toBottomOf="parent" />
 
     -->
-</ScrollView>
