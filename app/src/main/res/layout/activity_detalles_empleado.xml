@@ -164,27 +164,32 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title_fechaContratacionEmpleado"
         tools:text="521.25" />
 
-    <!-- Boton eliminar empleado -->
-    <Button
-        android:id="@+id/btnEliminarEmpleado"
-        style="@style/botonNegro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="84dp"
-        android:text="@string/btnEliminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_sueldoEmpleado_infoEmpleado" />
-
     <!-- Boton editar empleado -->
     <Button
         android:id="@+id/btnEditEmpleado"
         style="@style/botonVerde"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/btnEditar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_sueldoEmpleado_infoEmpleado" />
+
+    <!-- Boton eliminar empleado -->
+    <Button
+        android:id="@+id/btnEliminarEmpleado"
+        style="@style/botonRojo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/btnEliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditEmpleado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

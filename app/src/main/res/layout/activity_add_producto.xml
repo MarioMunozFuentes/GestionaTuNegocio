@@ -206,34 +206,85 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
 
-        <!-- LinearLayout contenedor de los botones-->
+        <!-- Boton aceptar -->
+        <Button
+            android:id="@+id/btnAceptarProducto"
+            style="@style/botonVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/btnAceptar"
+            app:layout_constraintTop_toBottomOf="@id/etPrecioVentaProducto"/>
+
+        <!-- Boton cancelar -->
+        <Button
+            android:id="@+id/btnCancelarProducto"
+            style="@style/botonNegro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/btnCancelar"
+            app:layout_constraintTop_toBottomOf="@id/btnAceptarProducto" />
+
+        <!--
+        <!- LinearLayout contenedor de los botones->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <!-- Boton aceptar -->
+            <!- Boton aceptar ->
             <Button
                 android:id="@+id/btnAceptarProducto"
                 style="@style/botonVerde"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="20dp"
-                android:background="#0E9209"
                 android:text="@string/btnAceptar" />
 
-            <!-- Boton cancelar -->
+            <!- Boton cancelar ->
             <Button
                 android:id="@+id/btnCancelarProducto"
                 style="@style/botonNegro"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="190dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginBottom="20dp"
-                android:background="#EE3811"
                 android:text="@string/btnCancelar" />
         </LinearLayout>
+
+        -->
     </LinearLayout>
+
+    <!--
+         <Button
+            android:id="@+id/btnAceptarEmpleado"
+            style="@style/botonVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/btnAceptar" />
+
+
+        <Button
+            android:id="@+id/btnCancelarEmpleado"
+            style="@style/botonNegro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/btnCancelar"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    -->
 </ScrollView>

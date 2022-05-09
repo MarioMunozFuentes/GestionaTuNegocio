@@ -251,34 +251,59 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <!-- LinearLayout contenedor de los botones-->
+
+        <Button
+            android:id="@+id/btnAceptarEmpleado"
+            style="@style/botonVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/btnAceptar" />
+
+
+        <Button
+            android:id="@+id/btnCancelarEmpleado"
+            style="@style/botonNegro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/btnCancelar"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+
+<!--
+        <!- LinearLayout contenedor de los botones->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Boton aceptar -->
+            <!- Boton aceptar ->
             <Button
                 android:id="@+id/btnAceptarEmpleado"
-                style="@style/botonNegro"
-                android:layout_width="wrap_content"
+                style="@style/botonVerde"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="#0E9209"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:text="@string/btnAceptar" />
 
-            <!-- Boton cancelar -->
+            <!- Boton cancelar ->
+            <!- REVISAR ESTE BOTON NO APARECE ->
             <Button
                 android:id="@+id/btnCancelarEmpleado"
-                style="@style/botonVerde"
-                android:layout_width="wrap_content"
+                style="@style/botonRojo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="190dp"
-                android:layout_marginRight="13dp"
-                android:layout_marginBottom="20dp"
-                android:background="#EE3811"
-                android:text="@string/btnCancelar" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/btnCancelar"
+                app:layout_constraintTop_toBottomOf="parent" />
         </LinearLayout>
+-->
     </LinearLayout>
 </ScrollView>

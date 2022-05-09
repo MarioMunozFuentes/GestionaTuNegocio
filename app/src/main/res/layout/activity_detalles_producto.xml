@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".producto.DetallesProducto">
 
+
+    <!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".empleado.AddEmpleadoActivity"> -->
+
+
     <!-- TextView informacion producto -->
     <TextView
         android:id="@+id/tv_tittle_InfoProducto"
@@ -149,39 +158,47 @@
         app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioVentaProducto"
         app:layout_constraintTop_toBottomOf="@+id/tv_precioCosteProducto" />
 
+
     <!-- Boton hacer pedido -->
     <Button
         android:id="@+id/btnHacerPedido"
         style="@style/botonVerde"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/btnHacerPedido"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descipcionProducto" />
 
     <!-- Boton editar producto -->
     <Button
         android:id="@+id/btnModificarProducto"
-        style="@style/botonVerde"
-        android:layout_width="wrap_content"
+        style="@style/botonNegro"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/btnEditar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnHacerPedido" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHacerPedido" />
 
     <!-- Boton eliminar producto -->
     <Button
         android:id="@+id/btnEliminarProducto"
-        style="@style/botonNegro"
-        android:layout_width="wrap_content"
+        style="@style/botonRojo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/btnEliminar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarProducto" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
