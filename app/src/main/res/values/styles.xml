@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- TextInputLayout -->
     <style name="textInputLayout">
         <item name="android:textColorHint">@color/Teal</item>
-<!--        cambiar color al escribir en los edit TEXT-->
+        <!-- cambiar color al escribir en los EditText -->
         <item name="android:textColor">@color/Teal4</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">0dp</item>
@@ -17,10 +19,11 @@
         <item name="android:textColorHint">@color/negroApp</item>
         <item name="android:maxLines">1</item>
         <item name="android:textColor">@color/Teal4</item>
-        <item  name="android:background">@color/transparente</item>
+        <item name="android:background">@color/transparente</item>
         <item name="android:textSize">17dp</item>
     </style>
 
+    <!-- Titulo -->
     <style name="estiloTitulo">
         <item name="fontFamily">@font/bebasneueregular</item>
         <item name="android:textColor">@color/verdeApp</item>
@@ -29,6 +32,7 @@
         <item name="android:text">@string/app_name</item>
     </style>
 
+    <!-- Boton Estilo 1 -->
     <style name="botonVerde">
         <item name="android:backgroundTint">@color/Teal</item>
         <item name="cornerRadius">15dp</item>
@@ -40,6 +44,7 @@
         <item name="strokeColor">@color/blancoApp</item>
     </style>
 
+    <!-- Boton inverso al Boton Estilo 1 -->
     <style name="botonNegro" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="alpha">1</item>
         <item name="android:state_pressed">true</item>
@@ -51,19 +56,19 @@
         <item name="strokeColor">@color/Teal4</item>
     </style>
 
+    <!-- Titulo de la aplicacion -->
     <style name="tituloapp">
-        <!--     El color de la sombra-->
+        <!-- El color de la sombra -->
         <item name="android:shadowColor">@color/negroApp</item>
-        <!--     El radio o expansión que queremos-->
+        <!-- El radio o expansión que queremos -->
         <item name="android:shadowRadius">10</item>
-        <!--     El desplazamiento horizontal-->
+        <!-- El desplazamiento horizontal -->
         <item name="android:shadowDx">2</item>
-        <!--     El desplazamiento vertical-->
+        <!-- El desplazamiento vertical -->
         <item name="android:shadowDy">5</item>
-
     </style>
 
-
+    <!-- Temas de la app -->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
