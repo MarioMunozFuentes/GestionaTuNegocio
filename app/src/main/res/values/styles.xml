@@ -20,7 +20,7 @@
         <item name="android:maxLines">1</item>
         <item name="android:textColor">@color/Teal4</item>
         <item name="android:background">@color/transparente</item>
-        <item name="android:textSize">17dp</item>
+        <item name="android:textSize">17sp</item>
     </style>
 
     <!-- Titulo -->
@@ -28,7 +28,7 @@
         <item name="fontFamily">@font/bebasneueregular</item>
         <item name="android:textColor">@color/verdeApp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">60dp</item>
+        <item name="android:textSize">60sp</item>
         <item name="android:text">@string/app_name</item>
     </style>
 
@@ -49,12 +49,25 @@
         <item name="alpha">1</item>
         <item name="android:state_pressed">true</item>
         <item name="cornerRadius">15dp</item>
+        <item name="android:textColor">@color/Teal</item>
+        <item name="fontFamily">@font/aeonikbold</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="strokeColor">@color/Teal</item>
+    </style>
+    <!-- Boton inverso al Boton Estilo 1 -->
+    <!--
+         <style name="botonNegro" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="alpha">1</item>
+        <item name="android:state_pressed">true</item>
+        <item name="cornerRadius">15dp</item>
         <item name="android:textColor">@color/Teal4</item>
         <item name="fontFamily">@font/aeonikbold</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="strokeColor">@color/Teal4</item>
     </style>
+     -->
 
     <!-- Boton rojo -->
     <style name="botonRojo" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -71,7 +84,7 @@
     <!-- Titulo de la aplicacion -->
     <style name="tituloapp">
         <!-- El color de la sombra -->
-        <item name="android:shadowColor">@color/negroApp</item>
+        <!--<item name="android:shadowColor">@color/negroApp</item> -->
         <!-- El radio o expansión que queremos -->
         <item name="android:shadowRadius">10</item>
         <!-- El desplazamiento horizontal -->
