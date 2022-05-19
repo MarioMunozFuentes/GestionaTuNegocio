@@ -47,31 +47,31 @@
         style="@style/tituloapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
-        android:text="By Asier Aranda"
-        android:textColor="@color/Teal"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/designer2"
-        app:layout_constraintEnd_toEndOf="@id/designer2"
-        app:layout_constraintStart_toStartOf="@id/designer2" />
-
-    <!-- TextView nombre desarrollador 2-->
-    <TextView
-        android:id="@+id/designer2"
-        style="@style/tituloapp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="@font/montserrat"
-        android:gravity="center"
-        android:text=" &amp; Mario Muñoz"
-        android:textColor="@color/Teal"
-        android:textSize="30sp"
+        android:text="Asier Aranda &amp; Mario Muñoz"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+
+<!--    &lt;!&ndash; TextView nombre desarrollador 2&ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/designer2"-->
+<!--        style="@style/tituloapp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="100dp"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:gravity="center"-->
+<!--        android:text=" &amp; Mario Muñoz"-->
+<!--        android:textColor="@color/Teal"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
