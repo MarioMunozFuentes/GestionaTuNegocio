@@ -37,7 +37,7 @@
 
     <!-- TextView Modificar Datos-->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvDatosContacto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -58,11 +58,11 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/ic_info_foreground"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDatosContacto"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/tvDatosContacto"
+        app:layout_constraintTop_toTopOf="@+id/tvDatosContacto"
         app:layout_constraintVertical_bias="0.0"></ImageView>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -70,7 +70,7 @@
         style="@style/textInputLayout"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosContacto">
         <!-- EditText email -->
         <EditText
             android:id="@+id/etEmailAcceso"

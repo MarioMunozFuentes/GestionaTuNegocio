@@ -36,13 +36,5 @@
             app:destination="@id/nav_home" />
     </fragment>
 
-    <!--    <fragment-->
-    <!--        android:id="@+id/nav_datos"-->
-    <!--        android:name="com.mariomunozmyaplication.gestionatunegocio.ui.DatosFragment"-->
-    <!--        android:label="@string/menu_empleados"-->
-    <!--        tools:layout="@layout/fragment_empleados" >-->
-    <!--        <action-->
-    <!--            android:id="@+id/action_nav_slideshow_to_nav_home"-->
-    <!--            app:destination="@id/nav_home" />-->
-    <!--    </fragment>-->
+
 </navigation>

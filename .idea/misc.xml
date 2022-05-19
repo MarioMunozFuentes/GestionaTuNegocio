@@ -3,14 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1725" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1725" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/drawable/side_nav_bar.xml" value="0.1325" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_add_empleado.xml" value="0.25" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_confguracion.xml" value="0.33" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_contactos.xml" value="0.35507246376811596" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_detalles_producto.xml" value="0.33" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_login.xml" value="0.17831813576494426" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_olvidar_contrasena.xml" value="0.33" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/card_empleado.xml" value="0.36666666666666664" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/content_main.xml" value="0.17831813576494426" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/drawer_toolbar.xml" value="0.17831813576494426" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/fragment_contactos.xml" value="0.33967391304347827" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/fragment_datos.xml" value="0.3104166666666667" />
@@ -19,6 +25,7 @@
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/fragment_productos.xml" value="0.29981884057971014" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/layout/nav_header_main.xml" value="0.33" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/menu/activity_main_drawer.xml" value="0.36102564102564105" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/GestionaTuNegocio/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

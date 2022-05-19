@@ -119,8 +119,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 drawer.closeDrawers();
                 return true;
             case R.id.nav_contacto:
-                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_contacto);
-                drawer.closeDrawers();
+                intent = new Intent(MainActivity.this, ContactosActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.nav_logout:
                 LoginActivity.auth.signOut();

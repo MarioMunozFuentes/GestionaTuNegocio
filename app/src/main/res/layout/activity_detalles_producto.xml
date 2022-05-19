@@ -10,195 +10,195 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!-- TextView informacion producto -->
-        <TextView
-            android:id="@+id/tv_tittle_InfoProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="111dp"
-            android:text="@string/tv_tittle_InfoProducto"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <!-- ImageView produco -->
-        <ImageView
-            android:id="@+id/imageView_Producto"
-            android:layout_width="131dp"
-            android:layout_height="135dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="25dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
-            app:srcCompat="@drawable/ic_persona_foreground" />
-
-        <!-- TextView descripcion producto -->
-        <TextView
-            android:id="@+id/tv_descipcionProducto"
-            android:layout_width="377dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="13dp"
-            android:scrollbars="vertical"
-            android:text="TextView"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioVentaProducto"
-            tools:text="descipción del productoooooooo esto tiene que ser muy largo para comprobar que se acople correctamente" />
-
-        <!-- TextView nombre producto -->
-        <TextView
-            android:id="@+id/tv_nombreProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="24dp"
-            android:text="TextView"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
-            tools:text="Nombre  del producto" />
-
-        <!-- TextView codigo referencial producto -->
-        <TextView
-            android:id="@+id/tv_referenciaProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="23dp"
-            android:text="TextView"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nombreProducto"
-            tools:text="codigo de referencia" />
-
-        <!-- TextView titulo stock producto -->
-        <TextView
-            android:id="@+id/tv_titleStockProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/tv_titleStockProducto"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto" />
-
-        <!-- TextView stock producto -->
-        <TextView
-            android:id="@+id/tv_stockProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="32dp"
-            android:text="TextView"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_titleStockProducto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto"
-            tools:text="230" />
-
-        <!-- TextView titulo precio de coste producto -->
-        <TextView
-            android:id="@+id/tv_tittlePrecioCosteProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="33dp"
-            android:text="@string/tv_tittlePrecioCosteProducto"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView_Producto" />
-
-        <!-- TextView precio de coste producto -->
-        <TextView
-            android:id="@+id/tv_precioCosteProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="33dp"
-            android:text="TextView"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioCosteProducto"
-            app:layout_constraintTop_toBottomOf="@+id/imageView_Producto"
-            tools:text="125.5" />
-
-        <!-- TextView titulo precio de venta producto -->
-        <TextView
-            android:id="@+id/tv_tittlePrecioVentaProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="21dp"
-            android:text="@string/tv_tittlePrecioVentaProducto"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioCosteProducto" />
-
-        <!-- TextView precio de venta producto -->
-        <TextView
-            android:id="@+id/tv_precioVentaProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="21dp"
-            android:text="230"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioVentaProducto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_precioCosteProducto" />
-
-
-        <!-- Boton hacer pedido -->
-        <Button
-            android:id="@+id/btnHacerPedido"
-            style="@style/botonVerde"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/btnHacerPedido"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_descipcionProducto" />
+            android:layout_height="wrap_content">
 
-        <!-- Boton editar producto -->
-        <Button
-            android:id="@+id/btnModificarProducto"
-            style="@style/botonInverso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/btnEditar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnHacerPedido" />
+            <!-- TextView informacion producto -->
+            <TextView
+                android:id="@+id/tv_tittle_InfoProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="111dp"
+                android:text="@string/tv_tittle_InfoProducto"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Boton eliminar producto -->
-        <Button
-            android:id="@+id/btnEliminarProducto"
-            style="@style/botonRojo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/btnEliminar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnModificarProducto" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <!-- ImageView produco -->
+            <ImageView
+                android:id="@+id/imageView_Producto"
+                android:layout_width="131dp"
+                android:layout_height="135dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
+                app:srcCompat="@drawable/ic_persona_foreground" />
+
+            <!-- TextView descripcion producto -->
+            <TextView
+                android:id="@+id/tv_descipcionProducto"
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="13dp"
+                android:scrollbars="vertical"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioVentaProducto"
+                tools:text="descipción del productoooooooo esto tiene que ser muy largo para comprobar que se acople correctamente" />
+
+            <!-- TextView nombre producto -->
+            <TextView
+                android:id="@+id/tv_nombreProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tittle_InfoProducto"
+                tools:text="Nombre  del producto" />
+
+            <!-- TextView codigo referencial producto -->
+            <TextView
+                android:id="@+id/tv_referenciaProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="23dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombreProducto"
+                tools:text="codigo de referencia" />
+
+            <!-- TextView titulo stock producto -->
+            <TextView
+                android:id="@+id/tv_titleStockProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/tv_titleStockProducto"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto" />
+
+            <!-- TextView stock producto -->
+            <TextView
+                android:id="@+id/tv_stockProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="32dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_titleStockProducto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_referenciaProducto"
+                tools:text="230" />
+
+            <!-- TextView titulo precio de coste producto -->
+            <TextView
+                android:id="@+id/tv_tittlePrecioCosteProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="33dp"
+                android:text="@string/tv_tittlePrecioCosteProducto"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_Producto" />
+
+            <!-- TextView precio de coste producto -->
+            <TextView
+                android:id="@+id/tv_precioCosteProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="33dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioCosteProducto"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_Producto"
+                tools:text="125.5" />
+
+            <!-- TextView titulo precio de venta producto -->
+            <TextView
+                android:id="@+id/tv_tittlePrecioVentaProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="21dp"
+                android:text="@string/tv_tittlePrecioVentaProducto"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioCosteProducto" />
+
+            <!-- TextView precio de venta producto -->
+            <TextView
+                android:id="@+id/tv_precioVentaProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="21dp"
+                android:text="230"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioVentaProducto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_precioCosteProducto" />
+
+
+            <!-- Boton hacer pedido -->
+            <Button
+                android:id="@+id/btnHacerPedido"
+                style="@style/botonVerde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/btnHacerPedido"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_descipcionProducto" />
+
+            <!-- Boton editar producto -->
+            <Button
+                android:id="@+id/btnModificarProducto"
+                style="@style/botonInverso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/btnEditar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnHacerPedido" />
+
+            <!-- Boton eliminar producto -->
+            <Button
+                android:id="@+id/btnEliminarProducto"
+                style="@style/botonRojo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/btnEliminar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnModificarProducto" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

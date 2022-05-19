@@ -38,7 +38,7 @@ public class MyAdapterEmpleados extends RecyclerView.Adapter<MyAdapterEmpleados.
             dni = itemView.findViewById(R.id.tvDNIEmpleadoCard);
             direccion = itemView.findViewById(R.id.tvDireccionEmpleadoCard);
             nombre = itemView.findViewById(R.id.tvnombreEmpleadoCard);
-            cardEmpleado = itemView.findViewById(R.id.cadViewEmpleado);
+            cardEmpleado = itemView.findViewById(R.id.cadViewEmpleado1);
         }
 
         // Metodo bind
