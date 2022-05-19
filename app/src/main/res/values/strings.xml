@@ -77,23 +77,23 @@
     <string name="alertEliminarEmpleado">¿Estás seguro que deseas eliminar el empleado?</string>
     <string name="alertErrorEmpleadoExistente">Ya hay un empleado registrado con ese DNI .</string>
     <string name="alertErrorProductoExistente">Ya hay un producto con ese código de referencia.</string>
-    <string name="alertEliminarProducto">Are you sure you want to delete the product?</string>
-    <string name="alertIntroducirCantidadAPedir">How many do you want to order?</string>
-    <string name="alertPedidoRecibido">Have you received the order of the product?</string>
-    <string name="alertErrorActualizandoStokc">The product stock could not be updated. Try it again later</string>
-    <string name="alertErrorCreandoEmpleado">Could not create employee, please try again later</string>
-    <string name="alertHacerPedido">To order, go to the details of the product you want to order</string>
-    <string name="alertCabezeraPermisosDesactivados">Disabled permissions</string>
-    <string name="alertPermisosDesactivados">Grant permissions for proper operation</string>
+    <string name="alertEliminarProducto">¿Estás seguro que deseas eliminar el producto?</string>
+    <string name="alertIntroducirCantidadAPedir">¿Cuantos productos quieres pedir?</string>
+    <string name="alertPedidoRecibido">¿Has recibido la petición de pedido?</string>
+    <string name="alertErrorActualizandoStokc">El stock del producto no se ha podido actualizar. Intentelo de nuevo más tarde</string>
+    <string name="alertErrorCreandoEmpleado">No se ha podido crear un empleado, por favor intentelo más tarde</string>
+    <string name="alertHacerPedido">Para hacer un pedido, Ve a los detalles del producto del que quiera hacer un pedido</string>
+    <string name="alertCabezeraPermisosDesactivados">Permisos desactivados</string>
+    <string name="alertPermisosDesactivados">Otorgar permisos para su correcto funcionamiento</string>
     <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!--    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>-->
     <!-- Textos Progress Dialog -->
-    <string name="progressDialogActualizarDatos">Updating data</string>
-    <string name="progressDialogCargando">Loading...</string>
-    <string name="progressDialogCreandoEmpleado">Creating employee ...</string>
-    <string name="progressDialogModificandoEmpleado">Modifying employee ...</string>
-    <string name="progressDialogCreandoProducto">Creating product ...</string>
-    <string name="progressDialogmodificandoProducto">Modifying product ...</string>
+    <string name="progressDialogActualizarDatos">Actualizando datos..</string>
+    <string name="progressDialogCargando">Cargando...</string>
+    <string name="progressDialogCreandoEmpleado">Creando empleado ...</string>
+    <string name="progressDialogModificandoEmpleado">Modificando empleado ...</string>
+    <string name="progressDialogCreandoProducto">Creando producto ...</string>
+    <string name="progressDialogmodificandoProducto">Modificando producto ...</string>
 
     <!-- Textos añadir empleado -->
     <array name="opcionesMenuFoto">
@@ -105,47 +105,47 @@
 
     <!-- Textos añadir productos -->
 
-    <string name="tvNombreEmpresa">Company name:</string>
-    <string name="tvEmailAcceso">Access email:</string>
-    <string name="tvContrasenaNueva">Enter the new password:</string>
-    <string name="tvContrasenaActualConfirmada">Confirm the new password:</string>
-    <string name="tvOlvidasteContrasena"><u> Forgot your password? Click here </u></string>
-    <string name="nav_header_title">Manage your business</string>
-    <string name="action_settings">Settings</string>
-    <string name="menu_home">Products</string>
-    <string name="menu_pedidos">Orders</string>
-    <string name="menu_empleados">Employees</string>
-    <string name="menu_logout">Exit</string>
-    <string name="tv_title_addEmpleado">Details of the new employee:</string>
-    <string name="tv_title_ModifyEmpleado">Employee details:</string>
-    <string name="tv_nombre">Enter the name:</string>
-    <string name="tv_apellidos">Enter the last names:</string>
-    <string name="tv_IBAN">Enter the IBAN of the bank account:</string>
-    <string name="tv_fContratacion">Hiring date:</string>
-    <string name="tv_title_fechaContratacionEmpleado">Hiring date:</string>
-    <string name="tv_imagenEmpleado">Employee photo:</string>
-    <string name="tv_direccionEmpleado">Address:</string>
-    <string name="tv_nTelefonoEmpleado">Phone number:</string>
-    <string name="tv_dniEmpleado">Enter your DNI:</string>
-    <string name="cabezeraMenuFoto">Select an option:</string>
-    <string name="tv_tittle_InfoEmpleado">Employee information:</string>
-    <string name="tv_tittle_InfoProducto">Product Information:</string>
-    <string name="tv_titleStockProducto">Available stock:</string>
-    <string name="tv_tittlePrecioCosteProducto">Cost price:</string>
-    <string name="tv_tittlePrecioVentaProducto">Sale price:</string>
-    <string name="tv_title_addProducto">Data of the new product:</string>
-    <string name="tv_title_ModifyProducto">Product dates:</string>
-    <string name="tv_imagenProducto">Product image:</string>
-    <string name="tv_DescripcionProducto">Enter the product description:</string>
-    <string name="tv_stockProducto">Enter the available stock:</string>
-    <string name="tv_precioProducto">Enter the price you bought it for:</string>
-    <string name="tv_precioVentaProducto">Enter the sale price:</string>
-    <string name="tv_ReferenciaProducto">Enter the product reference:</string>
-    <string name="tv_SueldoEmpleado">Employee salary:</string>
-    <string name="tv_title_sueldo">Salary:</string>
+    <string name="tvNombreEmpresa">Nombre empresa:</string>
+    <string name="tvEmailAcceso">Email de acceso:</string>
+    <string name="tvContrasenaNueva">Nueva contraseña:</string>
+    <string name="tvContrasenaActualConfirmada">Confirmar nueva contraseña:</string>
+    <string name="tvOlvidasteContrasena"><u> ¿Olvidaste contraseña? Haga click aquí </u></string>
+    <string name="nav_header_title">Gestiona tu negocio</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="menu_home">Productos</string>
+    <string name="menu_pedidos">Pedidos</string>
+    <string name="menu_empleados">Empleados</string>
+    <string name="menu_logout">Salir</string>
+    <string name="tv_title_addEmpleado">Detalles nuevo empleado:</string>
+    <string name="tv_title_ModifyEmpleado">Detalles Empleado:</string>
+    <string name="tv_nombre">Nombre:</string>
+    <string name="tv_apellidos">Apellido/s:</string>
+    <string name="tv_IBAN">IBAN cuenta de banco:</string>
+    <string name="tv_fContratacion">Fecha de contratación:</string>
+    <string name="tv_title_fechaContratacionEmpleado">Fecha de contratación:</string>
+    <string name="tv_imagenEmpleado">Foto empleado:</string>
+    <string name="tv_direccionEmpleado">Dirección:</string>
+    <string name="tv_nTelefonoEmpleado">Número Telefono:</string>
+    <string name="tv_dniEmpleado">DNI:</string>
+    <string name="cabezeraMenuFoto">Selecciona una opción:</string>
+    <string name="tv_tittle_InfoEmpleado">Información de Empleado:</string>
+    <string name="tv_tittle_InfoProducto">Información de Producto:</string>
+    <string name="tv_titleStockProducto">Stock disponible:</string>
+    <string name="tv_tittlePrecioCosteProducto">Precio de coste:</string>
+    <string name="tv_tittlePrecioVentaProducto">Precio de venta:</string>
+    <string name="tv_title_addProducto">Datos de nuevo producto:</string>
+    <string name="tv_title_ModifyProducto">Datos de producto:</string>
+    <string name="tv_imagenProducto">Imagen Producto:</string>
+    <string name="tv_DescripcionProducto">Descripción de producto:</string>
+    <string name="tv_stockProducto">Stock disponible</string>
+    <string name="tv_precioProducto">Precio que pagaste:</string>
+    <string name="tv_precioVentaProducto">Precio de venta:</string>
+    <string name="tv_ReferenciaProducto">Referencia del producto:</string>
+    <string name="tv_SueldoEmpleado">Salario empleado:</string>
+    <string name="tv_title_sueldo">Salario:</string>
 
 
-    <string name="toastPermisionsDimiss">You don"'"t have the necessary permissions</string>
+    <string name="toastPermisionsDimiss">Tu no tienes los permisos necesarios</string>
 
 
 </resources>
