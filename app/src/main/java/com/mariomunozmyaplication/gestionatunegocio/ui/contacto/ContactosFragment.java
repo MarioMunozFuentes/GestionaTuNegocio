@@ -10,11 +10,6 @@ import android.view.ViewGroup;
 
 import com.mariomunozmyaplication.gestionatunegocio.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ContactosFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ContactosFragment extends Fragment {
 
     public ContactosFragment() {
