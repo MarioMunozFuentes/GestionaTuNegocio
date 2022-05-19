@@ -112,7 +112,7 @@
     <!-- Boton registrarse -->
     <Button
         android:id="@+id/btnRegistrarse"
-        style="@style/botonNegro"
+        style="@style/botonInverso"
         android:text="Registrarse"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"

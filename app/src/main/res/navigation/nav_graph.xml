@@ -8,12 +8,12 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="dam.android.carlos.gestionatunegocio.ui.productos.ProductosFragment"
+        android:name="com.mariomunozmyaplication.gestionatunegocio.ui.productos.ProductosFragment"
 
         tools:layout="@layout/fragment_productos"/>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="dam.android.carlos.gestionatunegocio.ui.pedidos.PedidosFragment"
+        android:name="com.mariomunozmyaplication.gestionatunegocio.ui.pedidos.PedidosFragment"
 
         tools:layout="@layout/fragment_pedidos">
         <action

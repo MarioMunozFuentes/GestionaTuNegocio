@@ -116,7 +116,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void accederRegistrarUsuario() {
         intent = new Intent(this, RegistroActivity.class);
         startActivity(intent);
-        finish();
     }
 
     public boolean isNetworkAviable() {

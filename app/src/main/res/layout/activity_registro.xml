@@ -136,7 +136,7 @@
     <!-- Boton volver al login -->
     <Button
         android:id="@+id/btnCancelar"
-        style="@style/botonNegro"
+        style="@style/botonInverso"
         android:text="Volver al Login"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"

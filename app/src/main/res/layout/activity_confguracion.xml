@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- TextView XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX__CAMBIAR__XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <!-- TextView Modificar Datos-->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -43,14 +43,28 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/aeonikbold"
         android:gravity="start"
-        android:text="Cambio Contraseña"
+        android:text="Modificar Datos"
         android:textColor="@color/Teal"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
 
+
     <!-- CUADROS DE TEXTO RELLENABLES -->
     <!-- TextInputLayout email -->
+
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_info_foreground"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"></ImageView>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilIniciarSesion"
         style="@style/textInputLayout"
@@ -136,7 +150,7 @@
     <!-- Boton cambiar contraseña -->
     <Button
         android:id="@+id/btnCambiarPasswd"
-        style="@style/botonNegro"
+        style="@style/botonInverso"
         android:text="Cambiar Contraseña"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"

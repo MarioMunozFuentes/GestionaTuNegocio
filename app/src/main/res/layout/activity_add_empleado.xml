@@ -265,7 +265,7 @@
         <!-- Boton cancelar -->
         <Button
             android:id="@+id/btnCancelarEmpleado"
-            style="@style/botonNegro"
+            style="@style/botonInverso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"

@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Gestyc</string>
-    <string name="open" translatable="false">open</string>
-    <string name="close" translatable="false">close</string>
+    <string name="app_name">Gesty</string>
+    <string name="open" translatable="false">abrir</string>
+    <string name="close" translatable="false">cerrar</string>
     <string name="fondo" translatable="false">fondo</string>
     <string name="perfil" translatable="false">Perfil</string>
     <string name="nombre_de_usuario" translatable="false">Nombre</string>
@@ -26,57 +26,57 @@
     <string name="contacto">Contacto</string>
     <string name="salir" translatable="false">Salir</string>
 
-    <string name="settings" translatable="false">Settings</string>
+    <string name="settings" translatable="false">Ajustes</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
 
     <!--    f-->
     <!--    <string name="app_name">Manage your business</string>-->
     <string name="etEmail">"Email: "</string>
     <string name="etPassword">"Password: "</string>
-    <string name="etRepitePassword">Enter the password again:</string>
+    <string name="etRepitePassword">Repita la contraseña:</string>
     <!-- Texto Botones -->
-    <string name="btnAcceder">Access</string>
-    <string name="btnRegistrarse">Register</string>
-    <string name="etNombreEmpresa">Name of your company:</string>
-    <string name="btnCancelar">Cancel</string>
-    <string name="btnAceptar">Accept</string>
-    <string name="btnSave">Save</string>
-    <string name="btnAtras">Back</string>
-    <string name="btnCambiarPasswd">Change Password</string>
-    <string name="btnCambiarEmail">Change Email</string>
-    <string name="btnEditar">Edit</string>
-    <string name="btnEliminar">Delete</string>
-    <string name="btnHacerPedido">Order</string>
-    <string name="btnSi">Yes</string>
+    <string name="btnAcceder">Acceder</string>
+    <string name="btnRegistrarse">Registro</string>
+    <string name="etNombreEmpresa">Nombre de la Empresa:</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="btnSave">Guardar</string>
+    <string name="btnAtras">Volver</string>
+    <string name="btnCambiarPasswd">Cambiar Contraseña</string>
+    <string name="btnCambiarEmail">Cambiar Email</string>
+    <string name="btnEditar">Editar</string>
+    <string name="btnEliminar">Eliminar</string>
+    <string name="btnHacerPedido">Hacer Pedido</string>
+    <string name="btnSi">Si</string>
     <string name="btnNo" translatable="false">No</string>
 
 
     <!-- Mensajes de Alert -->
-    <string name="alertCabezeraImportante">"Important: "</string>
+    <string name="alertCabezeraImportante">"Importante: "</string>
     <string name="alertCabezeraError" translatable="false">ERROR: </string>
-    <string name="alertPasswdLong">The password must have 6 characters</string>
-    <string name="alertPasswdNoCoinciden">Passwords do not match</string>
-    <string name="alertErrorCreandoUsuario">Error during registration. Try again</string>
+    <string name="alertPasswdLong">La contraseña debe tener 6 caracteres mínimo</string>
+    <string name="alertPasswdNoCoinciden">Contraseñas no coinciden</string>
+    <string name="alertErrorCreandoUsuario">Error durante el registro. Intente de nuevo</string>
     <string name="title_activity_main" translatable="false">MainActivity</string>
-    <string name="alertErrorActualizarUsuario">Error updating user</string>
-    <string name="alertErrorCampoVacio">The field is empty</string>
-    <string name="alertErrorIntroduceDatosCampos">Enter information in all fields</string>
-    <string name="alertUsuarioCreado">User created</string>
-    <string name="alertErrorFormatoEmail">The email format is not valid</string>
-    <string name="alertErrorLogin">Wrong username and / or password</string>
-    <string name="alertErrorUsuarioYaExiste">This user already exists. Check the entered email</string>
-    <string name="alertUsuarioActualizado">Updated user</string>
-    <string name="alertIntroducirPassword">Enter your current password:</string>
-    <string name="alertRecuperarContrasena">Enter your email:</string>
-    <string name="alertEmailEnviado">E-mail sent. Check your email</string>
-    <string name="alertErrorEnviarEmail">Check the email address entered</string>
-    <string name="alertErrorIBAN">The entered IBAN is not correct</string>
-    <string name="alertErrorNTel">The phone number entered is invalid</string>
-    <string name="alertErrorDNI">The DNI entered is not valid</string>
-    <string name="alertErrorNetwork">There is no Internet conection</string>
-    <string name="alertEliminarEmpleado">Are you sure you want to eliminate the employee?</string>
-    <string name="alertErrorEmpleadoExistente">There is already an employee with that DNI registered.</string>
-    <string name="alertErrorProductoExistente">There is already a product with that reference code.</string>
+    <string name="alertErrorActualizarUsuario">Error actualizando usuario</string>
+    <string name="alertErrorCampoVacio">El campo está vacío</string>
+    <string name="alertErrorIntroduceDatosCampos">Introduce toda la información en los campos</string>
+    <string name="alertUsuarioCreado">Usuario Creado</string>
+    <string name="alertErrorFormatoEmail">El formato de email no es correcto</string>
+    <string name="alertErrorLogin">Usuario y / o contraseña erróneo</string>
+    <string name="alertErrorUsuarioYaExiste">Este usuario ya existe. Revise el email introducido</string>
+    <string name="alertUsuarioActualizado">Usuario actualizado</string>
+    <string name="alertIntroducirPassword">Contraseña actual:</string>
+    <string name="alertRecuperarContrasena">Email:</string>
+    <string name="alertEmailEnviado">Email enviado. Revise su email</string>
+    <string name="alertErrorEnviarEmail">Revisa el email introducido</string>
+    <string name="alertErrorIBAN">el IBAN introducido no es válido</string>
+    <string name="alertErrorNTel">El teléfono introducido no es válido</string>
+    <string name="alertErrorDNI">El DNI introducido no es válido</string>
+    <string name="alertErrorNetwork">No hay conexión a internet</string>
+    <string name="alertEliminarEmpleado">¿Estás seguro que deseas eliminar el empleado?</string>
+    <string name="alertErrorEmpleadoExistente">Ya hay un empleado registrado con ese DNI .</string>
+    <string name="alertErrorProductoExistente">Ya hay un producto con ese código de referencia.</string>
     <string name="alertEliminarProducto">Are you sure you want to delete the product?</string>
     <string name="alertIntroducirCantidadAPedir">How many do you want to order?</string>
     <string name="alertPedidoRecibido">Have you received the order of the product?</string>

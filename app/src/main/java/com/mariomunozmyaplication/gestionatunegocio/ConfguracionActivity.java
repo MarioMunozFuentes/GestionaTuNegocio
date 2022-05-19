@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -21,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException;
@@ -73,7 +76,36 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         comprobarFormatoPassword(etConfirmNewPassword);
         comprobarFormatoEmail();
         alertDialogVisible = false;
+
+
+        ImageView button = (ImageView) findViewById(R.id.info);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAlertDialogButtonClicked(ConfguracionActivity.this);
+            }
+        });
+
     }
+    public void showAlertDialogButtonClicked(ConfguracionActivity Configuration){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Información");//TITULO
+        builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste. \n"+"\n" +
+                "Para cambiar contraseña pulse en 'CAMBIAR CONTRASEÑA' y desbloquearas los campos.");//MENSAJITO
+        builder.setIcon(R.drawable.information);//ICONO
+        builder.setCancelable(false);
+        builder.setNeutralButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog=builder.create();
+        dialog.show();
+    }
+
+
 
     // Cuando pulsamos el botón atres del toolbar
     @Override
