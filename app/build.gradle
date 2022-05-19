@@ -13,6 +13,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnable true
     }
 
     buildTypes {
@@ -48,9 +50,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.google.firebase:firebase-auth:21.0.3'
-/*
-    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
-    implementation 'com.github.chrisbanes:PhotoView:2.1.3 '//zoom
-*/
+
+
+    //ampliar limite metodos
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
 
