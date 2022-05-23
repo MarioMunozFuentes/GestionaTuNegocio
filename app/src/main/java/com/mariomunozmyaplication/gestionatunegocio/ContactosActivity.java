@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -41,6 +44,7 @@ public class ContactosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                enviaMensajeWhatsApp("https://play.google.com/store/apps/details?id=com.mariomunozmyaplication.gestionatunegocio");
             }
         });
 
@@ -87,5 +91,18 @@ public class ContactosActivity extends AppCompatActivity {
 
     }
 
-
+    public void enviaMensajeWhatsApp(String msj) {
+        PackageManager pm=getPackageManager();
+        try {
+            Intent waIntent = new Intent(Intent.ACTION_SEND);
+            waIntent.setType("text/plain");
+            PackageInfo info=pm.getPackageInfo("com.whatsapp", PackageManager.GET_META_DATA);
+            waIntent.setPackage("com.whatsapp");
+            waIntent.putExtra(Intent.EXTRA_TEXT, msj);
+            startActivity(Intent.createChooser(waIntent, "Compartir con:"));
+        } catch (PackageManager.NameNotFoundException e) {
+            Toast.makeText(getApplicationContext(), "WhatsApp no esta instalado!", Toast.LENGTH_SHORT)
+                    .show();
+        }
+    }
 }
