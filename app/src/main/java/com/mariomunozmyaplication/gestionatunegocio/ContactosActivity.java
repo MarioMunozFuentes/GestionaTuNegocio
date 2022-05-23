@@ -32,6 +32,18 @@ public class ContactosActivity extends AppCompatActivity {
 
         Button QR = findViewById(R.id.btCompartirAppQR);
         Button LINK = findViewById(R.id.btCompartirAppLink);
+        Button empresa = findViewById(R.id.btDatosEmpresa);
+
+        empresa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
 
 
         QR.setOnClickListener(new View.OnClickListener() {

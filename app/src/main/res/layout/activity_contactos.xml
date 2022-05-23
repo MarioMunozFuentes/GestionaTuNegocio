@@ -62,7 +62,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
 
             <Button
-                android:id="@+id/btFeedback"
+                android:id="@+id/btDatosEmpresa"
                 style="@style/botonVerde"
                 _toStartOf="@+id/lineaDerecha"
                 android:layout_width="0dp"
@@ -84,7 +84,7 @@
                 android:textColor="@color/Teal"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/btFeedback" />
+                app:layout_constraintTop_toBottomOf="@+id/btDatosEmpresa" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
