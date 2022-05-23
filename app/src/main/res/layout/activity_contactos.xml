@@ -86,27 +86,32 @@
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
                 app:layout_constraintTop_toBottomOf="@+id/btFeedback" />
 
-            <Button
-                android:id="@+id/btCompartirAppQR"
-                style="@style/botonVerde"
-                android:layout_width="180dp"
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="QR"
-                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/tvCompartirApp"></Button>
-
-            <Button
-                android:id="@+id/btCompartirAppLink"
-                style="@style/botonVerde"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:text="LINK"
-                app:layout_constraintBottom_toBottomOf="@+id/btCompartirAppQR"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/btCompartirAppQR"
-                app:layout_constraintTop_toTopOf="@+id/btCompartirAppQR"
-                app:layout_constraintVertical_bias="0.0"></Button>
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompartirApp">
+
+                <Button
+                    android:id="@+id/btCompartirAppQR"
+                    style="@style/botonVerde"
+                    android:layout_width="180dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="QR"></Button>
+
+                <Button
+                    android:id="@+id/btCompartirAppLink"
+                    style="@style/botonVerde"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="LINK"></Button>
+
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/tvDesarrolladores"
@@ -119,7 +124,7 @@
                 android:textColor="@color/Teal"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/btCompartirAppLink" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
             <LinearLayout
                 android:id="@+id/lt1"
