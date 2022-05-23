@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- Item titulo -->
+    <item android:title="@string/bienvenido_a_gestiona">
+        <menu>
+            <!-- 1º grupo -->
+            <group android:checkableBehavior="single">
+                <!-- Item productos -->
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/producto"
+                    android:title="@string/productos" />
+                <!-- Item pedidos -->
+                <item
+                    android:id="@+id/nav_pedidos"
+                    android:icon="@drawable/pedido"
+                    android:title="@string/pedidos" />
+                <!-- Item empleados -->
+                <item
+                    android:id="@+id/nav_empleados"
+                    android:icon="@drawable/persona"
+                    android:title="@string/empleados" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- Item contacto -->
+    <item android:title="@string/contacto">
+        <menu>
+            <!-- 2º grupo -->
+            <group android:checkableBehavior="single">
+                <!-- Item contacto -->
+                <item
+                    android:id="@+id/nav_contacto"
+                    android:icon="@drawable/contacto"
+                    android:title="@string/contacto" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- 3º grupo -->
+    <!-- Item salir -->
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/cerrarsesion"
+        android:title="@string/salir"></item>
+</menu>

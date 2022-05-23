@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "504143137919",
+    "firebase_url": "https://pruebagestyc-default-rtdb.firebaseio.com",
+    "project_id": "pruebagestyc",
+    "storage_bucket": "pruebagestyc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504143137919:android:0eb4c9846b5474d30ac34a",
+        "android_client_info": {
+          "package_name": "com.mariomunozmyaplication.gestionatunegocio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504143137919-uis6ha71pbbbta56hnv74hovigoio8fq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCulsbmhw1WJYI2UczxDjE-Q3cUSmFxcKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504143137919-uis6ha71pbbbta56hnv74hovigoio8fq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

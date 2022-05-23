@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Gestiona"
+    tools:context=".ConfguracionActivity">
+
+    <!-- Guideline izquierda -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaIzd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Guideline derecha -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <!-- ImageView logo -->
+    <ImageView
+        android:id="@+id/imgViewLogo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/logo2"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView Modificar Datos-->
+    <TextView
+        android:id="@+id/tvDatosContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/aeonikbold"
+        android:gravity="start"
+        android:text="Modificar Datos"
+        android:textColor="@color/Teal"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
+
+
+    <!-- CUADROS DE TEXTO RELLENABLES -->
+    <!-- TextInputLayout email -->
+
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_info_foreground"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDatosContacto"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvDatosContacto"
+        app:layout_constraintTop_toTopOf="@+id/tvDatosContacto"
+        app:layout_constraintVertical_bias="0.0"></ImageView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilIniciarSesion"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosContacto">
+        <!-- EditText email -->
+        <EditText
+            android:id="@+id/etEmailAcceso"
+            style="@style/editText"
+            android:hint="Email"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout nueva contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilIniciarSesion"
+        app:passwordToggleEnabled="true">
+        <!-- EditText nueva contraseña -->
+        <EditText
+            android:id="@+id/etNewPassword"
+            style="@style/editText"
+            android:hint="Nueva Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout confirmar nueva contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPass2"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        app:passwordToggleEnabled="true">
+        <!-- EditText confirmar nueva contraseña -->
+        <EditText
+            android:id="@+id/etConfirmNewPassword"
+            style="@style/editText"
+            android:hint="Confirma Nueva Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout nombre empresa -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilPass2">
+        <!-- EditText nombre empresa -->
+        <EditText
+            android:id="@+id/etNombreEmpresa"
+            style="@style/editText"
+            android:hint="Nombre de Empresa"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Boton guardar -->
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/botonVerde"
+        android:layout_marginTop="20dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Boton cambiar contraseña -->
+    <Button
+        android:id="@+id/btnCambiarPasswd"
+        style="@style/botonInverso"
+        android:text="Cambiar Contraseña"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+</androidx.constraintlayout.widget.ConstraintLayout>

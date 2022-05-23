@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blancoApp"
+    android:theme="@style/Theme.Gestiona"
+    tools:context=".RegistroActivity">
+
+    <!-- Guideline izquierda -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaIzd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Guideline derecha -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <!-- ImageView logo -->
+    <ImageView
+        android:id="@+id/imgViewLogo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView Registro -->
+    <TextView
+        android:id="@+id/tvDatosContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aeonikbold"
+        android:gravity="start"
+        android:text="Registro"
+        android:textColor="@color/Teal"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
+
+    <!-- CUADROS DE TEXTO RELLENABLES -->
+    <!-- TextInputLayout email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilIniciarSesion"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosContacto">
+        <!-- EditText email -->
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/editText"
+            android:hint="Email"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilIniciarSesion"
+        app:passwordToggleEnabled="true">
+        <!-- EditText contraseña -->
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/editText"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout repite contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPass2"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        app:passwordToggleEnabled="true">
+        <!-- EditText repite contraseña -->
+        <EditText
+            android:id="@+id/etPassword2"
+            style="@style/editText"
+            android:hint="Repite Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout nombre empresa -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilPass2">
+        <!-- EditText nombre empresa -->
+        <EditText
+            android:id="@+id/etNombreEmpresa"
+            style="@style/editText"
+            android:hint="Nombre de Empresa"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Boton registrarme -->
+    <Button
+        android:id="@+id/btnAceptar"
+        style="@style/botonVerde"
+        android:layout_marginTop="20dp"
+        android:text="Registrarme"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Boton volver al login -->
+    <Button
+        android:id="@+id/btnCancelar"
+        style="@style/botonInverso"
+        android:text="Volver al Login"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/btnAceptar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

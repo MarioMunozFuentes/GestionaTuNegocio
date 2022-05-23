@@ -1,3 +1,152 @@
 <resources>
-    <string name="app_name">GestionaTuNegocio</string>
+    <string name="app_name">Gesty</string>
+    <string name="open" translatable="false">abrir</string>
+    <string name="close" translatable="false">cerrar</string>
+    <string name="fondo" translatable="false">fondo</string>
+    <string name="perfil" translatable="false">Perfil</string>
+    <string name="nombre_de_usuario" translatable="false">Nombre</string>
+    <string name="apellidos" translatable="false">Apellidos</string>
+    <string name="edad" translatable="false">Edad</string>
+    <string name="altura" translatable="false">Altura</string>
+    <string name="peso" translatable="false">Peso</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="telefono" translatable="false">Teléfono</string>
+    <!--    <string name="tv_fContratacion" translatable="false">Fecha Alta</string>-->
+    <string name="hombre" translatable="false">Hombre</string>
+    <string name="mujer" translatable="false">Mujer</string>
+    <string name="emailRegistro" translatable="false"></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="bienvenido_a_gestiona" translatable="false">Bienvenido a Gestiona</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="empleados" translatable="false">Empleados</string>
+    <string name="pedidos" translatable="false">Pedidos</string>
+    <string name="productos" translatable="false">Productos</string>
+    <string name="usuario" translatable="false">Usuario</string>
+    <string name="contacto">Contacto</string>
+    <string name="salir" translatable="false">Salir</string>
+
+    <string name="settings" translatable="false">Ajustes</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <!--    f-->
+    <!--    <string name="app_name">Manage your business</string>-->
+    <string name="etEmail">"Email: "</string>
+    <string name="etPassword">"Password: "</string>
+    <string name="etRepitePassword">Repita la contraseña:</string>
+    <!-- Texto Botones -->
+    <string name="btnAcceder">Acceder</string>
+    <string name="btnRegistrarse">Registro</string>
+    <string name="etNombreEmpresa">Nombre de la Empresa:</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="btnSave">Guardar</string>
+    <string name="btnAtras">Volver</string>
+    <string name="btnCambiarPasswd">Cambiar Contraseña</string>
+    <string name="btnCambiarEmail">Cambiar Email</string>
+    <string name="btnEditar">Editar</string>
+    <string name="btnEliminar">Eliminar</string>
+    <string name="btnHacerPedido">Hacer Pedido</string>
+    <string name="btnSi">Si</string>
+    <string name="btnNo" translatable="false">No</string>
+
+
+    <!-- Mensajes de Alert -->
+    <string name="alertCabezeraImportante">"Importante: "</string>
+    <string name="alertCabezeraError" translatable="false">ERROR: </string>
+    <string name="alertPasswdLong">La contraseña debe tener 6 caracteres mínimo</string>
+    <string name="alertPasswdNoCoinciden">Contraseñas no coinciden</string>
+    <string name="alertErrorCreandoUsuario">Error durante el registro. Intente de nuevo</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="alertErrorActualizarUsuario">Error actualizando usuario</string>
+    <string name="alertErrorCampoVacio">El campo está vacío</string>
+    <string name="alertErrorIntroduceDatosCampos">Introduce toda la información en los campos</string>
+    <string name="alertUsuarioCreado">Usuario Creado</string>
+    <string name="alertErrorFormatoEmail">El formato de email no es correcto</string>
+    <string name="alertErrorLogin">Usuario y / o contraseña erróneo</string>
+    <string name="alertErrorUsuarioYaExiste">Este usuario ya existe. Revise el email introducido</string>
+    <string name="alertUsuarioActualizado">Usuario actualizado</string>
+    <string name="alertIntroducirPassword">Contraseña actual:</string>
+    <string name="alertRecuperarContrasena">Email:</string>
+    <string name="alertEmailEnviado">Email enviado. Revise su email</string>
+    <string name="alertErrorEnviarEmail">Revisa el email introducido</string>
+    <string name="alertErrorIBAN">el IBAN introducido no es válido</string>
+    <string name="alertErrorNTel">El teléfono introducido no es válido</string>
+    <string name="alertErrorDNI">El DNI introducido no es válido</string>
+    <string name="alertErrorNetwork">No hay conexión a internet</string>
+    <string name="alertEliminarEmpleado">¿Estás seguro que deseas eliminar el empleado?</string>
+    <string name="alertErrorEmpleadoExistente">Ya hay un empleado registrado con ese DNI .</string>
+    <string name="alertErrorProductoExistente">Ya hay un producto con ese código de referencia.</string>
+    <string name="alertEliminarProducto">¿Estás seguro que deseas eliminar el producto?</string>
+    <string name="alertIntroducirCantidadAPedir">¿Cuantos productos quieres pedir?</string>
+    <string name="alertPedidoRecibido">¿Has recibido la petición de pedido?</string>
+    <string name="alertErrorActualizandoStokc">El stock del producto no se ha podido actualizar. Intentelo de nuevo más tarde</string>
+    <string name="alertErrorCreandoEmpleado">No se ha podido crear un empleado, por favor intentelo más tarde</string>
+    <string name="alertHacerPedido">Para hacer un pedido, Ve a los detalles del producto del que quiera hacer un pedido</string>
+    <string name="alertCabezeraPermisosDesactivados">Permisos desactivados</string>
+    <string name="alertPermisosDesactivados">Otorgar permisos para su correcto funcionamiento</string>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!--    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>-->
+    <!-- Textos Progress Dialog -->
+    <string name="progressDialogActualizarDatos">Actualizando datos..</string>
+    <string name="progressDialogCargando">Cargando...</string>
+    <string name="progressDialogCreandoEmpleado">Creando empleado ...</string>
+    <string name="progressDialogModificandoEmpleado">Modificando empleado ...</string>
+    <string name="progressDialogCreandoProducto">Creando producto ...</string>
+    <string name="progressDialogmodificandoProducto">Modificando producto ...</string>
+
+    <!-- Textos añadir empleado -->
+    <array name="opcionesMenuFoto">
+        <item>Tomar foto ahora</item>
+        <item>Seleccionar del dispositivo</item>
+    </array>
+
+    <!-- textos mostrar datos -->
+
+    <!-- Textos añadir productos -->
+
+    <string name="tvNombreEmpresa">Nombre empresa:</string>
+    <string name="tvEmailAcceso">Email de acceso:</string>
+    <string name="tvContrasenaNueva">Nueva contraseña:</string>
+    <string name="tvContrasenaActualConfirmada">Confirmar nueva contraseña:</string>
+    <string name="tvOlvidasteContrasena"><u> ¿Olvidaste contraseña? Haga click aquí </u></string>
+    <string name="nav_header_title">Gestiona tu negocio</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="menu_home">Productos</string>
+    <string name="menu_pedidos">Pedidos</string>
+    <string name="menu_empleados">Empleados</string>
+    <string name="menu_logout">Salir</string>
+    <string name="tv_title_addEmpleado">Detalles nuevo empleado:</string>
+    <string name="tv_title_ModifyEmpleado">Detalles Empleado:</string>
+    <string name="tv_nombre">Nombre:</string>
+    <string name="tv_apellidos">Apellido/s:</string>
+    <string name="tv_IBAN">IBAN cuenta de banco:</string>
+    <string name="tv_fContratacion">Fecha de contratación:</string>
+    <string name="tv_title_fechaContratacionEmpleado">Fecha de contratación:</string>
+    <string name="tv_imagenEmpleado">Foto empleado:</string>
+    <string name="tv_direccionEmpleado">Dirección:</string>
+    <string name="tv_nTelefonoEmpleado">Número Telefono:</string>
+    <string name="tv_dniEmpleado">DNI:</string>
+    <string name="cabezeraMenuFoto">Selecciona una opción:</string>
+    <string name="tv_tittle_InfoEmpleado">Información de Empleado:</string>
+    <string name="tv_tittle_InfoProducto">Información de Producto:</string>
+    <string name="tv_titleStockProducto">Stock disponible:</string>
+    <string name="tv_tittlePrecioCosteProducto">Precio de coste:</string>
+    <string name="tv_tittlePrecioVentaProducto">Precio de venta:</string>
+    <string name="tv_title_addProducto">Datos de nuevo producto:</string>
+    <string name="tv_title_ModifyProducto">Datos de producto:</string>
+    <string name="tv_imagenProducto">Imagen Producto:</string>
+    <string name="tv_DescripcionProducto">Descripción de producto:</string>
+    <string name="tv_stockProducto">Stock disponible</string>
+    <string name="tv_precioProducto">Precio que pagaste:</string>
+    <string name="tv_precioVentaProducto">Precio de venta:</string>
+    <string name="tv_ReferenciaProducto">Referencia del producto:</string>
+    <string name="tv_SueldoEmpleado">Salario empleado:</string>
+    <string name="tv_title_sueldo">Salario:</string>
+
+
+    <string name="toastPermisionsDimiss">Tu no tienes los permisos necesarios</string>
+
+
+
 </resources>

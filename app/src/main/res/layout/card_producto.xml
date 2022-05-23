@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardProducto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- CardView producto -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cadViewProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="7dp"
+        card_view:cardUseCompatPadding="true">
+
+        <!-- LinearLayout producto horizontal -->
+        <LinearLayout
+            android:id="@+id/horizontalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- ImageView foto producto -->
+            <ImageView
+                android:id="@+id/imagenProductoCard"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                tools:srcCompat="@drawable/ic_persona_foreground" />
+
+            <!-- LinearLayout producto vertical -->
+            <LinearLayout
+                android:id="@+id/verticalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:orientation="vertical"
+                android:padding="@dimen/cardview_compat_inset_shadow">
+
+                <!-- TextView nombre producto -->
+                <TextView
+                    android:id="@+id/tvnombreProductoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/cardview_compat_inset_shadow"
+                    android:text="TextView"
+                    android:textColor="#0E63E6"
+                    android:textSize="25dp" />
+                <!-- TextView referencia producto -->
+                <TextView
+                    android:id="@+id/tvStockProductoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="TextView"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvReff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Ref: "
+                        android:textSize="20dp" />
+
+                    <!-- TextView referencia producto -->
+                    <TextView
+                        android:id="@+id/tvReferenciaProductoCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="TextView"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+
+                <!-- TextView precio venta producto -->
+                <TextView
+                    android:id="@+id/tvPrecioVentaProductoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="TextView"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
