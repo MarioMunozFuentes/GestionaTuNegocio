@@ -29,13 +29,14 @@ public class MyAdapterProductos extends RecyclerView.Adapter<MyAdapterProductos.
     public class MyViewHolder extends RecyclerView.ViewHolder {
         View cardProducto;
         ImageView imageView;
-        TextView referencia, precioVenta, nombre;
+        TextView referencia, precioVenta, nombre, stock,referencia1;
 
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imagenProductoCard);
             referencia = itemView.findViewById(R.id.tvReferenciaProductoCard);
             precioVenta = itemView.findViewById(R.id.tvPrecioVentaProductoCard);
+            stock = itemView.findViewById(R.id.tvStockProductoCard);
             nombre = itemView.findViewById(R.id.tvnombreProductoCard);
             cardProducto = itemView.findViewById(R.id.cadViewProducto);
         }
@@ -44,7 +45,8 @@ public class MyAdapterProductos extends RecyclerView.Adapter<MyAdapterProductos.
         public void bind(ArrayList<Producto> productos, int posicion, final OnItemClickListener listener) {
             this.nombre.setText(productos.get(posicion).getNombre());
             this.referencia.setText(productos.get(posicion).getReferencia());
-            this.precioVenta.setText(String.valueOf(productos.get(posicion).getPrecioVenta()));
+            this.precioVenta.setText(String.valueOf("Precio: "+productos.get(posicion).getPrecioVenta())+" €");
+            this.stock.setText(String.valueOf("Stock: "+productos.get(posicion).getStock())+" uds");
             if (productos.get(posicion).getImagen() == null) {
                 this.imageView.setImageResource(R.drawable.producto);
             } else {

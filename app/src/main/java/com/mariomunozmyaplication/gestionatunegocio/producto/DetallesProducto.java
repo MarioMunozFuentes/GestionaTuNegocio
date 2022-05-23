@@ -31,7 +31,7 @@ import com.mariomunozmyaplication.gestionatunegocio.pedido.Pedido;
 public class DetallesProducto extends AppCompatActivity implements View.OnClickListener {
 
     // Declaramos variables
-    private TextView tv_nombreProducto, tv_descipcionProducto, tv_referenciaProducto, tv_stockProducto, tv_precioCosteProducto, tv_precioVentaProducto;
+    private TextView tv_nombreProducto, tv_descripcionProducto, tv_referenciaProducto, tv_stockProducto, tv_precioCosteProducto, tv_precioVentaProducto;
     private ImageView imagenProducto;
     private Intent intent;
     private AlertDialog dialog = null;
@@ -49,8 +49,8 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
         // Asociamos variables
         // TextView
         tv_nombreProducto = findViewById(R.id.tv_nombreProducto);
-        tv_descipcionProducto = findViewById(R.id.tv_descipcionProducto);
-        tv_descipcionProducto.setMovementMethod(new ScrollingMovementMethod());
+        tv_descripcionProducto = findViewById(R.id.tv_descripcionProducto);
+        tv_descripcionProducto.setMovementMethod(new ScrollingMovementMethod());
         tv_referenciaProducto = findViewById(R.id.tv_referenciaProducto);
         tv_stockProducto = findViewById(R.id.tv_stockProducto);
         tv_precioCosteProducto = findViewById(R.id.tv_precioCosteProducto);
@@ -77,7 +77,7 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
     // Metodo para cargar los datos
     private void cargarDatos() {
         tv_nombreProducto.setText(getIntent().getStringExtra("nombre"));
-        tv_descipcionProducto.setText(getIntent().getStringExtra("descipcion"));
+        tv_descripcionProducto.setText(getIntent().getStringExtra("descipcion"));
         tv_referenciaProducto.setText(getIntent().getStringExtra("referencia"));
         tv_stockProducto.setText(String.valueOf(getIntent().getIntExtra("stock", 0)));
         tv_precioCosteProducto.setText(String.valueOf(getIntent().getFloatExtra("precioCoste", 0)));
@@ -93,9 +93,9 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
     // Metodo para modificar producto
     private void modificarProducto() {
         intent = new Intent(this, AddProductoActivity.class);
-        Log.i("loge", "modificarProducto descripcion::: " + tv_descipcionProducto.getText());
+        Log.i("loge", "modificarProducto descripcion::: " + tv_descripcionProducto.getText());
         intent.putExtra("referencia", tv_referenciaProducto.getText()).putExtra("nombre", tv_nombreProducto.getText()).putExtra("precioCoste", tv_precioCosteProducto.getText())
-                .putExtra("precioVenta", tv_precioVentaProducto.getText()).putExtra("descipcion", tv_descipcionProducto.getText().toString()).putExtra("stock", tv_stockProducto.getText())
+                .putExtra("precioVenta", tv_precioVentaProducto.getText()).putExtra("descipcion", tv_descripcionProducto.getText().toString()).putExtra("stock", tv_stockProducto.getText())
         .putExtra("img",getIntent().getStringExtra("img"));
         startActivity(intent);
         finish();

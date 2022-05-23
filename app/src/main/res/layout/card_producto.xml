@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="8dp"
-        card_view:cardElevation="5dp"
+        card_view:cardElevation="7dp"
         card_view:cardUseCompatPadding="true">
 
         <!-- LinearLayout producto horizontal -->
@@ -38,20 +38,56 @@
             <LinearLayout
                 android:id="@+id/verticalLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
                 android:padding="@dimen/cardview_compat_inset_shadow">
 
+                <!-- TextView nombre producto -->
+                <TextView
+                    android:id="@+id/tvnombreProductoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/cardview_compat_inset_shadow"
+                    android:text="TextView"
+                    android:textColor="#0E63E6"
+                    android:textSize="25dp" />
                 <!-- TextView referencia producto -->
                 <TextView
-                    android:id="@+id/tvReferenciaProductoCard"
+                    android:id="@+id/tvStockProductoCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:text="TextView"
                     android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvReff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Ref: "
+                        android:textSize="20dp" />
+
+                    <!-- TextView referencia producto -->
+                    <TextView
+                        android:id="@+id/tvReferenciaProductoCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="TextView"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
 
                 <!-- TextView precio venta producto -->
                 <TextView
@@ -63,16 +99,7 @@
                     android:text="TextView"
                     android:textSize="20dp" />
 
-                <!-- TextView nombre producto -->
-                <TextView
-                    android:id="@+id/tvnombreProductoCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/cardview_compat_inset_shadow"
-                    android:paddingStart="5dp"
-                    android:text="TextView"
-                    android:textColor="#0E63E6"
-                    android:textSize="25dp" />
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

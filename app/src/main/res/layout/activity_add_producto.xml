@@ -21,7 +21,9 @@
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
             android:text="@string/tv_title_addProducto"
-            android:textSize="23dp"
+            android:textColor="#0E63E6"
+            android:textSize="30dp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +37,7 @@
             android:layout_marginTop="12dp"
             android:text="@string/tv_imagenProducto"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado" />
 
@@ -59,6 +62,7 @@
             android:layout_marginTop="15dp"
             android:text="@string/tv_nombre"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado" />
 
@@ -85,6 +89,7 @@
             android:layout_marginTop="23dp"
             android:text="@string/tv_ReferenciaProducto"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
 
@@ -111,6 +116,7 @@
             android:layout_marginTop="23dp"
             android:text="@string/tv_DescripcionProducto"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
 
@@ -137,6 +143,7 @@
             android:layout_marginTop="23dp"
             android:text="@string/tv_stockProducto"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
@@ -163,6 +170,7 @@
             android:layout_marginTop="21dp"
             android:text="@string/tv_precioProducto"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
@@ -189,6 +197,7 @@
             android:layout_marginTop="21dp"
             android:text="@string/tv_precioVentaProducto"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
@@ -229,8 +238,7 @@
             android:text="@string/btnCancelar"
             app:layout_constraintTop_toBottomOf="@id/btnAceptarProducto" />
     </LinearLayout>
-</ScrollView>
-    <!--
+</ScrollView><!--
         <!- LinearLayout contenedor de los botones->
         <LinearLayout
             android:layout_width="match_parent"

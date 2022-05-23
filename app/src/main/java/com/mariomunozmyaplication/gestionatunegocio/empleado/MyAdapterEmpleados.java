@@ -30,14 +30,15 @@ public class MyAdapterEmpleados extends RecyclerView.Adapter<MyAdapterEmpleados.
     public class MyViewHolder extends RecyclerView.ViewHolder {
         View cardEmpleado;
         ImageView imageView;
-        TextView dni, direccion, nombre;
+        TextView dni, direccion, nombre, telefono;
 
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imagenEmpleadoCard);
             dni = itemView.findViewById(R.id.tvDNIEmpleadoCard);
-            direccion = itemView.findViewById(R.id.tvDireccionEmpleadoCard);
+//            direccion = itemView.findViewById(R.id.tvDireccionEmpleadoCard);
             nombre = itemView.findViewById(R.id.tvnombreEmpleadoCard);
+            telefono = itemView.findViewById(R.id.tvTelefonoEmpleado);
             cardEmpleado = itemView.findViewById(R.id.cadViewEmpleado1);
         }
 
@@ -45,7 +46,7 @@ public class MyAdapterEmpleados extends RecyclerView.Adapter<MyAdapterEmpleados.
         public void bind(ArrayList<Empleado> empleados, int posicion, final OnItemClickListener listener) {
             this.nombre.setText(empleados.get(posicion).getNombre());
             this.dni.setText(String.valueOf(empleados.get(posicion).getDni()));
-            this.direccion.setText(empleados.get(posicion).getDireccion());
+            this.telefono.setText("Tel: "+empleados.get(posicion).getnTelefono());
             if (empleados.get(posicion).getImagenEmpleado() == null) {
                 this.imageView.setImageResource(R.drawable.ic_persona_foreground);
             } else {

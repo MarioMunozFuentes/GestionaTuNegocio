@@ -21,7 +21,9 @@
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
             android:text="@string/tv_title_addEmpleado"
-            android:textSize="23dp"
+            android:textColor="#0E63E6"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +36,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="12dp"
             android:text="@string/tv_imagenEmpleado"
-            android:textSize="18dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado" />
 
@@ -59,6 +62,7 @@
             android:layout_marginTop="15dp"
             android:text="@string/tv_nombre"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado" />
 
@@ -75,7 +79,8 @@
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <!-- TextView apellidos empleado -->
         <TextView
@@ -86,6 +91,7 @@
             android:layout_marginTop="23dp"
             android:text="@string/tv_apellidos"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
 
@@ -99,9 +105,11 @@
             android:layout_marginEnd="20dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <!-- TextView DNI empleado -->
         <TextView
@@ -112,6 +120,7 @@
             android:layout_marginTop="23dp"
             android:text="@string/tv_dniEmpleado"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
@@ -124,7 +133,9 @@
             android:layout_marginTop="17dp"
             android:layout_marginEnd="20dp"
             android:ems="10"
+            android:hint="51193186Q"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado" />
@@ -138,6 +149,7 @@
             android:layout_marginTop="21dp"
             android:text="@string/tv_IBAN"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
@@ -150,7 +162,9 @@
             android:layout_marginTop="26dp"
             android:layout_marginEnd="20dp"
             android:ems="10"
+            android:hint="EJ:ES7220353072137353112069"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
@@ -164,6 +178,7 @@
             android:layout_marginTop="21dp"
             android:text="@string/tv_direccionEmpleado"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etIBAN" />
 
@@ -190,6 +205,7 @@
             android:layout_marginTop="21dp"
             android:text="@string/tv_nTelefonoEmpleado"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado" />
 
@@ -216,6 +232,7 @@
             android:layout_marginTop="21dp"
             android:text="@string/tv_SueldoEmpleado"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado" />
 
@@ -242,6 +259,7 @@
             android:layout_marginTop="24dp"
             android:text="@string/tv_fContratacion"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etIBAN" />
 
@@ -258,8 +276,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
             android:text="@string/btnAceptar" />
 
         <!-- Boton cancelar -->
@@ -275,34 +293,34 @@
     </LinearLayout>
 </ScrollView>
 
-<!--
-        <!- LinearLayout contenedor de los botones->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <!- Boton aceptar ->
-            <Button
-                android:id="@+id/btnAceptarEmpleado"
-                style="@style/botonVerde"
+    <!--
+            <!- LinearLayout contenedor de los botones->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:text="@string/btnAceptar" />
+                android:orientation="horizontal">
 
-            <!- Boton cancelar ->
-            <!- REVISAR ESTE BOTON NO APARECE ->
-            <Button
-                android:id="@+id/btnCancelarEmpleado"
-                style="@style/botonRojo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"
-                android:text="@string/btnCancelar"
-                app:layout_constraintTop_toBottomOf="parent" />
-        </LinearLayout>
--->
+                <!- Boton aceptar ->
+                <Button
+                    android:id="@+id/btnAceptarEmpleado"
+                    style="@style/botonVerde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/btnAceptar" />
+
+                <!- Boton cancelar ->
+                <!- REVISAR ESTE BOTON NO APARECE ->
+                <Button
+                    android:id="@+id/btnCancelarEmpleado"
+                    style="@style/botonRojo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/btnCancelar"
+                    app:layout_constraintTop_toBottomOf="parent" />
+            </LinearLayout>
+    -->
