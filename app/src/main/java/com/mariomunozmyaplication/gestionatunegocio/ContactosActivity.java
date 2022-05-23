@@ -47,7 +47,7 @@ public class ContactosActivity extends AppCompatActivity {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
 //                sendIntent.setPackage("com.whatsapp");
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.mariomunozmyaplication.gestionatunegocio");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga GESTY a través de este link: \n\n https://play.google.com/store/apps/details?id=com.mariomunozmyaplication.gestionatunegocio");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }
