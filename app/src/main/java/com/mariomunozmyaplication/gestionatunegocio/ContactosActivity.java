@@ -46,6 +46,7 @@ public class ContactosActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
+//                sendIntent.setPackage("com.whatsapp");
                 sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.mariomunozmyaplication.gestionatunegocio");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
