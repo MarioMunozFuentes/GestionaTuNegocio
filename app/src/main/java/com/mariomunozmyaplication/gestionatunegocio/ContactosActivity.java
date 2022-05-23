@@ -16,8 +16,8 @@ import com.bumptech.glide.Glide;
 
 public class ContactosActivity extends AppCompatActivity {
 
-    TextView tvGithubMario,tvGithubAsier;
-    Button btCompartirAppQR,btCompartirAppLink;
+    TextView tvGithubMario, tvGithubAsier;
+    Button btCompartirAppQR, btCompartirAppLink;
     private ImageView image;
 
     @Override
@@ -68,7 +68,7 @@ public class ContactosActivity extends AppCompatActivity {
     }
 
 
-    public void cargarQR(ContactosActivity contactos){
+    public void cargarQR(ContactosActivity contactos) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Escanea el código QR");//TITULO
         builder.setIcon(R.drawable.lupaqr);//ICONO
@@ -86,7 +86,6 @@ public class ContactosActivity extends AppCompatActivity {
         builder.create().show();
 
     }
-
 
 
 }
