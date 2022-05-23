@@ -9,6 +9,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,8 +22,10 @@ import com.google.android.material.snackbar.Snackbar;
 public class ContactosActivity extends AppCompatActivity {
 
     TextView tvGithubMario, tvGithubAsier;
+    private TextView tvEmailUsuario, tvNombreEmpresa;
     Button btCompartirAppQR, btCompartirAppLink;
     private ImageView image;
+    String email,nombreEmpresa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +37,21 @@ public class ContactosActivity extends AppCompatActivity {
         Button LINK = findViewById(R.id.btCompartirAppLink);
         Button empresa = findViewById(R.id.btDatosEmpresa);
 
+
+
         empresa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "");
+                email=tvEmailUsuario.getText().toString();
+                nombreEmpresa=tvNombreEmpresa.getText().toString();
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "DATOS EMPRESA: "+
+                        "\n\n" +
+                        "EMAIL: "+email+"\n"+
+                        "NOMBRE EMPRESA: "+ nombreEmpresa+" \n"+
+                        "DIRECCIÓN: "+"añadir dirección aquí \n"+
+                        "TELÉFONO: "+"añadir teléfono aquí");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }
@@ -87,6 +99,24 @@ public class ContactosActivity extends AppCompatActivity {
         image.setImageResource(R.drawable.linkgesty);
 
     }
+
+    // Metodo para modificar el NavHeader
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        tvEmailUsuario = findViewById(R.id.tvEmailUsuario);
+        tvNombreEmpresa = findViewById(R.id.tvNombreEmpresa);
+
+        // Mostramos el nombre de la empresa y el correo en el menu draw
+        tvEmailUsuario.setText(LoginActivity.user.getEmail());
+        String nombreEmpresa = LoginActivity.user.getDisplayName();
+        if (nombreEmpresa != null && !nombreEmpresa.equals("")) {
+            tvNombreEmpresa.setText(nombreEmpresa);
+        }
+        return true;
+    }
+
 
 
     public void cargarQR(ContactosActivity contactos) {

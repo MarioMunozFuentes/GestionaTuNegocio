@@ -109,9 +109,23 @@
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:text="LINK"></Button>
-
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/tvEmailUsuario"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/lineaIzd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">></TextView>
+
+            <TextView
+                android:id="@+id/tvNombreEmpresa"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/lineaIzd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
             <TextView
                 android:id="@+id/tvDesarrolladores"
