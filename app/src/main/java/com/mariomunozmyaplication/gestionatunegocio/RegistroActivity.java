@@ -113,6 +113,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
                 });
     }
 
+
     // Metodo para mostrar alerta
     private void mostrarAlert(int titulo, int mensaje) {
         AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
