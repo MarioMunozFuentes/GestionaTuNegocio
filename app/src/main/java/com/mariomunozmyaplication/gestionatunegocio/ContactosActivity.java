@@ -43,7 +43,7 @@ public class ContactosActivity extends AppCompatActivity {
                 email=tvEmailUsuario.getText().toString();
                 nombreEmpresa=tvNombreEmpresa.getText().toString();
                 sendIntent.putExtra(Intent.EXTRA_TEXT, "DATOS EMPRESA: "+
-                        "\n\n" +
+                        "\n\n\n" +
                         "EMAIL: "+email+"\n\n"+
                         "NOMBRE EMPRESA: "+ nombreEmpresa); //+" \n" +
                       // "DIRECCIÓN: "+"añadir dirección aquí \n"+
