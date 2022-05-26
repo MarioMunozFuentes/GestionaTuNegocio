@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +23,7 @@ public class ContactosActivity extends AppCompatActivity {
     private TextView tvEmailUsuario, tvNombreEmpresa;
     Button btCompartirAppQR, btCompartirAppLink;
     private ImageView image;
-    String email,nombreEmpresa;
+    String email, nombreEmpresa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +36,19 @@ public class ContactosActivity extends AppCompatActivity {
         Button empresa = findViewById(R.id.btDatosEmpresa);
 
 
-
         empresa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                email=tvEmailUsuario.getText().toString();
-                nombreEmpresa=tvNombreEmpresa.getText().toString();
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "DATOS EMPRESA: "+
+                email = tvEmailUsuario.getText().toString();
+                nombreEmpresa = tvNombreEmpresa.getText().toString();
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "DATOS EMPRESA: " +
                         "\n\n\n" +
-                        "EMAIL: "+email+"\n\n"+
-                        "NOMBRE EMPRESA: "+ nombreEmpresa); //+" \n" +
-                      // "DIRECCIÓN: "+"añadir dirección aquí \n"+
-                      //  "TELÉFONO: "+"añadir teléfono aquí");
+                        "EMAIL: " + email + "\n\n" +
+                        "NOMBRE EMPRESA: " + nombreEmpresa); //+" \n" +
+                // "DIRECCIÓN: "+"añadir dirección aquí \n"+
+                //  "TELÉFONO: "+"añadir teléfono aquí");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }
@@ -96,6 +97,20 @@ public class ContactosActivity extends AppCompatActivity {
 
     }
 
+    // Opciones menú 3 puntitos
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent intent = new Intent(this, ConfguracionActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
     // Metodo para modificar el NavHeader
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -112,7 +127,6 @@ public class ContactosActivity extends AppCompatActivity {
         }
         return true;
     }
-
 
 
     public void cargarQR(ContactosActivity contactos) {
