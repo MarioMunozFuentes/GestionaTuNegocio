@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,9 +20,8 @@ import com.bumptech.glide.Glide;
 
 public class ContactosActivity extends AppCompatActivity {
 
-    TextView tvGithubMario, tvGithubAsier;
+
     private TextView tvEmailUsuario, tvNombreEmpresa;
-    Button btCompartirAppQR, btCompartirAppLink;
     private ImageView image;
     String email, nombreEmpresa;
 
@@ -31,8 +31,8 @@ public class ContactosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contactos);
 
 
-        Button QR = findViewById(R.id.btCompartirAppQR);
-        Button LINK = findViewById(R.id.btCompartirAppLink);
+        ImageButton QR = findViewById(R.id.btCompartirAppQR);
+        ImageButton LINK = findViewById(R.id.btCompartirAppLink);
         Button empresa = findViewById(R.id.btDatosEmpresa);
 
 

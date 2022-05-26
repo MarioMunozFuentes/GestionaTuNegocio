@@ -12,8 +12,9 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="29dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -44,7 +45,6 @@
                 android:layout_marginTop="16dp"
                 android:src="@drawable/logo2"
                 app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,7 +85,8 @@
                 android:backgroundTint="@color/white"
                 android:src="@mipmap/ic_playstore_foreground"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/btDatosEmpresa"></ImageButton>
+                app:layout_constraintTop_toBottomOf="@+id/btDatosEmpresa"
+                tools:ignore="SpeakableTextPresentCheck"></ImageButton>
 
             <ImageButton
                 android:id="@+id/btCompartirAppQR"
@@ -99,7 +100,8 @@
                 app:layout_constraintHorizontal_bias="0.567"
                 app:layout_constraintStart_toEndOf="@+id/btCompartirAppLink"
                 app:layout_constraintTop_toTopOf="@+id/btCompartirAppLink"
-                app:layout_constraintVertical_bias="0.0"></ImageButton>
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="SpeakableTextPresentCheck"></ImageButton>
 
             <TextView
                 android:id="@+id/tvEmailUsuario"
@@ -107,7 +109,7 @@
                 android:layout_height="0dp"
                 app:layout_constraintEnd_toStartOf="@+id/lineaIzd"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">></TextView>
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
             <TextView
                 android:id="@+id/tvNombreEmpresa"

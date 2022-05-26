@@ -105,8 +105,8 @@
 
     <!-- Textos añadir productos -->
 
-    <string name="tvNombreEmpresa">Nombre empresa:</string>
-    <string name="tvEmailAcceso">Email de acceso:</string>
+    <string name="tvNombreEmpresa">Nombre empresa</string>
+    <string name="tvEmailAcceso">Email de acceso</string>
     <string name="tvContrasenaNueva">Nueva contraseña:</string>
     <string name="tvContrasenaActualConfirmada">Confirmar nueva contraseña:</string>
     <string name="tvOlvidasteContrasena"><u> ¿Olvidaste contraseña? Haga click aquí </u></string>
@@ -118,29 +118,29 @@
     <string name="menu_logout">Salir</string>
     <string name="tv_title_addEmpleado">Detalles nuevo empleado:</string>
     <string name="tv_title_ModifyEmpleado">Detalles Empleado:</string>
-    <string name="tv_nombre">Nombre:</string>
-    <string name="tv_apellidos">Apellido/s:</string>
-    <string name="tv_IBAN">IBAN cuenta de banco:</string>
-    <string name="tv_fContratacion">Fecha de contratación:</string>
-    <string name="tv_title_fechaContratacionEmpleado">Fecha de contratación:</string>
-    <string name="tv_imagenEmpleado">Foto empleado:</string>
-    <string name="tv_direccionEmpleado">Dirección:</string>
-    <string name="tv_nTelefonoEmpleado">Número Telefono:</string>
-    <string name="tv_dniEmpleado">DNI:</string>
-    <string name="cabezeraMenuFoto">Selecciona una opción:</string>
-    <string name="tv_tittle_InfoEmpleado">Información de Empleado:</string>
-    <string name="tv_tittle_InfoProducto">Información de Producto:</string>
-    <string name="tv_titleStockProducto">Stock disponible:</string>
-    <string name="tv_tittlePrecioCosteProducto">Precio de coste:</string>
-    <string name="tv_tittlePrecioVentaProducto">Precio de venta:</string>
-    <string name="tv_title_addProducto">Datos de nuevo producto:</string>
-    <string name="tv_title_ModifyProducto">Datos de producto:</string>
-    <string name="tv_imagenProducto">Imagen Producto:</string>
+    <string name="tv_nombre">Nombre</string>
+    <string name="tv_apellidos">Apellido/s</string>
+    <string name="tv_IBAN">IBAN cuenta de banco</string>
+    <string name="tv_fContratacion">Fecha de contratación</string>
+    <string name="tv_title_fechaContratacionEmpleado">Fecha de contratación</string>
+    <string name="tv_imagenEmpleado">Foto empleado</string>
+    <string name="tv_direccionEmpleado">Dirección</string>
+    <string name="tv_nTelefonoEmpleado">Número Telefono</string>
+    <string name="tv_dniEmpleado">DNI</string>
+    <string name="cabezeraMenuFoto">Selecciona una opción</string>
+    <string name="tv_tittle_InfoEmpleado">Información de Empleado</string>
+    <string name="tv_tittle_InfoProducto">Información de Producto</string>
+    <string name="tv_titleStockProducto">Stock disponible</string>
+    <string name="tv_tittlePrecioCosteProducto">Precio de coste</string>
+    <string name="tv_tittlePrecioVentaProducto">Precio de venta</string>
+    <string name="tv_title_addProducto">Datos de nuevo producto</string>
+    <string name="tv_title_ModifyProducto">Datos de producto</string>
+    <string name="tv_imagenProducto">Imagen Producto</string>
     <string name="tv_DescripcionProducto">Descripción de producto:</string>
     <string name="tv_stockProducto">Stock disponible</string>
     <string name="tv_precioProducto">Precio que pagaste:</string>
     <string name="tv_precioVentaProducto">Precio de venta:</string>
-    <string name="tv_ReferenciaProducto">Referencia del producto:</string>
+    <string name="tv_ReferenciaProducto">Referencia del producto</string>
     <string name="tv_SueldoEmpleado">Salario empleado:</string>
     <string name="tv_title_sueldo">Salario:</string>
 
