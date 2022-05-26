@@ -66,40 +66,40 @@
                 android:id="@+id/tvCompartirApp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/aeonikbold"
                 android:gravity="start"
                 android:text="GESTY "
                 android:textColor="@color/Teal"
                 android:textSize="30sp"
-                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/btDatosEmpresa" />
+                app:layout_constraintEnd_toEndOf="@+id/imgViewLogo"
+                app:layout_constraintStart_toStartOf="@+id/imgViewLogo"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <ImageButton
+                android:id="@+id/btCompartirAppLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/white"
+                android:src="@mipmap/ic_playstore_foreground"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/tvCompartirApp">
+                app:layout_constraintTop_toBottomOf="@+id/btDatosEmpresa"></ImageButton>
 
-                <ImageButton
-                    android:id="@+id/btCompartirAppQR"
-                    android:backgroundTint="@color/Teal"
-                    android:layout_width="100dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/googleplay"
-                    android:layout_marginEnd="10dp"
-                    android:text="QR"></ImageButton>
-
-                <ImageButton
-                    android:id="@+id/btCompartirAppLink"
-                    style="@style/botonVerde"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:text="LINK"></ImageButton>
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/btCompartirAppQR"
+                style="@style/botonVerde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:src="@mipmap/ic_qr_foreground"
+                app:layout_constraintBottom_toBottomOf="@+id/btCompartirAppLink"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintHorizontal_bias="0.567"
+                app:layout_constraintStart_toEndOf="@+id/btCompartirAppLink"
+                app:layout_constraintTop_toTopOf="@+id/btCompartirAppLink"
+                app:layout_constraintVertical_bias="0.0"></ImageButton>
 
             <TextView
                 android:id="@+id/tvEmailUsuario"
@@ -128,7 +128,7 @@
                 android:textColor="@color/Teal"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/btCompartirAppLink" />
 
             <LinearLayout
                 android:id="@+id/lt1"
