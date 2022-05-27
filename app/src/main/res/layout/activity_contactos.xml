@@ -59,7 +59,8 @@
                 android:text="Compartir datos empresa"
                 app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/imgViewLogo"></Button>
+                app:layout_constraintTop_toBottomOf="@+id/imgViewLogo"
+                tools:ignore="TextContrastCheck"></Button>
 
 
             <TextView
@@ -73,7 +74,8 @@
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="@+id/imgViewLogo"
                 app:layout_constraintStart_toStartOf="@+id/imgViewLogo"
-                app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
+                app:layout_constraintTop_toBottomOf="@+id/imgViewLogo"
+                tools:ignore="TextContrastCheck" />
 
             <ImageButton
                 android:id="@+id/btCompartirAppLink"
@@ -130,7 +132,8 @@
                 android:textColor="@color/Teal"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-                app:layout_constraintTop_toBottomOf="@+id/btCompartirAppLink" />
+                app:layout_constraintTop_toBottomOf="@+id/btCompartirAppLink"
+                tools:ignore="TextContrastCheck" />
 
             <LinearLayout
                 android:id="@+id/lt1"
@@ -206,7 +209,8 @@
                                 android:paddingStart="5dp"
                                 android:text="https://github.com/asier97am"
                                 android:textColor="#0E63E6"
-                                android:textSize="20dp" />
+                                android:textSize="20dp"
+                                tools:ignore="TextContrastCheck" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -290,7 +294,8 @@
                                 android:paddingStart="5dp"
                                 android:text="https://github.com/MarioMunozFuentes"
                                 android:textColor="#0E63E6"
-                                android:textSize="20dp" />
+                                android:textSize="20dp"
+                                tools:ignore="TextContrastCheck" />
                         </LinearLayout>
                     </LinearLayout>
 

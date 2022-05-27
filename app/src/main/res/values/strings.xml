@@ -107,8 +107,8 @@
 
     <string name="tvNombreEmpresa">Nombre empresa</string>
     <string name="tvEmailAcceso">Email de acceso</string>
-    <string name="tvContrasenaNueva">Nueva contraseña:</string>
-    <string name="tvContrasenaActualConfirmada">Confirmar nueva contraseña:</string>
+    <string name="tvContrasenaNueva">Nueva contraseña</string>
+    <string name="tvContrasenaActualConfirmada">Confirmar nueva contraseña</string>
     <string name="tvOlvidasteContrasena"><u> ¿Olvidaste contraseña? Haga click aquí </u></string>
     <string name="nav_header_title">Gestiona tu negocio</string>
     <string name="action_settings">Ajustes</string>
@@ -116,8 +116,8 @@
     <string name="menu_pedidos">Pedidos</string>
     <string name="menu_empleados">Empleados</string>
     <string name="menu_logout">Salir</string>
-    <string name="tv_title_addEmpleado">Detalles nuevo empleado:</string>
-    <string name="tv_title_ModifyEmpleado">Detalles Empleado:</string>
+    <string name="tv_title_addEmpleado">Datos nuevo empleado</string>
+    <string name="tv_title_ModifyEmpleado">Detalles Empleado</string>
     <string name="tv_nombre">Nombre</string>
     <string name="tv_apellidos">Apellido/s</string>
     <string name="tv_IBAN">IBAN cuenta de banco</string>
@@ -145,7 +145,7 @@
     <string name="tv_title_sueldo">Salario:</string>
 
 
-    <string name="toastPermisionsDimiss">Tu no tienes los permisos necesarios</string>
+    <string name="toastPermisionsDimiss">No tienes los permisos necesarios</string>
 
 
 
