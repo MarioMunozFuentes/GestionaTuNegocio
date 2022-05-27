@@ -130,7 +130,7 @@
     <string name="cabezeraMenuFoto">Selecciona una opción</string>
     <string name="tv_tittle_InfoEmpleado">Información de Empleado</string>
     <string name="tv_tittle_InfoProducto">Información de Producto</string>
-    <string name="tv_titleStockProducto">Stock disponible</string>
+    <string name="tv_titleStockProducto">Stock disponible:</string>
     <string name="tv_tittlePrecioCosteProducto">Precio de coste</string>
     <string name="tv_tittlePrecioVentaProducto">Precio de venta</string>
     <string name="tv_title_addProducto">Datos de nuevo producto</string>
