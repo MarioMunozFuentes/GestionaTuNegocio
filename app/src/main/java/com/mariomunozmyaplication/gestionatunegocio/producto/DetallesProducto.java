@@ -122,7 +122,7 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
     // Metodo para mostrar alerta de confirmacion
     private void mostrarAlertConfirmacionEliminar() {
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-        dialogo1.setTitle(R.string.alertCabezeraImportante);
+//        dialogo1.setTitle(R.string.alertCabezeraImportante);
         dialogo1.setMessage(R.string.alertEliminarProducto);
         dialogo1.setCancelable(false);
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
@@ -142,14 +142,13 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
 
     // Metodo para hacer un nuevo pedido
     private void hacerPedido() {
-        mostrarAlertDialog(R.string.alertCabezeraImportante, R.string.alertIntroducirCantidadAPedir);
+        mostrarAlertDialog(R.string.alertIntroducirCantidadAPedir);
     }
 
     // Metodo que muestra un AlertDialog
-    private void mostrarAlertDialog(int titulo, int mensaje) {
+    private void mostrarAlertDialog( int mensaje) {
         editTextAlertDialog.setInputType(InputType.TYPE_CLASS_NUMBER);
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-        dialogo1.setTitle(titulo);
         dialogo1.setMessage(mensaje);
         dialogo1.setView(editTextAlertDialog);
         dialogo1.setCancelable(false);

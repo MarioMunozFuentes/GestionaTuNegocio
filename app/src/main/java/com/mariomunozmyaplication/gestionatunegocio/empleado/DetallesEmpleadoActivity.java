@@ -133,7 +133,7 @@ public class DetallesEmpleadoActivity extends AppCompatActivity implements View.
     // Metodo para mostrar alerta de confirmacion
     private void mostrarAlertConfirmacion() {
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-        dialogo1.setTitle(R.string.alertCabezeraImportante);
+//        dialogo1.setTitle(R.string.alertCabezeraImportante);
         dialogo1.setMessage(R.string.alertEliminarEmpleado);
         dialogo1.setCancelable(false);
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {

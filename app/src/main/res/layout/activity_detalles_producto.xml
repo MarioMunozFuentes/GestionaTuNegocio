@@ -227,7 +227,8 @@
                 android:text="@string/btnHacerPedido"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_descripcionProducto" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_descripcionProducto"
+                tools:ignore="TextContrastCheck" />
 
             <!-- Boton editar producto -->
             <Button

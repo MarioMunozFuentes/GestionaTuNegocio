@@ -37,6 +37,7 @@ import java.io.ByteArrayOutputStream;
 
 public class AddProductoActivity extends AppCompatActivity implements View.OnClickListener {
 
+
     // Declaramos variables
     private EditText etNombreProducto, etDescripcionProducto, etStockProducto, etPrecioProducto, etPrecioVentaProducto, etReferenciaProducto;
     private TextView tv_title_addProducto;
