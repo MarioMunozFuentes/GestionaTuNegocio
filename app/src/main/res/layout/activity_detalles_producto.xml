@@ -59,18 +59,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_titleStockProducto" />
 
             <!--TEXTVIEW REFERENCIA PRODUCTO (DATOS)-->
+
+            <!-- TextView titulo stock producto -->
             <TextView
                 android:id="@+id/tv_referenciaProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
                 android:text="TextView"
                 android:textSize="20dp"
-                app:layout_constraintStart_toEndOf="@+id/tv_titleRef"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_titleRef"
+                app:layout_constraintStart_toStartOf="@+id/tv_stockProducto"
                 app:layout_constraintTop_toTopOf="@+id/tv_titleRef"
                 tools:text="XXXX" />
 
-            <!-- TextView titulo stock producto -->
             <TextView
                 android:id="@+id/tv_titleStockProducto"
                 android:layout_width="wrap_content"
