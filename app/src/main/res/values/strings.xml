@@ -70,7 +70,7 @@
     <string name="alertCabezeraPermisosDesactivados">Permisos desactivados</string>
     <string name="alertPermisosDesactivados">Otorgar permisos para su correcto funcionamiento</string>
     <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <!--    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>-->
+        <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
     <!-- Textos Progress Dialog -->
     <string name="progressDialogActualizarDatos">Actualizando datos..</string>
     <string name="progressDialogCargando">Cargando...</string>

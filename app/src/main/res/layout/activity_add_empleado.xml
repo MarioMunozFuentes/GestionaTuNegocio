@@ -45,7 +45,7 @@
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/tv_title_addEmpleado"
-                android:textColor="#0E63E6"
+                android:textColor="@color/Teal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"

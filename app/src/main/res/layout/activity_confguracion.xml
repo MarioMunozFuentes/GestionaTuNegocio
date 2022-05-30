@@ -110,6 +110,7 @@
         <EditText
             android:id="@+id/etNewPassword"
             style="@style/editText"
+            android:background="@color/gray1"
             android:hint="Nueva Contraseña"
             android:inputType="textPassword"
             android:maxLines="1"
@@ -119,7 +120,7 @@
     <!-- TextInputLayout confirmar nueva contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPass2"
-        style="@style/textInputLayout"
+        style="@style/textInputLayoutBloqueado"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
@@ -129,12 +130,14 @@
         <EditText
             android:id="@+id/etConfirmNewPassword"
             style="@style/editText"
+            android:background="@color/gray1"
             android:hint="Confirma Nueva Contraseña"
             android:inputType="textPassword"
             android:maxLines="1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
 
     <!-- Boton guardar -->

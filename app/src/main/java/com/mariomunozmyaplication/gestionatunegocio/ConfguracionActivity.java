@@ -1,11 +1,14 @@
 package com.mariomunozmyaplication.gestionatunegocio;
 
+import static com.mariomunozmyaplication.gestionatunegocio.R.color.Teal;
+
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -132,10 +135,23 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
             case R.id.btnCambiarPasswd:
                 etNewPassword.setEnabled(true);
                 etConfirmNewPassword.setEnabled(true);
+
+                //bloquear CAMPOS "NOMBRE EMPRESA y EMAIL"
                 etEmailAcceso.setEnabled(false);
                 etNombreEmpresa.setEnabled(false);
+                //bloquear boton "DESBLOQUEAR CAMPOS"
                 btnCambiarPasswd.setEnabled(false);
+
+                //modificar color de editText para ayudar al usuario
+                etConfirmNewPassword.getBackground().setColorFilter(getResources().getColor(R.color.blancoApp),PorterDuff.Mode.SRC_ATOP);
+                etNewPassword.getBackground().setColorFilter(getResources().getColor(R.color.blancoApp),PorterDuff.Mode.SRC_ATOP);
+
+
+                //indicar al usuario que están desbloqueados
+                Toast.makeText(this, "CAMPOS CONTRASEÑA DESBLOQUEADOS", Toast.LENGTH_SHORT).show();
                 break;
+            default:
+
         }
     }
 

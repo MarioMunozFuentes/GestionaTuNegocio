@@ -30,7 +30,7 @@
         android:text="Gestiona"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="22sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <!-- TextVIew email usuario -->
     <TextView

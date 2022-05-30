@@ -91,7 +91,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorFormatoEmail);
         } else {
             if (etPassword.getText().length() >= 6) {
-                auth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                auth.signInWithEmailAndPassword(etEmail.getText().toString(),
+                        etPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
