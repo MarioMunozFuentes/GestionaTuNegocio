@@ -6,30 +6,15 @@
     <string name="perfil" translatable="false">Perfil</string>
     <string name="nombre_de_usuario" translatable="false">Nombre</string>
     <string name="apellidos" translatable="false">Apellidos</string>
-    <string name="edad" translatable="false">Edad</string>
-    <string name="altura" translatable="false">Altura</string>
-    <string name="peso" translatable="false">Peso</string>
     <string name="email" translatable="false">Email</string>
     <string name="telefono" translatable="false">Teléfono</string>
-    <!--    <string name="tv_fContratacion" translatable="false">Fecha Alta</string>-->
-    <string name="hombre" translatable="false">Hombre</string>
-    <string name="mujer" translatable="false">Mujer</string>
     <string name="emailRegistro" translatable="false"></string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="bienvenido_a_gestiona" translatable="false">Bienvenido a Gestiona</string>
-    <string name="home" translatable="false">Home</string>
     <string name="empleados" translatable="false">Empleados</string>
     <string name="pedidos" translatable="false">Pedidos</string>
     <string name="productos" translatable="false">Productos</string>
-    <string name="usuario" translatable="false">Usuario</string>
     <string name="contacto">Contacto</string>
     <string name="salir" translatable="false">Salir</string>
 
-    <string name="settings" translatable="false">Ajustes</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-
-    <!--    f-->
     <!--    <string name="app_name">Manage your business</string>-->
     <string name="etEmail">"Email: "</string>
     <string name="etPassword">"Password: "</string>
@@ -49,7 +34,6 @@
     <string name="btnHacerPedido">Hacer Pedido</string>
     <string name="btnSi">Si</string>
     <string name="btnNo" translatable="false">No</string>
-
 
     <!-- Mensajes de Alert -->
     <string name="alertCabezeraImportante">""</string>

@@ -3,8 +3,6 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 31
-
-
     defaultConfig {
         applicationId "com.mariomunozmyaplication.gestionatunegocio"
         minSdkVersion 17
@@ -16,7 +14,6 @@ android {
 
         multiDexEnabled true
     }
-
     buildTypes {
         release {
             minifyEnabled false
