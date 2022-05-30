@@ -90,7 +90,7 @@ public class PedidosFragment extends Fragment implements MyAdapterPedidos.OnItem
     // Metodo para mostrar alerta de confirmacion del pedido
     private void mostrarAlertConfirmacionPedido(final String prodcuto) {
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(getContext());
-        dialogo1.setTitle(R.string.alertCabezeraImportante);
+//        dialogo1.setTitle(R.string.alertCabezeraImportante);
         dialogo1.setMessage(R.string.alertPedidoRecibido);
         dialogo1.setCancelable(false);
         dialogo1.setPositiveButton(R.string.btnSi, new DialogInterface.OnClickListener() {

@@ -4,7 +4,9 @@
     <!--  -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- PERMISO PARA PODER ABRIR LA CAMARA -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- PERMISO PARA PODER ABRIR LA CAMARA -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -19,7 +21,7 @@
         <activity
             android:name=".ContactosActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <!-- activity Detalles de Producto -->
         <activity android:name=".producto.DetallesProducto" /> <!-- activity Detalles de Empleado -->
         <activity android:name=".empleado.DetallesEmpleadoActivity" /> <!-- activity Añadir Producto -->

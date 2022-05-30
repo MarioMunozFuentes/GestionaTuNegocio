@@ -52,7 +52,7 @@
 
 
     <!-- Mensajes de Alert -->
-    <string name="alertCabezeraImportante">"Importante: "</string>
+    <string name="alertCabezeraImportante">""</string>
     <string name="alertCabezeraError" translatable="false">ERROR: </string>
     <string name="alertPasswdLong">La contraseña debe tener 6 caracteres mínimo</string>
     <string name="alertPasswdNoCoinciden">Contraseñas no coinciden</string>
