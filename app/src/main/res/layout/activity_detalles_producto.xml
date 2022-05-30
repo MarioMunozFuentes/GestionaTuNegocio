@@ -113,9 +113,9 @@
                 android:layout_marginStart="4dp"
                 android:text="uds"
                 android:textSize="22sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_stockProducto"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_titleStockProducto"
                 app:layout_constraintStart_toEndOf="@+id/tv_stockProducto"
-                app:layout_constraintTop_toTopOf="@+id/tv_stockProducto"
+                app:layout_constraintTop_toTopOf="@+id/tv_titleStockProducto"
                 app:layout_constraintVertical_bias="0.588" />
 
             <TextView
