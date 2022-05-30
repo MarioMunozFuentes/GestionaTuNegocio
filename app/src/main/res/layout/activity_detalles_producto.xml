@@ -24,42 +24,41 @@
                 android:layout_width="131dp"
                 android:layout_height="135dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="84dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_persona_foreground" />
 
+            <!--         TEXTVIEW NOMBRE DEL PRODUCTO-->
             <TextView
                 android:id="@+id/tv_nombreProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="32dp"
                 android:text="TextView"
                 android:textColor="@color/Teal"
                 android:textSize="27sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
+                app:layout_constraintHorizontal_bias="0.103"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Nombre del producto" />
 
-            <!-- TextView codigo referencial producto -->
-
-            <!-- TextView stock producto -->
-
+            <!--TEXTVIEW REF-->
             <TextView
                 android:id="@+id/tv_titleRef"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="20dp"
-                android:text="Ref: "
+                android:text="Ref"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
                 app:layout_constraintTop_toBottomOf="@+id/tv_titleStockProducto" />
 
+            <!--TEXTVIEW REFERENCIA PRODUCTO (DATOS)-->
             <TextView
                 android:id="@+id/tv_referenciaProducto"
                 android:layout_width="wrap_content"
@@ -72,33 +71,24 @@
                 tools:text="XXXX" />
 
             <!-- TextView titulo stock producto -->
-
-
-            <!-- TextView titulo precio de coste producto -->
-
-            <!-- TextView stock ud -->
-
-            <!-- TextView precio de coste producto -->
-
-            <!-- simbolo € -->
-
             <TextView
                 android:id="@+id/tv_titleStockProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:text="Stock"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
                 app:layout_constraintTop_toBottomOf="@+id/tv_nombreProducto" />
 
+            <!-- TextView stock producto(DATOS) -->
             <TextView
                 android:id="@+id/tv_stockProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="4dp"
                 android:text="TextView"
                 android:textSize="50dp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_titleStockProducto"
@@ -107,6 +97,7 @@
                 app:layout_constraintVertical_bias="0.75"
                 tools:text="230" />
 
+            <!-- TextView  simbolo UDS-->
             <TextView
                 android:id="@+id/tv_uds"
                 android:layout_width="wrap_content"
@@ -115,37 +106,51 @@
                 android:text="uds"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_titleStockProducto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tv_stockProducto"
                 app:layout_constraintTop_toTopOf="@+id/tv_titleStockProducto"
-                app:layout_constraintVertical_bias="0.588" />
+                app:layout_constraintVertical_bias="1.0" />
 
+            <!-- TextView  PRECIO COSTE-->
             <TextView
                 android:id="@+id/tv_tittlePrecioCosteProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="72dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/tv_tittlePrecioCosteProducto"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView_Producto" />
 
+            <!-- TextView  PRECIO COSTE(DATO NUMERICO)-->
             <TextView
-                android:id="@+id/tv_precioEuro2"
+                android:id="@+id/tv_precioCosteProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="230"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tittlePrecioCosteProducto"
+                app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioCosteProducto"
+                app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioCosteProducto"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <!-- TextView  simbolo €-->
+            <TextView
+                android:id="@+id/tv_precioEuro1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="€"
                 android:textSize="22sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_tittlePrecioVentaProducto"
-                app:layout_constraintStart_toEndOf="@+id/tv_precioVentaProducto"
-                app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioVentaProducto" />
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tittlePrecioCosteProducto"
+                app:layout_constraintStart_toEndOf="@+id/tv_precioCosteProducto"
+                app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioCosteProducto" />
 
             <!-- TextView titulo precio de venta producto -->
-
-            <!-- simbolo € -->
-
             <TextView
                 android:id="@+id/tv_tittlePrecioVentaProducto"
                 android:layout_width="wrap_content"
@@ -159,21 +164,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioCosteProducto" />
 
             <!-- TextView precio de venta producto -->
-
-
-            <!-- TextView descripcion producto -->
-
-            <TextView
-                android:id="@+id/tv_precioEuro1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="€"
-                android:textSize="22sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_tittlePrecioCosteProducto"
-                app:layout_constraintStart_toEndOf="@+id/tv_precioCosteProducto"
-                app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioCosteProducto" />
-
             <TextView
                 android:id="@+id/tv_precioVentaProducto"
                 android:layout_width="wrap_content"
@@ -186,18 +176,19 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioVentaProducto"
                 app:layout_constraintVertical_bias="0.65" />
 
+            <!-- TextView  simbolo €-->
             <TextView
-                android:id="@+id/tv_precioCosteProducto"
+                android:id="@+id/tv_precioEuro2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:text="230"
-                android:textSize="50sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_tittlePrecioCosteProducto"
-                app:layout_constraintStart_toEndOf="@+id/tv_tittlePrecioCosteProducto"
-                app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioCosteProducto"
-                app:layout_constraintVertical_bias="0.65" />
+                android:layout_marginStart="4dp"
+                android:text="€"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tittlePrecioVentaProducto"
+                app:layout_constraintStart_toEndOf="@+id/tv_precioVentaProducto"
+                app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioVentaProducto" />
 
+            <!-- TextView descripcion producto -->
             <TextView
                 android:id="@+id/tv_titleDescripcion"
                 android:layout_width="377dp"
@@ -213,7 +204,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioVentaProducto" />
-            <!-- TextView descripcion producto -->
+
+            <!-- TextView descripcion producto(DATOS) -->
             <TextView
                 android:id="@+id/tv_descripcionProducto"
                 android:layout_width="377dp"
