@@ -11,8 +11,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -44,7 +46,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_persona_foreground" />
 
-            <!--         TEXTVIEW NOMBRE DEL PRODUCTO-->
+            <!-- TEXTVIEW NOMBRE DEL PRODUCTO-->
             <TextView
                 android:id="@+id/tv_nombreProducto"
                 android:layout_width="wrap_content"
@@ -61,25 +63,21 @@
                 tools:text="Nombre del producto" />
 
             <!--TEXTVIEW REF-->
-
-            <!--TEXTVIEW REFERENCIA PRODUCTO (DATOS)-->
-
-            <!-- TextView titulo stock producto -->
-
             <TextView
                 android:id="@+id/tv_titleRef"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:text="Ref"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/tv_referenciaProducto"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.054"
                 app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
-                app:layout_constraintTop_toBottomOf="@+id/tv_titleStockProducto" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombreProducto" />
 
+            <!--TEXTVIEW REFERENCIA PRODUCTO (DATOS)-->
             <TextView
                 android:id="@+id/tv_referenciaProducto"
                 android:layout_width="wrap_content"
@@ -93,36 +91,35 @@
                 app:layout_constraintVertical_bias="0.0"
                 tools:text="XXXX" />
 
+            <!-- TextView titulo stock producto -->
             <TextView
                 android:id="@+id/tv_titleStockProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="24dp"
                 android:text="Stock"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView_Producto"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nombreProducto" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_titleRef" />
 
             <!-- TextView stock producto(DATOS) -->
-
-            <!-- TextView  simbolo UDS-->
-
             <TextView
                 android:id="@+id/tv_stockProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="25dp"
+                android:layout_marginEnd="20dp"
                 android:text="10"
                 android:textSize="50dp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_titleStockProducto"
                 app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.912"
                 app:layout_constraintStart_toEndOf="@+id/tv_titleStockProducto"
                 app:layout_constraintTop_toTopOf="@+id/tv_titleStockProducto"
-                app:layout_constraintVertical_bias="0.77" />
+                app:layout_constraintVertical_bias="0.8" />
 
+            <!-- TextView  simbolo UDS-->
             <TextView
                 android:id="@+id/tv_uds"
                 android:layout_width="wrap_content"
@@ -149,11 +146,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView_Producto" />
 
             <!-- TextView  PRECIO COSTE(DATO NUMERICO)-->
-
-            <!-- TextView  simbolo €-->
-
-            <!-- TextView titulo precio de venta producto -->
-
             <TextView
                 android:id="@+id/tv_precioCosteProducto"
                 android:layout_width="wrap_content"
@@ -168,6 +160,7 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioCosteProducto"
                 app:layout_constraintVertical_bias="0.77" />
 
+            <!-- TextView  simbolo €-->
             <TextView
                 android:id="@+id/tv_precioEuro1"
                 android:layout_width="wrap_content"
@@ -181,6 +174,7 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioCosteProducto"
                 app:layout_constraintVertical_bias="1.0" />
 
+            <!-- TextView titulo precio de venta producto -->
             <TextView
                 android:id="@+id/tv_tittlePrecioVentaProducto"
                 android:layout_width="wrap_content"
@@ -193,18 +187,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_tittlePrecioCosteProducto" />
 
             <!-- TextView precio de venta producto -->
-
-            <!-- TextView  simbolo €-->
-
-            <!-- TextView descripcion producto -->
-
             <TextView
                 android:id="@+id/tv_precioVentaProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
                 android:text="5"
                 android:textSize="50sp"
-                android:layout_marginEnd="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_tittlePrecioVentaProducto"
                 app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -212,6 +201,7 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioVentaProducto"
                 app:layout_constraintVertical_bias="0.77" />
 
+            <!-- TextView  simbolo €-->
             <TextView
                 android:id="@+id/tv_precioEuro2"
                 android:layout_width="wrap_content"
@@ -225,6 +215,7 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_tittlePrecioVentaProducto"
                 app:layout_constraintVertical_bias="1.0" />
 
+            <!-- TextView descripcion producto -->
             <TextView
                 android:id="@+id/tv_titleDescripcion"
                 android:layout_width="0dp"
