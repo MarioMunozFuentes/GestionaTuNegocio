@@ -94,7 +94,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Información");//TITULO
         builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste. \n"+"\n" +
-                "Para cambiar contraseña pulse en 'CAMBIAR CONTRASEÑA' y desbloquearas los campos.");//MENSAJITO
+                "Para cambiar contraseña pulse en el botón 'DESBLOQUEAR CAMPOS'");//MENSAJITO
         builder.setIcon(R.drawable.information);//ICONO
         builder.setCancelable(false);
         builder.setNeutralButton("Salir", new DialogInterface.OnClickListener() {

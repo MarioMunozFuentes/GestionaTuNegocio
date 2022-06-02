@@ -37,7 +37,7 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.95" />
             <!-- ImageView logo -->
-            <!-- TextView bienvenido -->
+
             <ImageView
                 android:id="@+id/imgViewLogo"
                 android:layout_width="109dp"
@@ -47,7 +47,6 @@
                 app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
                 app:layout_constraintStart_toStartOf="@+id/lineaIzd"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <Button
                 android:id="@+id/btDatosEmpresa"
