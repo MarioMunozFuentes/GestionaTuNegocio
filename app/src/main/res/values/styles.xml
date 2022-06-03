@@ -10,6 +10,16 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_marginTop">10dp</item>
     </style>
+    <!-- TextInputLayout -->
+    <style name="textInputLayoutBloqueado">
+        <item name="android:textColorHint">@color/Teal</item>
+        <!-- cambiar color al escribir en los EditText -->
+        <item name="android:textColor">@color/Teal4</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
 
     <!-- EditText -->
     <style name="editText">

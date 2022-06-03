@@ -37,6 +37,7 @@ import java.io.ByteArrayOutputStream;
 
 public class AddProductoActivity extends AppCompatActivity implements View.OnClickListener {
 
+
     // Declaramos variables
     private EditText etNombreProducto, etDescripcionProducto, etStockProducto, etPrecioProducto, etPrecioVentaProducto, etReferenciaProducto;
     private TextView tv_title_addProducto;
@@ -181,7 +182,8 @@ public class AddProductoActivity extends AppCompatActivity implements View.OnCli
     // Metodo para añadir un producto nuevo
     private void addProducto() {
         Log.i("loge", "Hola AddProducto: ");
-        if (etNombreProducto.getText().toString().equals("") || etReferenciaProducto.getText().toString().equals("") || etDescripcionProducto.getText().toString().equals("") || etStockProducto.getText().toString().equals("")
+        if (etNombreProducto.getText().toString().equals("") || etReferenciaProducto.getText().toString().equals("")
+                || etDescripcionProducto.getText().toString().equals("") || etStockProducto.getText().toString().equals("")
                 || etPrecioProducto.getText().toString().equals("") || etPrecioVentaProducto.getText().toString().equals("")) {
             mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorIntroduceDatosCampos);
         } else {

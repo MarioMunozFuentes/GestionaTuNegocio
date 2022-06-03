@@ -6,20 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".empleado.DetallesEmpleadoActivity">
 
-    <!-- TextView informacion empleado -->
+    <!-- TextView nombre empleado -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_nombre_infoEmpleado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="102dp"
-        android:text="@string/tv_tittle_InfoEmpleado"
-        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textColor="@color/Teal"
+        android:textSize="27sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="nombre" />
+
+
+    <!-- TextView apellidos empleado -->
+    <TextView
+        android:id="@+id/tv_apellidos_infoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text=""
+        android:textColor="@color/Teal"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nombre_infoEmpleado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_nombre_infoEmpleado"
+        app:layout_constraintTop_toTopOf="@+id/tv_nombre_infoEmpleado"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="apellido1 apellido2" />
+
 
     <!-- ImageView empleado -->
     <ImageView
@@ -27,9 +47,9 @@
         android:layout_width="128dp"
         android:layout_height="127dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_infoEmpleado"
         app:srcCompat="@drawable/ic_persona_foreground"
         tools:ignore="VectorDrawableCompat" />
 
@@ -38,26 +58,26 @@
         android:id="@+id/tv_title_Dni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
         android:text="DNI: "
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imagenDetallesEmpleado"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_apellidos_infoEmpleado" />
     <!-- TextView DNI empleado -->
     <TextView
         android:id="@+id/tv_dni_infoEmpleado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="4dp"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_Dni"
         app:layout_constraintStart_toEndOf="@+id/tv_title_Dni"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_Dni"
         tools:text="00000000P" />
+
 
     <!--    TextView Direccion-->
     <TextView
@@ -65,11 +85,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="35dp"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imagenDetallesEmpleado"
         app:layout_constraintTop_toBottomOf="@+id/tv_dni_infoEmpleado"
         tools:text="c/ falsa ontinyentyyyyyyyy" />
@@ -79,13 +100,14 @@
         android:id="@+id/tv_titleTel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:text="Tel: "
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imagenDetallesEmpleado"
         app:layout_constraintTop_toBottomOf="@+id/tv_direccion_infoEmpleado" />
+
 
     <!-- TextView telefono empleado -->
     <TextView
@@ -93,43 +115,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/tv_titleTel"
         app:layout_constraintTop_toBottomOf="@+id/tv_direccion_infoEmpleado"
         tools:text="690139950" />
-
-    <!-- TextView nombre empleado -->
-    <TextView
-        android:id="@+id/tv_nombre_infoEmpleado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="31dp"
-        android:text="TextView"
-        android:textColor="#0E63E6"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenDetallesEmpleado"
-        tools:text="nombre" />
-
-    <!-- TextView apellidos empleado -->
-    <TextView
-        android:id="@+id/tv_apellidos_infoEmpleado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="31dp"
-        android:text="TextView"
-        android:textColor="#0E63E6"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tv_nombre_infoEmpleado"
-        app:layout_constraintTop_toBottomOf="@+id/imagenDetallesEmpleado"
-        tools:text="apellido1 apellido2" />
-
 
     <!-- TextView IBAN empleado -->
     <TextView
@@ -137,14 +128,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="20dp"
         android:text="IBAN: "
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_apellidos_infoEmpleado" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenDetallesEmpleado" />
 
-    <!-- TextView IBAN empleado -->
     <TextView
         android:id="@+id/tv_IBAN_infoEmpleado"
         android:layout_width="wrap_content"
@@ -152,38 +142,37 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_title_IBAN_infoEmpleado"
         app:layout_constraintStart_toEndOf="@+id/tv_title_IBAN_infoEmpleado"
         app:layout_constraintTop_toBottomOf="@+id/tv_nombre_infoEmpleado"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="ES7220353072137353112069" />
 
 
-    <!-- TextView titulo fecha contratacion empleado -->
+    <!-- TextView fecha contratacion empleado -->
     <TextView
         android:id="@+id/tv_title_fechaContratacionEmpleado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="12dp"
         android:text="@string/tv_title_fechaContratacionEmpleado"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_IBAN_infoEmpleado" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_IBAN_infoEmpleado" />
 
-
-    <!-- TextView fecha contratacion empleado -->
     <TextView
         android:id="@+id/tv_fContratacion_infoEmpleado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_fechaContratacionEmpleado"
         app:layout_constraintStart_toEndOf="@+id/tv_title_fechaContratacionEmpleado"
-        app:layout_constraintTop_toBottomOf="@+id/tv_IBAN_infoEmpleado"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_fechaContratacionEmpleado"
         tools:text="25/12/2021" />
 
     <!-- TextView titulo sueldo empleado -->
@@ -191,26 +180,25 @@
         android:id="@+id/tv_title_sueldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="16dp"
         android:text="@string/tv_title_sueldo"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_fechaContratacionEmpleado"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_fechaContratacionEmpleado" />
-
     <!-- TextView sueldo empleado -->
     <TextView
         android:id="@+id/tv_sueldoEmpleado_infoEmpleado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="22dp"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_title_sueldo"
         app:layout_constraintStart_toEndOf="@+id/tv_title_sueldo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_fechaContratacionEmpleado"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_sueldo"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="521.25" />
 
     <TextView
@@ -219,25 +207,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:text="€"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_sueldoEmpleado_infoEmpleado"
         app:layout_constraintStart_toEndOf="@+id/tv_sueldoEmpleado_infoEmpleado"
         app:layout_constraintTop_toTopOf="@+id/tv_sueldoEmpleado_infoEmpleado" />
 
     <!-- Boton editar empleado -->
+
+
     <Button
         android:id="@+id/btnEditEmpleado"
         style="@style/botonVerde"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="10dp"
         android:text="@string/btnEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_sueldoEmpleado_infoEmpleado" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_sueldoEmpleado_infoEmpleado"
+        tools:ignore="TextContrastCheck" />
     <!-- Boton eliminar empleado -->
     <Button
         android:id="@+id/btnEliminarEmpleado"

@@ -1,31 +1,29 @@
 package com.mariomunozmyaplication.gestionatunegocio;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.google.android.material.snackbar.Snackbar;
 
 public class ContactosActivity extends AppCompatActivity {
 
-    TextView tvGithubMario, tvGithubAsier;
+
     private TextView tvEmailUsuario, tvNombreEmpresa;
-    Button btCompartirAppQR, btCompartirAppLink;
     private ImageView image;
-    String email,nombreEmpresa;
+    String email, nombreEmpresa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +31,9 @@ public class ContactosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contactos);
 
 
-        Button QR = findViewById(R.id.btCompartirAppQR);
-        Button LINK = findViewById(R.id.btCompartirAppLink);
+        ImageButton QR = findViewById(R.id.btCompartirAppQR);
+        ImageButton LINK = findViewById(R.id.btCompartirAppLink);
         Button empresa = findViewById(R.id.btDatosEmpresa);
-
 
 
         empresa.setOnClickListener(new View.OnClickListener() {
@@ -44,14 +41,14 @@ public class ContactosActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                email=tvEmailUsuario.getText().toString();
-                nombreEmpresa=tvNombreEmpresa.getText().toString();
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "DATOS EMPRESA: "+
-                        "\n\n" +
-                        "EMAIL: "+email+"\n"+
-                        "NOMBRE EMPRESA: "+ nombreEmpresa+" \n"+
-                        "DIRECCIÓN: "+"añadir dirección aquí \n"+
-                        "TELÉFONO: "+"añadir teléfono aquí");
+                email = tvEmailUsuario.getText().toString();
+                nombreEmpresa = tvNombreEmpresa.getText().toString();
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "DATOS EMPRESA: " +
+                        "\n\n\n" +
+                        "EMAIL: " + email + "\n\n" +
+                        "NOMBRE EMPRESA: " + nombreEmpresa); //+" \n" +
+                // "DIRECCIÓN: "+"añadir dirección aquí \n"+
+                //  "TELÉFONO: "+"añadir teléfono aquí");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }
@@ -100,6 +97,20 @@ public class ContactosActivity extends AppCompatActivity {
 
     }
 
+    // Opciones menú 3 puntitos
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent intent = new Intent(this, ConfguracionActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
     // Metodo para modificar el NavHeader
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -116,7 +127,6 @@ public class ContactosActivity extends AppCompatActivity {
         }
         return true;
     }
-
 
 
     public void cargarQR(ContactosActivity contactos) {

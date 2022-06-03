@@ -1,326 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".empleado.AddEmpleadoActivity">
 
-    <!-- LinearLayout contenedor-->
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- TextView datos empleado -->
-        <TextView
-            android:id="@+id/tv_title_addEmpleado"
-            android:layout_width="373dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="20dp"
-            android:text="@string/tv_title_addEmpleado"
-            android:textColor="#0E63E6"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <!-- TextView foto empleado -->
-        <TextView
-            android:id="@+id/tv_ImagenEmpleado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/tv_imagenEmpleado"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado" />
-
-        <!-- ImageView foto empleado -->
-        <ImageView
-            android:id="@+id/imagenEmppleado"
-            android:layout_width="186dp"
-            android:layout_height="183dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="11dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_ImagenEmpleado"
-            app:srcCompat="@drawable/ic_persona_foreground"
-            tools:ignore="VectorDrawableCompat" />
-
-        <!-- TextView nombre empleado -->
-        <TextView
-            android:id="@+id/tv_nombreEmplado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/tv_nombre"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado" />
-
-        <!-- EditText nombre empleado -->
-        <EditText
-            android:id="@+id/etNombreEmpleado"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:theme="@style/Theme.Gestiona">
 
-        <!-- TextView apellidos empleado -->
-        <TextView
-            android:id="@+id/tv_ApellidosEmplado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="23dp"
-            android:text="@string/tv_apellidos"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etNombreEmpleado" />
+            <!-- Guideline izquierda -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineaIzd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
 
-        <!-- EditText apellidos empleado -->
-        <EditText
-            android:id="@+id/etApellidosEmpleado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado"
-            tools:ignore="SpeakableTextPresentCheck" />
+            <!-- Guideline derecha -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineaDerecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
 
-        <!-- TextView DNI empleado -->
-        <TextView
-            android:id="@+id/tv_dniEmpleado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="23dp"
-            android:text="@string/tv_dniEmpleado"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
-        <!-- EditText DNI empleado -->
-        <EditText
-            android:id="@+id/etDNIEmpleado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:hint="51193186Q"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado" />
+            <!-- TextView datos empleado -->
+            <TextView
+                android:id="@+id/tv_title_addEmpleado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/tv_title_addEmpleado"
+                android:textColor="@color/Teal"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- TextView IBAN empleado -->
-        <TextView
-            android:id="@+id/tv_IBAN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="21dp"
-            android:text="@string/tv_IBAN"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etApellidosEmpleado" />
 
-        <!-- EditText IBAN empleado -->
-        <EditText
-            android:id="@+id/etIBAN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:hint="EJ:ES7220353072137353112069"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_IBAN" />
+            <!-- ImageView foto empleado -->
+            <ImageView
+                android:id="@+id/imagenEmppleado"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_addEmpleado"
+                app:srcCompat="@drawable/user"
+                tools:ignore="VectorDrawableCompat" />
 
-        <!-- TextView direccion empleado -->
-        <TextView
-            android:id="@+id/tv_direccionEmpleado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="21dp"
-            android:text="@string/tv_direccionEmpleado"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etIBAN" />
+            <!-- TextInputLayout Nombre empleado -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_nombreEmplado"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/imagenEmppleado">
+                <!-- EditText empleado -->
+                <EditText
+                    android:id="@+id/etNombreEmpleado"
+                    style="@style/editText"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:minHeight="48dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- EditText direccion empleado -->
-        <EditText
-            android:id="@+id/etDireccionEmpleado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_direccionEmpleado" />
+            <!-- TextInputLayout Apellido -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_ApellidosEmplado"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombreEmplado">
+                <!-- EditText apellido -->
+                <EditText
+                    android:id="@+id/etApellidosEmpleado"
+                    style="@style/editText"
+                    android:hint="Apellido/s"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- TextView telefono empleado -->
-        <TextView
-            android:id="@+id/tv_nTelefonoEmpleado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="21dp"
-            android:text="@string/tv_nTelefonoEmpleado"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado" />
+            <!-- TextInputLayout DNI -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_dniEmpleado"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ApellidosEmplado">
+                <!-- EditText DNI -->
+                <EditText
+                    android:id="@+id/etDNIEmpleado"
+                    style="@style/editText"
+                    android:hint="DNI"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- EditText telefono empleado -->
-        <EditText
-            android:id="@+id/etnTelefonoEmpleado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nTelefonoEmpleado" />
 
-        <!-- TextView sueldo empleado -->
-        <TextView
-            android:id="@+id/tv_SueldoEmpleado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="21dp"
-            android:text="@string/tv_SueldoEmpleado"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDireccionEmpleado" />
+            <!-- TextView IBAN empleado -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_IBAN"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dniEmpleado">
+                <!-- EditText IBAN -->
+                <EditText
+                    android:id="@+id/etIBAN"
+                    style="@style/editText"
+                    android:hint="IBAN"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- EditText sueldo empleado -->
-        <EditText
-            android:id="@+id/etSueldoEmpleado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nTelefonoEmpleado" />
 
-        <!-- TextView fecha de contratacion empleado -->
-        <TextView
-            android:id="@+id/tv_fechaContratacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/tv_fContratacion"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etIBAN" />
+            <!-- TextView direccion empleado -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_direccionEmpleado"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_IBAN">
+                <!-- EditText direccion -->
+                <EditText
+                    android:id="@+id/etDireccionEmpleado"
+                    style="@style/editText"
+                    android:hint="Dirección"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- CalendarView fecha de contraacion empleado-->
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <!-- Boton aceptar -->
-        <Button
-            android:id="@+id/btnAceptarEmpleado"
-            style="@style/botonVerde"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/btnAceptar" />
+            <!-- TextView telefono empleado -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_nTelefonoEmpleado"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_direccionEmpleado">
+                <!-- EditText telefono -->
+                <EditText
+                    android:id="@+id/etnTelefonoEmpleado"
+                    style="@style/editText"
+                    android:hint="Teléfono"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Boton cancelar -->
-        <Button
-            android:id="@+id/btnCancelarEmpleado"
-            style="@style/botonInverso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/btnCancelar"
-            app:layout_constraintTop_toBottomOf="parent" />
-    </LinearLayout>
-</ScrollView>
+            <!-- TextView sueldo empleado -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_SueldoEmpleado"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nTelefonoEmpleado">
+                <!-- EditText telefono -->
+                <EditText
+                    android:id="@+id/etSueldoEmpleado"
+                    style="@style/editText"
+                    android:hint="Salario"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <!--
-            <!- LinearLayout contenedor de los botones->
-            <LinearLayout
+            <!-- TextView fecha de contratacion empleado -->
+            <TextView
+                android:id="@+id/tv_fechaContratacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/tv_fContratacion"
+                android:textColor="@color/Teal"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_SueldoEmpleado"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- CalendarView fecha de contraacion empleado-->
+            <CalendarView
+                android:id="@+id/calendarView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fechaContratacion" />
 
-                <!- Boton aceptar ->
-                <Button
-                    android:id="@+id/btnAceptarEmpleado"
-                    style="@style/botonVerde"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="@string/btnAceptar" />
+            <!-- Boton aceptar -->
+            <Button
+                android:id="@+id/btnAceptarEmpleado"
+                style="@style/botonVerde"
+                android:layout_marginTop="30dp"
+                android:text="@string/btnAceptar"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@id/calendarView" />
 
-                <!- Boton cancelar ->
-                <!- REVISAR ESTE BOTON NO APARECE ->
-                <Button
-                    android:id="@+id/btnCancelarEmpleado"
-                    style="@style/botonRojo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="@string/btnCancelar"
-                    app:layout_constraintTop_toBottomOf="parent" />
-            </LinearLayout>
-    -->
+            <!-- Boton cancelar -->
+            <Button
+                android:id="@+id/btnCancelarEmpleado"
+                style="@style/botonInverso"
+                android:text="@string/btnCancelar"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@id/btnAceptarEmpleado" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+                app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+                app:layout_constraintTop_toBottomOf="@id/btnCancelarEmpleado"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

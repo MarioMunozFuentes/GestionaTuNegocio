@@ -4,7 +4,7 @@
     tools:showIn="navigation_view">
 
     <!-- Item titulo -->
-    <item android:title="@string/bienvenido_a_gestiona">
+    <item android:title="General">
         <menu>
             <!-- 1º grupo -->
             <group android:checkableBehavior="single">
@@ -28,7 +28,7 @@
     </item>
 
     <!-- Item contacto -->
-    <item android:title="@string/contacto">
+    <item android:title="Información">
         <menu>
             <!-- 2º grupo -->
             <group android:checkableBehavior="single">

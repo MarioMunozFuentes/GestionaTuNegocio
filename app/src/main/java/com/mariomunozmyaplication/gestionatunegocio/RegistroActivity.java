@@ -70,7 +70,8 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         } else {
             if (etPassword.getText().length() >= 6 && etPassword2.getText().length() >= 6) {
                 if (etPassword.getText().toString().equals(etPassword2.getText().toString())) {
-                    auth.createUserWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    auth.createUserWithEmailAndPassword(etEmail.getText().toString(),
+                            etPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
@@ -94,7 +95,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    // Metodo para modificar datos de un usuario
+    // Metodo para registrar usuarios en firebase
     private void updateUser(FirebaseUser user) {
         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                 .setDisplayName(etNombreEmpresa.getText().toString()).build();
@@ -168,6 +169,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() >= 6) {
@@ -176,6 +178,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
                     etPassword2.getBackground().setColorFilter(getResources().getColor(R.color.colorRojo), PorterDuff.Mode.SRC_ATOP);
                 }
             }
+
             @Override
             public void afterTextChanged(Editable s) {
             }
@@ -184,6 +187,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (validarEmail(etEmail.getText().toString())) {

@@ -6,30 +6,15 @@
     <string name="perfil" translatable="false">Perfil</string>
     <string name="nombre_de_usuario" translatable="false">Nombre</string>
     <string name="apellidos" translatable="false">Apellidos</string>
-    <string name="edad" translatable="false">Edad</string>
-    <string name="altura" translatable="false">Altura</string>
-    <string name="peso" translatable="false">Peso</string>
     <string name="email" translatable="false">Email</string>
     <string name="telefono" translatable="false">Teléfono</string>
-    <!--    <string name="tv_fContratacion" translatable="false">Fecha Alta</string>-->
-    <string name="hombre" translatable="false">Hombre</string>
-    <string name="mujer" translatable="false">Mujer</string>
     <string name="emailRegistro" translatable="false"></string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="bienvenido_a_gestiona" translatable="false">Bienvenido a Gestiona</string>
-    <string name="home" translatable="false">Home</string>
     <string name="empleados" translatable="false">Empleados</string>
     <string name="pedidos" translatable="false">Pedidos</string>
     <string name="productos" translatable="false">Productos</string>
-    <string name="usuario" translatable="false">Usuario</string>
     <string name="contacto">Contacto</string>
     <string name="salir" translatable="false">Salir</string>
 
-    <string name="settings" translatable="false">Ajustes</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-
-    <!--    f-->
     <!--    <string name="app_name">Manage your business</string>-->
     <string name="etEmail">"Email: "</string>
     <string name="etPassword">"Password: "</string>
@@ -50,9 +35,8 @@
     <string name="btnSi">Si</string>
     <string name="btnNo" translatable="false">No</string>
 
-
     <!-- Mensajes de Alert -->
-    <string name="alertCabezeraImportante">"Importante: "</string>
+    <string name="alertCabezeraImportante">""</string>
     <string name="alertCabezeraError" translatable="false">ERROR: </string>
     <string name="alertPasswdLong">La contraseña debe tener 6 caracteres mínimo</string>
     <string name="alertPasswdNoCoinciden">Contraseñas no coinciden</string>
@@ -86,7 +70,7 @@
     <string name="alertCabezeraPermisosDesactivados">Permisos desactivados</string>
     <string name="alertPermisosDesactivados">Otorgar permisos para su correcto funcionamiento</string>
     <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <!--    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>-->
+        <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
     <!-- Textos Progress Dialog -->
     <string name="progressDialogActualizarDatos">Actualizando datos..</string>
     <string name="progressDialogCargando">Cargando...</string>
@@ -105,10 +89,10 @@
 
     <!-- Textos añadir productos -->
 
-    <string name="tvNombreEmpresa">Nombre empresa:</string>
-    <string name="tvEmailAcceso">Email de acceso:</string>
-    <string name="tvContrasenaNueva">Nueva contraseña:</string>
-    <string name="tvContrasenaActualConfirmada">Confirmar nueva contraseña:</string>
+    <string name="tvNombreEmpresa">Nombre empresa</string>
+    <string name="tvEmailAcceso">Email de acceso</string>
+    <string name="tvContrasenaNueva">Nueva contraseña</string>
+    <string name="tvContrasenaActualConfirmada">Confirmar nueva contraseña</string>
     <string name="tvOlvidasteContrasena"><u> ¿Olvidaste contraseña? Haga click aquí </u></string>
     <string name="nav_header_title">Gestiona tu negocio</string>
     <string name="action_settings">Ajustes</string>
@@ -116,36 +100,36 @@
     <string name="menu_pedidos">Pedidos</string>
     <string name="menu_empleados">Empleados</string>
     <string name="menu_logout">Salir</string>
-    <string name="tv_title_addEmpleado">Detalles nuevo empleado:</string>
-    <string name="tv_title_ModifyEmpleado">Detalles Empleado:</string>
-    <string name="tv_nombre">Nombre:</string>
-    <string name="tv_apellidos">Apellido/s:</string>
-    <string name="tv_IBAN">IBAN cuenta de banco:</string>
-    <string name="tv_fContratacion">Fecha de contratación:</string>
-    <string name="tv_title_fechaContratacionEmpleado">Fecha de contratación:</string>
-    <string name="tv_imagenEmpleado">Foto empleado:</string>
-    <string name="tv_direccionEmpleado">Dirección:</string>
-    <string name="tv_nTelefonoEmpleado">Número Telefono:</string>
-    <string name="tv_dniEmpleado">DNI:</string>
-    <string name="cabezeraMenuFoto">Selecciona una opción:</string>
-    <string name="tv_tittle_InfoEmpleado">Información de Empleado:</string>
-    <string name="tv_tittle_InfoProducto">Información de Producto:</string>
+    <string name="tv_title_addEmpleado">Datos nuevo empleado</string>
+    <string name="tv_title_ModifyEmpleado">Detalles Empleado</string>
+    <string name="tv_nombre">Nombre</string>
+    <string name="tv_apellidos">Apellido/s</string>
+    <string name="tv_IBAN">IBAN cuenta de banco</string>
+    <string name="tv_fContratacion">Fecha de contratación</string>
+    <string name="tv_title_fechaContratacionEmpleado">Fecha de contratación</string>
+    <string name="tv_imagenEmpleado">Foto empleado</string>
+    <string name="tv_direccionEmpleado">Dirección</string>
+    <string name="tv_nTelefonoEmpleado">Número Telefono</string>
+    <string name="tv_dniEmpleado">DNI</string>
+    <string name="cabezeraMenuFoto">Selecciona una opción</string>
+    <string name="tv_tittle_InfoEmpleado">Información de Empleado</string>
+    <string name="tv_tittle_InfoProducto">Información de Producto</string>
     <string name="tv_titleStockProducto">Stock disponible:</string>
-    <string name="tv_tittlePrecioCosteProducto">Precio de coste:</string>
-    <string name="tv_tittlePrecioVentaProducto">Precio de venta:</string>
-    <string name="tv_title_addProducto">Datos de nuevo producto:</string>
-    <string name="tv_title_ModifyProducto">Datos de producto:</string>
-    <string name="tv_imagenProducto">Imagen Producto:</string>
+    <string name="tv_tittlePrecioCosteProducto">Precio de coste</string>
+    <string name="tv_tittlePrecioVentaProducto">Precio de venta</string>
+    <string name="tv_title_addProducto">Datos de nuevo producto</string>
+    <string name="tv_title_ModifyProducto">Datos de producto</string>
+    <string name="tv_imagenProducto">Imagen Producto</string>
     <string name="tv_DescripcionProducto">Descripción de producto:</string>
     <string name="tv_stockProducto">Stock disponible</string>
     <string name="tv_precioProducto">Precio que pagaste:</string>
     <string name="tv_precioVentaProducto">Precio de venta:</string>
-    <string name="tv_ReferenciaProducto">Referencia del producto:</string>
+    <string name="tv_ReferenciaProducto">Referencia del producto</string>
     <string name="tv_SueldoEmpleado">Salario empleado:</string>
     <string name="tv_title_sueldo">Salario:</string>
 
 
-    <string name="toastPermisionsDimiss">Tu no tienes los permisos necesarios</string>
+    <string name="toastPermisionsDimiss">No tienes los permisos necesarios</string>
 
 
 

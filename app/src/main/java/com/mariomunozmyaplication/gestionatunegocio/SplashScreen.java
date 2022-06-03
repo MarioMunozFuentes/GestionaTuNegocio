@@ -22,9 +22,11 @@ public class SplashScreen extends AppCompatActivity {
         AnimationABienvenida(true);
 
         // Implementar animacion (LOGO PRINCIPAL)
-        ImageView mSea = (ImageView) findViewById(R.id.imgLogo); // Se define una variable de tipo ImageView referenciada al id beach que es el LOGO PRINCIPAL
-        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.fadein); // Se define una variable Animaton y que cargue mi animacion llamada FADEIN
-        mSea.startAnimation(myanim); // Inicio Animacion
+        ImageView mLogo = (ImageView) findViewById(R.id.imgLogo);
+        // Se define una variable de tipo ImageView referenciada al id logo que es el LOGO PRINCIPAL
+        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.fadein);
+        // Se define una variable Animaton y que cargue mi animacion llamada FADEIN
+        mLogo.startAnimation(myanim); // Inicio Animacion
 
         // Animacion del Titulo de la App
         TextView shake = findViewById(R.id.Titulo);

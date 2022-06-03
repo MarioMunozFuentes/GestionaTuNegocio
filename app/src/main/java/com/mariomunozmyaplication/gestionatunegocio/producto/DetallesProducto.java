@@ -31,7 +31,8 @@ import com.mariomunozmyaplication.gestionatunegocio.pedido.Pedido;
 public class DetallesProducto extends AppCompatActivity implements View.OnClickListener {
 
     // Declaramos variables
-    private TextView tv_nombreProducto, tv_descripcionProducto, tv_referenciaProducto, tv_stockProducto, tv_precioCosteProducto, tv_precioVentaProducto;
+    private TextView tv_nombreProducto, tv_descripcionProducto, tv_referenciaProducto, tv_stockProducto, tv_precioCosteProducto,
+            tv_precioVentaProducto;
     private ImageView imagenProducto;
     private Intent intent;
     private AlertDialog dialog = null;
@@ -122,7 +123,7 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
     // Metodo para mostrar alerta de confirmacion
     private void mostrarAlertConfirmacionEliminar() {
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-        dialogo1.setTitle(R.string.alertCabezeraImportante);
+//        dialogo1.setTitle(R.string.alertCabezeraImportante);
         dialogo1.setMessage(R.string.alertEliminarProducto);
         dialogo1.setCancelable(false);
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
@@ -142,14 +143,13 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
 
     // Metodo para hacer un nuevo pedido
     private void hacerPedido() {
-        mostrarAlertDialog(R.string.alertCabezeraImportante, R.string.alertIntroducirCantidadAPedir);
+        mostrarAlertDialog(R.string.alertIntroducirCantidadAPedir);
     }
 
     // Metodo que muestra un AlertDialog
-    private void mostrarAlertDialog(int titulo, int mensaje) {
+    private void mostrarAlertDialog( int mensaje) {
         editTextAlertDialog.setInputType(InputType.TYPE_CLASS_NUMBER);
         final AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-        dialogo1.setTitle(titulo);
         dialogo1.setMessage(mensaje);
         dialogo1.setView(editTextAlertDialog);
         dialogo1.setCancelable(false);
@@ -166,7 +166,8 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
                 if (editTextAlertDialog.getText().toString().equals("")) {
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorCampoVacio);
                 } else {
-                    pedido = new Pedido(getIntent().getStringExtra("img"), tv_referenciaProducto.getText().toString(), tv_nombreProducto.getText().toString(), Integer.valueOf(editTextAlertDialog.getText().toString()));
+                    pedido = new Pedido(getIntent().getStringExtra("img"), tv_referenciaProducto.getText().toString(),
+                            tv_nombreProducto.getText().toString(), Integer.valueOf(editTextAlertDialog.getText().toString()));
                     reff.child(tv_referenciaProducto.getText().toString()).setValue(pedido);
                 }
                 editTextAlertDialog.setText("");

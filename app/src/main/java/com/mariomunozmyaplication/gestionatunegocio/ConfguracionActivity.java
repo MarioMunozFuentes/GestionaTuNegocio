@@ -1,11 +1,11 @@
 package com.mariomunozmyaplication.gestionatunegocio;
-
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -91,7 +91,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Información");//TITULO
         builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste. \n"+"\n" +
-                "Para cambiar contraseña pulse en 'CAMBIAR CONTRASEÑA' y desbloquearas los campos.");//MENSAJITO
+                "Para cambiar contraseña pulse en el botón 'DESBLOQUEAR CAMPOS'");//MENSAJITO
         builder.setIcon(R.drawable.information);//ICONO
         builder.setCancelable(false);
         builder.setNeutralButton("Salir", new DialogInterface.OnClickListener() {
@@ -107,7 +107,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
 
 
 
-    // Cuando pulsamos el botón atres del toolbar
+    // Cuando pulsamos el botón atrás del toolbar
     @Override
     public boolean onSupportNavigateUp() {
         finish();
@@ -132,10 +132,23 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
             case R.id.btnCambiarPasswd:
                 etNewPassword.setEnabled(true);
                 etConfirmNewPassword.setEnabled(true);
+
+                //bloquear CAMPOS "NOMBRE EMPRESA y EMAIL"
                 etEmailAcceso.setEnabled(false);
                 etNombreEmpresa.setEnabled(false);
+                //bloquear boton "DESBLOQUEAR CAMPOS"
                 btnCambiarPasswd.setEnabled(false);
+
+                //modificar color de editText para ayudar al usuario
+                etConfirmNewPassword.getBackground().setColorFilter(getResources().getColor(R.color.blancoApp),PorterDuff.Mode.SRC_ATOP);
+                etNewPassword.getBackground().setColorFilter(getResources().getColor(R.color.blancoApp),PorterDuff.Mode.SRC_ATOP);
+
+
+                //indicar al usuario que están desbloqueados
+                Toast.makeText(this, "CAMPOS CONTRASEÑA DESBLOQUEADOS", Toast.LENGTH_SHORT).show();
                 break;
+            default:
+
         }
     }
 
@@ -233,7 +246,6 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
 
     // Metodo para mostrar AlertDialog
     private void mostrarAlertDialog(int titulo, int mensaje) {
-        //Hacemos que el edit text sea de tipo password para que no muestre la contraseña
         editTextAlertDialog.setInputType(InputType.TYPE_CLASS_TEXT |
                 InputType.TYPE_TEXT_VARIATION_PASSWORD);
         comprobarFormatoPassword(editTextAlertDialog);
@@ -255,7 +267,6 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
 
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                //comprobamos que el usuario y la contraseña coninciden
                 if (editTextAlertDialog.getText().toString().equals("")) {
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorCampoVacio);
                 } else {
