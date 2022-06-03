@@ -31,7 +31,8 @@ import com.mariomunozmyaplication.gestionatunegocio.pedido.Pedido;
 public class DetallesProducto extends AppCompatActivity implements View.OnClickListener {
 
     // Declaramos variables
-    private TextView tv_nombreProducto, tv_descripcionProducto, tv_referenciaProducto, tv_stockProducto, tv_precioCosteProducto, tv_precioVentaProducto;
+    private TextView tv_nombreProducto, tv_descripcionProducto, tv_referenciaProducto, tv_stockProducto, tv_precioCosteProducto,
+            tv_precioVentaProducto;
     private ImageView imagenProducto;
     private Intent intent;
     private AlertDialog dialog = null;
@@ -165,7 +166,8 @@ public class DetallesProducto extends AppCompatActivity implements View.OnClickL
                 if (editTextAlertDialog.getText().toString().equals("")) {
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorCampoVacio);
                 } else {
-                    pedido = new Pedido(getIntent().getStringExtra("img"), tv_referenciaProducto.getText().toString(), tv_nombreProducto.getText().toString(), Integer.valueOf(editTextAlertDialog.getText().toString()));
+                    pedido = new Pedido(getIntent().getStringExtra("img"), tv_referenciaProducto.getText().toString(),
+                            tv_nombreProducto.getText().toString(), Integer.valueOf(editTextAlertDialog.getText().toString()));
                     reff.child(tv_referenciaProducto.getText().toString()).setValue(pedido);
                 }
                 editTextAlertDialog.setText("");

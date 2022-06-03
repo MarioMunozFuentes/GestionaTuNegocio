@@ -1,7 +1,4 @@
 package com.mariomunozmyaplication.gestionatunegocio;
-
-import static com.mariomunozmyaplication.gestionatunegocio.R.color.Teal;
-
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -110,7 +107,7 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
 
 
 
-    // Cuando pulsamos el botón atres del toolbar
+    // Cuando pulsamos el botón atrás del toolbar
     @Override
     public boolean onSupportNavigateUp() {
         finish();
@@ -249,7 +246,6 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
 
     // Metodo para mostrar AlertDialog
     private void mostrarAlertDialog(int titulo, int mensaje) {
-        //Hacemos que el edit text sea de tipo password para que no muestre la contraseña
         editTextAlertDialog.setInputType(InputType.TYPE_CLASS_TEXT |
                 InputType.TYPE_TEXT_VARIATION_PASSWORD);
         comprobarFormatoPassword(editTextAlertDialog);
@@ -271,7 +267,6 @@ public class ConfguracionActivity extends AppCompatActivity implements View.OnCl
 
         dialogo1.setPositiveButton(R.string.btnAceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                //comprobamos que el usuario y la contraseña coninciden
                 if (editTextAlertDialog.getText().toString().equals("")) {
                     mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorCampoVacio);
                 } else {

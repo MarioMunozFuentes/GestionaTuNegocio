@@ -49,7 +49,8 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
 
     // Declaramos variables
     private ProgressDialog progressDialog;
-    private EditText etNombreEmpleado, etApellidosEmpleado, etDNIEmpleado, etIBAN, etDireccionEmpleado, etnTelefonoEmpleado, etSueldoEmpleado;
+    private EditText etNombreEmpleado, etApellidosEmpleado, etDNIEmpleado, etIBAN, etDireccionEmpleado,
+            etnTelefonoEmpleado, etSueldoEmpleado;
     private TextView tv_title_addEmpleado;
     private CalendarView calendarView;
     private Empleado empleados;
@@ -201,7 +202,8 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
         Intent intent = new Intent(Intent.ACTION_PICK);
         // Sets the type as image/*. This ensures only components of type image are selected
         intent.setType("image/*");
-        // We pass an extra array with the accepted mime types. This will ensure only components with these MIME types as targeted.
+        // We pass an extra array with the accepted mime types.
+        // This will ensure only components with these MIME types as targeted.
         String[] mimeTypes = {"image/jpeg", "image/png"};
         intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
         // Launching the Intent
@@ -237,7 +239,8 @@ public class AddEmpleadoActivity extends AppCompatActivity implements View.OnCli
     // Metodo para añadir un empleado nuevo
     private void addEmpleado() {
         if (etNombreEmpleado.getText().toString().equals("") || etApellidosEmpleado.getText().toString().equals("") || etIBAN.getText().toString().equals("")
-                || etDireccionEmpleado.getText().toString().equals("") || etnTelefonoEmpleado.getText().toString().equals("") || etDNIEmpleado.getText().toString().equals("") || etSueldoEmpleado.getText().toString().equals("")) {
+                || etDireccionEmpleado.getText().toString().equals("") || etnTelefonoEmpleado.getText().toString().equals("")
+                || etDNIEmpleado.getText().toString().equals("") || etSueldoEmpleado.getText().toString().equals("")) {
             mostrarAlert(R.string.alertCabezeraError, R.string.alertErrorIntroduceDatosCampos);
         } else {
             if (!iban) {
